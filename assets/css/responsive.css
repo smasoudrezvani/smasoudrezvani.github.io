@@ -1,0 +1,15 @@
+@media screen and (max-width: 991px) {
+    body header .brand {
+        flex-direction: column;
+        text-align: center;
+      }
+      body header .brand .profil{
+          margin-right: 0px;
+      }
+      body main section .description .education{
+          margin-bottom: 15px;
+      }
+      body main section .description .work-experience{
+          margin-bottom: 15px;
+      }
+}
