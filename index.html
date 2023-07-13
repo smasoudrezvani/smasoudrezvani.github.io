@@ -227,10 +227,9 @@
         </main>
         <footer>
             <div class="end-part mt-3">
-                <p id="demo"><span>Masoud Rezvani</span></p>
+                <p><span>Masoud Rezvani © - Last updated on </span><p id="demo"></p>
                   <script>
                   const d = new Date();
-                  const text1 = '© - Last updated on';
                   let day = d.getDate(),month = d.getMonth(),year = d.getFullYear();
                   if (month == 0) {
                     month2 = "January";
@@ -269,7 +268,7 @@
                     month2 = "December";
                   }
                   
-                  let result = text1.concat(month2,' ',day,', ',year);
+                  let result = month2.concat(' ',day,', ',year);
                   document.getElementById("demo").innerHTML = result;
                   </script>
 
