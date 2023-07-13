@@ -227,7 +227,53 @@
         </main>
         <footer>
             <div class="end-part mt-3">
-                <p><span>Masoud Rezvani</span> © - Last updated on November 25, 2022</p>
+                <p id="demo"></p>
+                  <script>
+                  const d = new Date();
+                  const text1 = '© - Last updated on';
+                  let day = d.getDate(),month = d.getMonth(),year = d.getFullYear();
+                  if (month == 0) {
+                    month2 = "January";
+                  }
+                  if (month == 1) {
+                    month2 = "February";
+                  }
+                  if (month == 2) {
+                    month2 = "March";
+                  }
+                  if (month == 3) {
+                    month2 = "April";
+                  }
+                  if (month == 4) {
+                    month2 = "May";
+                  }
+                  if (month == 5) {
+                    month2 = "June";
+                  }
+                  if (month == 6) {
+                    month2 = "July";
+                  }
+                  if (month == 7) {
+                    month2 = "August";
+                  }
+                  if (month == 8) {
+                    month2 = "September";
+                  }
+                  if (month == 9) {
+                    month2 = "October";
+                  }
+                  if (month == 10) {
+                    month2 = "November";
+                  }
+                  if (month == 11) {
+                    month2 = "December";
+                  }
+                  
+                  let result = text1.concat(month2,' ',day,', ',year);
+                  document.getElementById("demo").innerHTML = result;
+                  </script>
+
+               
             </div>
         </footer>
 
