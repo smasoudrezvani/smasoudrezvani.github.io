@@ -1,343 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-   <!--
-      Developed by Masoud Rezvani
-   -->
-    <head>
-        <!-- Meta Tags -->
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <meta name="theme-color" content="#1f9ff1" />
-        <!-- Title -->
-        <title>Masoud Rezvani</title>
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css?family=Muli|Rubik:400,500,700&display=swap" rel="stylesheet" />
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
-        <!-- Theme CSS -->
-        <link rel="stylesheet" href="assets/css/style.css" />
-        <link rel="stylesheet" href="assets/css/responsive.css" />
-    </head>
-    <body>
-        <header>
-            <div class="presentation">
-                <div class="container">
-                    <div class="brand">
-                        <img src="assets/images/profile.jpg" alt="" />
-                        <div class="profil">
-                            <h1>Seyyed Masoud Rezvaninejad</h1>
-                            <br />
-                            <p>Senior Fraud Analyst and Machine learning expert</span>
-                        </div>
-                        <div class="contacts">
-                            <button type="button" class="btn btn-contact mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                <svg
-                                    class="svg-inline--fa fa-paper-plane fa-w-16"
-                                    aria-hidden="true"
-                                    focusable="false"
-                                    data-prefix="fas"
-                                    data-icon="paper-plane"
-                                    role="img"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512"
-                                    data-fa-i2svg=""
-                                >
-                                    <path
-                                        fill="currentColor"
-                                        d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"
-                                    ></path>
-                                </svg>
-                                Contact with me
-                            </button>
-                            <a href="assets/pdf/Masoudrezvani__CV.pdf">
-
-                                <button type="button" class="btn btn-contact" >
-                                    <img src="assets/images/3917330.png" alt="">
-                                Download CV
-                            </button>
-                        </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <main>
-            <section>
-                <div class="description mt-4">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-7">
-                                <div class="education mt-4">
-                                    <h4>Education</h4>
-                                    <span>2017–2019:</span> <strong>Master of business administration</strong>
-                                    <p>University of Tehran, Faculty of Management.Thesis: Technology Capability Assessment and Gap Analysis – Based on Panda & Ramanathan Model with the help of ZBWM method - CGPA : 3.46/4</p>
-                                    <br />
-                                    <span>2012–2016:</span> <strong>Bachelor of Engineering,Industrial engineering</strong>
-                                    <p>Amirkabir University of Technology, Tehran Polytechnic). CGPA : 2.93/4</p>
-                                </div>
-                                <div class="work-experience mt-4">
-                                    <h4>Work Experience</h4>
-                                    <h5>Snapp!, The biggest ride-sharing App in Iran</h5>
-                                    <span>September,2020– present:</span> <strong>Senior Fraud Analyst and Machine learning expert.</strong>
-                                    <p>
-                                        • Develop and Automate various codes to investigate claims and activities in which we have a strong suspicion of fraud in all aspects of the business (drivers, bikers, passengers, financial transactions, and promoters)
-                                        <br />
-                                        • Conceptualized and implemented a sentiment analysis tool to understand customers' feedback and detect abnormalities in the system.
-                                        <br />
-                                        • created a data pipeline to consume and store 10TB of raw data weekly using Apache Airflow, Nifi, Python, and Go.
-                                        <br />
-                                        • Collected, cleansed, and provided modeling and analysis of structured and unstructured data used for business initiatives, resulting in 50k USD daily savings.
-                                        <br />
-                                        • Build predictive models using various machine learning tools to predict the possibility of churn (Logistic regression, Svm, and DTs).
-                                        <br />
-                                        • Develop a graph-based code to uncover fraud rings and the connections linking them
-                                        <br />
-                                        • Created reports and charts to perform preliminary analysis regarding suspected activities using Plotly and Matplotlib.
-                                    </p>
-<!--                                     <br />
-                                    <span>2012–2016:</span> <strong>Bachelor of Engineering,Industrial engineering,</strong>
-                                    <p>Amirkabir University of Technology, Tehran Polytechnic). CGPA : 2.93/4</p>
-                                    <br> 
+<!--
+  Updated portfolio site for Masoud RezvaniNejad
 -->
-                                    <h5>Parsijoo</h5>
-                                    <span>2017 –June,2020:</span> <strong>Business Development Specialist.</strong>
-                                    <p>
-                                        As a Business Development Specialist, I was in charge of identifying new leads for expansion in order to grow the company. This overall task was made possible by a myriad of responsibilities, such as
-                                        Market Research, Analyzing Business Processes, Manage Financial Information, and Customer Service. Parsijoo’s main product was tailor-made data processing software, e.g., Elasticsearch and Spark.
-                                    </p>
-                                </div>
-                                <div class="education mt-4">
-                                    <h4>Volunteer Projects</h4>
-                                    <h5>COVID-19 Volunteering Project</h5>
-                                    <span>March,2020:</span> <strong>COVID-19 prediction .</strong>
-                                    <p>
-                                        In this project, we used Plotly and some basic concepts of learning to show how bad the situation is in the world (specifically in Iran) and then we used statsmodels (a library for time series) trying
-                                        to provide a predictive model for the number of deaths in the world
-                                    </p>
-                                </div>
-                                <div class="computer-skills mt-4 mb-4">
-                                    <h4>Computer skills</h4>
-                                    <strong>Programming Languages:</strong>
-                                    <p>Python, R, C, C++,Go (programming language)</p>
-                                    <strong>Relevant Mathematics:</strong>
-                                    <p>Linear Algebra, Probability Theory,Hypothesis testing</p>
-                                    <strong>ML/AI:</strong>
-                                    <p>Tensorflow, Pytorch, Sci-kit Learn,Tree-based methods, bagging, boosting</p>
-                                    <strong>Web Technologies:</strong>
-                                    <p> CSS (Bootstrap) ,Flask </p>
-                                    <strong>Deep Learning:</strong>
-                                    <p> GNN,Tabular Datasets and Reinforcement Learning</p>
-                                    <strong>Database Optimization:</strong>
-                                    <p>PostgreSQL, MySQL, Apache (Hadoop), Neo4j(Beginner)</p>
-                                    <strong>Others:</strong>
-                                    <p>SPSS, Lingo, SmartPLS</p>
-                                </div>
-                            </div>
-                           
-                            <div class="col-lg-5">
-                                <div class="test-scores mt-4">
-                                    <h4>Languages</h4>
-<!-- <!--                                <span> <strong>CEFR levels</strong></span> -->
-                                    <table class="table table-striped">
-                                          <thead>
-                                           <tr>
-                                             <th scope="col" th  class="text-center">Language</th>
-                                             <th scope="col" th  class="text-center">CEFR Level</th>
-                                           </tr>
-                                         </thead>
-                                         <tbody>
-                                                <tr class="table-primary">
-                                                   <th scope="row" th  class="text-center">English</th>
-                                                      <td style='text-align:center; vertical-align:middle'>C1</td>
-                                               </tr>
-                                              <tr class="table-secondary">
-                                                   <th scope="row" th  class="text-center">Deutsche Sprache</th>
-                                                      <td style='text-align:center; vertical-align:middle'>A1</td>
-                                              </tr>
-                                              <tr class="table-success">
-                                                   <th scope="row" th  class="text-center">Persian</th>
-                                                      <td style='text-align:center; vertical-align:middle'>Native Language</td>
-                                              </tr>
-                                       </tbody>
-                                    </table>
-                                </div>
-                               
-                                <div class="test-scores mt-4">
-                                    <h4>Test Scores</h4>
-                                    <span>August 2022:</span> <strong>TOEFL</strong>
-                                    <table class="table table-striped">
-                                         <thead>
-                                           <tr>
-                                             <th scope="col" th colspan="1" class="text-center">Reading</th>
-                                             <th scope="col" th colspan="1" class="text-center">Listening</th>
-                                             <th scope="col" th colspan="1" class="text-center">Speaking</th>
-                                             <th scope="col" th colspan="1" class="text-center">Writing</th>
-                                           </tr>
-                                         </thead>
-                                         <tbody>
-                                           <tr>
-                                             <td style="text-align:center;">25</th>
-                                             <td style="text-align:center;">28</td>
-                                             <td style="text-align:center;">22</td>
-                                             <td style="text-align:center;">25</td>
-                                           </tr>
-                                           <tr>
-                                             <td colspan="4" class="text-center" style="text-align:center;"> <strong>Total <strong> = 100 </td>
-                                           </tr>
-                                         </tbody>
-                                       </table>
-                                   <span>December 2022:</span> <strong>GRE</strong>
-                                   <table class="table table-striped">
-                                         <thead>
-                                           <tr>
-                                             <th scope="col" th colspan="1" class="text-center">Quantitative</th>
-                                             <th scope="col" th colspan="1" class="text-center">Verbal</th>
-                                             <th scope="col" th colspan="1" class="text-center">Analytical Writing</th>
-                                           </tr>
-                                         </thead>
-                                         <tbody>
-                                           <tr>
-                                             <td style="text-align:center;">166/170</th>
-                                             <td style="text-align:center;">155/170</td>
-                                             <td style="text-align:center;">3.5/6</td>
-                                           </tr>
-                                           <tr>
-                                             <td colspan="3" class="text-center" style="text-align:center;"> <strong>Total <strong> = 321 </td>
-                                           </tr>
-                                         </tbody>
-                                       </table>
-                                   
-                                </div>
-                                <div class="education mt-4 mb-4">
-                                    <h4>Research Experience</h4>
-                                    <h5>Journal Article(Under review)</h5>
-                                    <h6>Javad Khaligh, SeyyedMasoud Rezvaninnejad,2023</h6>
-                                    <p>A hybrid machine learning model for predicting customer churn under presence of uncertainty,</p>
-<!--                                     <strong><i> <p style="color:#006400;"> Amazonia Investiga <i><strong> Journal<p> -->
-                                    <p style="color:#006400;"> Amazonia Investiga Journal<p>
-                                   <br><strong><a href="assets/pdf/Abstract.pdf">Download Abstract</a><strong>
-                                </div>
-                                <div class="education mt-4 mb-4">
-                                    <h4>Fellowships & Awards</h4>
-                                    <p style="color:#339999;">2017</p>
-                                    <p>Ranked among the top 0.001% in the national entrance exam for Iranian universities, Iran, 2017</p>
-                                    <p style="color:#339999;">2012</p>
-                                    <p>Ranked among the top 0.3% in the national entrance exam for Iranian universities, Iran, 2012</p>
-                                </div>
-                                <div class="education mt-4 mb-4">
-                                    <h4>Further Education</h4>
-                                    <p style="color:#76d609;">WorldQuant University, 2024</p>
-                                    <p>Data Science course</p>
-                                    <p style="color:#76d609;">Packt, 2025</p>
-                                    <p>Data Engineering with AWS</p>
-                                    <p style="color:#76d609;">coursera, 2023</p>
-                                    <p>Econometrics: Methods and Applications</p>
-                                    <p style="color:#76d609;">Udemy, 2023</p>
-                                    <p>Applied Statistical Modeling for Data Analysis in R</p>
-                                    <p style="color:#76d609;">nikamooz.com,2022</p>
-                                    <p>Data Engineering courses</p>
-                                    <p style="color:#76d609;">tihe.ac.ir,2020</p>
-                                    <p>Data Science Course</p>  
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <div class="end-part mt-3">
-<!--                <p><span>Masoud Rezvani</span> © - Last updated on November 25, 2022</p> -->
-                    <p><span>Masoud Rezvani </span> © - Last updated on &nbsp </p> <p id="demo"></p>
-                  <script>
-                  const d = new Date();
-                  let day = d.getDate(),month = d.getMonth(),year = d.getFullYear();
-                  if (month == 0) {
-                    month2 = "January";
-                  }
-                  if (month == 1) {
-                    month2 = "February";
-                  }
-                  if (month == 2) {
-                    month2 = "March";
-                  }
-                  if (month == 3) {
-                    month2 = "April";
-                  }
-                  if (month == 4) {
-                    month2 = "May";
-                  }
-                  if (month == 5) {
-                    month2 = "June";
-                  }
-                  if (month == 6) {
-                    month2 = "July";
-                  }
-                  if (month == 7) {
-                    month2 = "August";
-                  }
-                  if (month == 8) {
-                    month2 = "September";
-                  }
-                  if (month == 9) {
-                    month2 = "October";
-                  }
-                  if (month == 10) {
-                    month2 = "November";
-                  }
-                  if (month == 11) {
-                    month2 = "December";
-                  }
-                  
-                  let result = month2.concat(' ',day,', ',year);
-                  document.getElementById("demo").innerHTML = result;
-                  </script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#1f9ff1" />
+  <title>Masoud RezvaniNejad</title>
+  <link href="https://fonts.googleapis.com/css?family=Muli|Rubik:400,500,700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
 
-               
-            </div>
-        </footer>
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog text-center modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Contact Me</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <ul>
-                           <li>
-                              Address: Iran,Tehran
-                           </li>
-                            <li>
-                                <a href="tel:+989212169533">
-                                    Phone Number :
-                                    (+98) 9212169533
-                                </a>
-                            </li>
-                            <li>
-                                <a href="mailto:s.masoudrezvani@ut.ac.ir">
-                                    Email :
-                                    s.masoudrezvani[@]ut.ac.ir
-                                </a>
-                            </li>
-                            <li>
-                                <a href="mailto:s.masoudrezvani@gmail.com">
-                                    Gmail :
-                                    s.masoudrezvani[@]gmail.com
-                                </a>
-                            </li>
-                            <li><a href="">Skype : masoud.rezvani1</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+<body>
+  <header>
+    <div class="presentation">
+      <div class="container">
+        <div class="brand">
+          <img src="assets/images/profile.jpg" alt="Profile Picture" />
+          <div class="profil">
+            <h1>Masoud RezvaniNejad</h1>
+            <br />
+            <p>AI Engineer Intern</p>
+          </div>
+          <div class="contacts">
+            <button type="button" class="btn btn-contact mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <svg class="svg-inline--fa fa-paper-plane fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas"
+                data-icon="paper-plane" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor"
+                  d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z">
+                </path>
+              </svg>
+              Contact Me
+            </button>
+            <a href="assets/pdf/Masoudrezvani__CV.pdf">
+              <button type="button" class="btn btn-contact">
+                <img src="assets/images/3917330.png" alt="">
+                Download CV
+              </button>
+            </a>
+          </div>
         </div>
-        <!-- Scripts -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
-        <!-- /scripts -->
-    </body>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="description mt-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7">
+              <div class="education mt-4">
+                <h4>About Me</h4>
+                <p>
+                  I am a data scientist who loves turning raw data into AI systems that deliver tangible business
+                  value. I have built fraud models, scheduled pipelines, and simple APIs. My stack includes Python,
+                  Airflow, Docker, and AWS to make workflows repeatable. My professional motto is to keep learning,
+                  build systems that act, learn, and automate useful work.
+                </p>
+              </div>
+
+              <div class="work-experience mt-4">
+                <h4>Experience</h4>
+
+                <h5>baly.iq (Rocket Internet)</h5>
+                <span>Feb 2024 – Nov 2025:</span>
+                <strong>Data Scientist</strong>
+                <p>
+                  • Deployed Docker-based services to deliver business features quickly, coordinating with tech and
+                  ops.<br />
+                  • Automated fraud-data pipelines with Airflow, reducing manual work by 30%.<br />
+                  • Tuned databases using Percona PMM, improving query response by 20% and ensuring 99.8% HA.<br />
+                  • Deployed containerized services using Docker and Ansible to deliver key business features faster.
+                </p>
+
+                <h5>snapp.ir (Rocket Internet)</h5>
+                <span>Sep 2020 – Feb 2024:</span>
+                <strong>Fraud Data Analyst</strong>
+                <p>
+                  • Investigated 35M+ weekly transactions to detect unusual patterns and report findings.<br />
+                  • Built SQL detection rules and Python scripts to flag abnormal transactions, reducing processing time
+                  by 40%.<br />
+                  • Collaborated with cross-functional teams to refine business rules.<br />
+                  • Learned automation and containerization to build scalable fraud-detection tools used in production.
+                </p>
+
+                <h5>Parsijoo</h5>
+                <span>Sep 2017 – Sep 2020:</span>
+                <strong>Business Development Specialist</strong>
+                <p>
+                  • Conducted market and product research to guide data-processing software strategy.<br />
+                  • Increased client acquisition by 15% through feedback-driven improvements.<br />
+                  • Improved workflows for faster customer response and accurate financial reporting.
+                </p>
+              </div>
+
+              <div class="education mt-4">
+                <h4>Projects</h4>
+
+                <h5>Smart Telegram Bot using n8n</h5>
+                <p>Built an automation workflow connecting a Telegram bot to OpenAI GPT via n8n; used ngrok for SSL and
+                  short-term context memory in chat responses.</p>
+
+                <h5>LLM Fraud Detection</h5>
+                <p>Designed a transformer-based LLM model for Arabic fraud-text detection with reproducible pipelines. <a
+                    href="https://github.com/smasoudrezvani/ArabicFraudDetection_LLM" target="_blank">[GitHub]</a></p>
+
+                <h5>Interactive Model Interpretation Dashboard</h5>
+                <p>Developed SHAP and feature-importance visuals with FastAPI backend and Docker deployment. <a
+                    href="https://github.com/smasoudrezvani/UCIAdultXAI" target="_blank">[GitHub]</a></p>
+
+                <h5>S3-MinIO Starter Kit</h5>
+                <p>Created an S3-compatible local storage using Docker + MinIO for testing pipelines; later deployed on
+                  AWS EC2. <a href="https://github.com/smasoudrezvani/s3-minio-starter" target="_blank">[GitHub]</a></p>
+
+                <h5>Algorithmic Trading System</h5>
+                <p>Worked in a research group on predictive trend detection for XAU/USD and FX; built Python pipelines
+                  with Selenium and Docker for real-time data.</p>
+
+                <h5>COVID-19 Prediction</h5>
+                <p>Built a predictive model for COVID-19 death counts using time series methods. <a
+                    href="https://colab.research.google.com/drive/1tpQ5yPT1BZtBUE6CJoF21KLNkbeyjrKk?usp=sharing"
+                    target="_blank">[Colab]</a></p>
+              </div>
+
+              <div class="computer-skills mt-4 mb-4">
+                <h4>Skills</h4>
+
+                <strong>Programming:</strong>
+                <p>Python, R, C, Golang, Rust (intermediate)</p>
+
+                <strong>ML/AI Tools:</strong>
+                <p>TensorFlow, PyTorch Geometric, GNN, FastAPI</p>
+
+                <strong>Databases:</strong>
+                <p>PostgreSQL, MySQL, Neo4j, ClickHouse</p>
+
+                <strong>Automation:</strong>
+                <p>Apache Airflow, Ansible (intermediate)</p>
+
+                <strong>Containerization:</strong>
+                <p>Docker</p>
+
+                <strong>Version Control:</strong>
+                <p>Git</p>
+
+                <strong>Web Technologies:</strong>
+                <p>CSS (Bootstrap), Flask</p>
+
+                <strong>Soft Skills:</strong>
+                <p>Team leadership, structured problem-solving, clear communication, cross-team coordination.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div class="education mt-4">
+                <h4>Education</h4>
+
+                <span>2025–2026:</span> <strong>Master of Science, Data Science</strong>
+                <p>University of Amsterdam (UvA). Coursework: Machine Learning & Optimization, Advanced Analytics for a
+                  Better World, Impact Evaluation.</p>
+
+                <span>2017–2019:</span> <strong>Master of Business Administration (MBA)</strong>
+                <p>University of Tehran. GPA: 3.11/4. Courses in Strategy, Marketing, and Financial Management.</p>
+
+                <span>2012–2016:</span> <strong>BSc, Industrial Engineering</strong>
+                <p>Amir Kabir University of Technology (Tehran Polytechnic). GPA: 2.9/4. Courses in Probability,
+                  Operations Research, and Linear Algebra.</p>
+              </div>
+
+              <div class="education mt-4 mb-4">
+                <h4>Certifications</h4>
+                <p><strong>Divide and Conquer, Sorting and Searching, and Randomized Algorithms</strong> — Coursera</p>
+                <p><strong>Applied Statistical Modeling for Data Analysis in R</strong> — Udemy</p>
+                <p><strong>Associate DevOps Engineer</strong> — ArvanCloud</p>
+              </div>
+
+              <div class="education mt-4 mb-4">
+                <h4>Languages</h4>
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th class="text-center">Language</th>
+                      <th class="text-center">Level</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="table-primary">
+                      <td class="text-center">English</td>
+                      <td class="text-center">Fluent</td>
+                    </tr>
+                    <tr class="table-secondary">
+                      <td class="text-center">Dutch</td>
+                      <td class="text-center">Basic</td>
+                    </tr>
+                    <tr class="table-secondary">
+                      <td class="text-center">German (Deutsche Sprache)</td>
+                      <td class="text-center">Basic</td>
+                    </tr>
+                    <tr class="table-success">
+                      <td class="text-center">Persian</td>
+                      <td class="text-center">Native</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="education mt-4 mb-4">
+                <h4>Interests</h4>
+                <p>Deep learning, LLM, MLOps, Agentic AI.</p>
+              </div>
+
+              <div class="education mt-4 mb-4">
+                <h4>Profiles</h4>
+                <ul>
+                  <li><a href="https://github.com/smasoudrezvani" target="_blank">GitHub</a></li>
+                  <li><a href="https://www.linkedin.com/in/smasoudrezvani/" target="_blank">LinkedIn</a></li>
+                  <li><a href="https://huggingface.co/smasoudrezvani" target="_blank">Hugging Face</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="end-part mt-3">
+      <p><span>Masoud RezvaniNejad</span> © - Last updated on &nbsp;</p>
+      <p id="demo"></p>
+      <script>
+        const d = new Date();
+        const monthNames = [
+          "January", "February", "March", "April", "May", "June",
+          "July", "August", "September", "October", "November", "December"
+        ];
+        document.getElementById("demo").innerHTML =
+          monthNames[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
+      </script>
+    </div>
+  </footer>
+
+  <!-- Contact Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog text-center modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Contact Me</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>Address: Amsterdam, Netherlands</li>
+            <li><a href="tel:+31634795587">Phone: (+31) 634795587</a></li>
+            <li><a href="mailto:s.masoudrezvani@gmail.com">Email: s.masoudrezvani@gmail.com</a></li>
+            <li><a href="https://github.com/smasoudrezvani" target="_blank">GitHub: smasoudrezvani</a></li>
+            <li><a href="https://www.linkedin.com/in/smasoudrezvani/" target="_blank">LinkedIn: smasoudrezvani</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+    crossorigin="anonymous"></script>
+</body>
 </html>
