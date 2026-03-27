@@ -72,7 +72,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-a-post-with-plotly-js",
+            },{id: "post-muon-optimizer",
+        
+          title: "Muon optimizer",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/muon-optimizer/";
+          
+        },
+      },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
         
