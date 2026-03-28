@@ -8,12 +8,12 @@ middle_name:
 last_name: Rezvani
 
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  Data Scientist, MBA, and Master's student at UvA. Research interests include AI, Deep Learning, MLOps, and Computer Vision.
 footer_text: >
-  Made with ❤️ by Masoud Rezvani
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+                  Made with ❤️
+keywords: Masoud Rezvani, data science, machine learning, MLOps, AI, UvA, portfolio
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: 👨‍💻 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://smasoudrezvani.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
@@ -52,7 +52,7 @@ external_services:
 
 navbar_fixed: true
 footer_fixed: true
-search_enabled: true
+search_enabled: false
 socials_in_search: true
 posts_in_search: true
 bib_search: true
