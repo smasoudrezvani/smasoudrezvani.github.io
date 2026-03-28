@@ -34,4 +34,4 @@ Beyond academic research, I prioritize rigorous system design and deployment. I 
 
 I am currently based in Amsterdam and am actively seeking a PhD position in Computer Science, as well as Data Scientist or ML Engineering internships where I can apply scalable engineering practices to research frontiers.
 
-Research interest : LLM, Deep learning, Computer vision
+Research interest : LLM, Deep learning, Generative ai
