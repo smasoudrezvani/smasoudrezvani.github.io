@@ -1,19 +1,24 @@
 {
   "basics": {
-    "name": "Masoud Rezvani",
-    "label": "Data Scientist",
+    "name": "Masoud Rezvaninejad",
+    "label": "Deep Learning Researcher & Data Scientist",
     "image": "",
     "email": "s.masoudrezvani@gmail.com",
     "phone": "+31 6 34795587",
-    "summary": "Data Scientist / AI Engineer /AI Researcher",
+    "location": {
+      "city": "Amsterdam",
+      "countryCode": "NL"
+    },
+    "summary": "Deep Learning researcher and Master's student (UvA) with a published track record in Generative AI (GANs). Brings 4+ years of engineering experience in building robust data pipelines (Airflow, Python) and deploying models at scale (Docker, AWS). Passionate about advancing state-of-the-art Vision Language Models (VLMs) and applying rigorous engineering practices to research frontiers.",
     "profiles": []
   },
   "education": [
     {
-      "institution": "University of Amsterdam (UvA)",
+      "institution": "Universiteit Van Amsterdam (UvA)",
       "area": "Data Science",
       "studyType": "Master of Science",
-      "location": "Amsterdam, Netherlands",
+      "startDate": "2025-09",
+      "endDate": "Expected 2026",
       "courses": [
         "Thesis: Evaluating the Muon Optimizer vs. AdamW for High-Dimensional LLM Adaptation via LoRA."
       ]
@@ -22,9 +27,18 @@
       "institution": "University of Tehran",
       "area": "Business Administration",
       "studyType": "MBA",
+      "startDate": "2017-09",
+      "endDate": "2019-09",
       "courses": [
         "Focus on strategic management and quantitative analysis."
       ]
+    },
+    {
+      "institution": "Amirkabir University of Technology",
+      "area": "Industrial Engineering",
+      "studyType": "BSc",
+      "startDate": "2012-09",
+      "endDate": "2016-11"
     }
   ],
   "publications": [
@@ -42,6 +56,33 @@
     }
   ],
   "work": [
+    {
+      "name": "Baly.iq (Rocket Internet)",
+      "position": "Data Scientist",
+      "startDate": "2024-02",
+      "endDate": "2025-11",
+      "summary": "The #1 super app in Iraq.",
+      "highlights": [
+        "Engineered large-scale data processing pipelines using Python and Airflow to curate and clean unstructured datasets, directly enabling downstream ML training.",
+        "Built reproducible Airflow pipelines and Python ETL modules to process unstructured and semi-structured fraud data, reducing manual work by 30%.",
+        "Analyzed customer and transaction journey data to map data sources and improve anomaly detection accuracy.",
+        "Tuned database systems using Percona PMM to speed up query response by 20%, ensuring 99.8% HA.",
+        "Deployed containerized services with Docker and Ansible to deliver key business features faster when the tech team's backlog delayed development; took ownership of deployment to keep operations on schedule."
+      ]
+    },
+    {
+      "name": "Snapp! (Rocket Internet)",
+      "position": "Fraud Data Analyst",
+      "startDate": "2020-09",
+      "endDate": "2024-02",
+      "summary": "The #1 super app and ride-hailing app in Iran.",
+      "highlights": [
+        "Investigated raw logs, relational tables, and metadata sources to design SQL and Python detection rules, identifying anomalies 40% faster.",
+        "Collaborated on dataset curation for foundation model training by structuring raw logs into high-quality, ML-ready formats.",
+        "Built tagging logic for fraud categories and structured irregular transaction flows into ML-ready datasets.",
+        "Took initiative to learn automation and containerization, laying the groundwork for more scalable fraud-detection tools later used in production."
+      ]
+    },
     {
       "name": "Algorithmic Trading ML Infrastructure",
       "position": "Project Lead / ML Engineer",
@@ -76,24 +117,33 @@
       "name": "Engineering & MLOps",
       "keywords": [
         "Python",
+        "PyTorch",
         "FastAPI",
         "Docker",
         "AWS",
         "Airflow",
         "OOP",
-        "System Design"
+        "System Design",
+        "Go",
+        "Rust",
+        "HTML"
       ]
     },
     {
       "name": "Data & Tools",
       "keywords": [
         "Git",
-        "Jira",
         "LaTeX",
         "MetaTrader 5",
-        "D3.js",
-        "Chart.js",
-        "Scientometrics"
+        "GUROBI"
+      ]
+    },
+    {
+      "name": "Soft Skills",
+      "keywords": [
+        "Problem Solving",
+        "Clear Communication",
+        "Cross-team coordination"
       ]
     }
   ],
@@ -116,7 +166,7 @@
   ],
   "interests": [
     {
-      "name": "Physics",
+      "name": "interests",
       "icon": "fa-solid fa-tag",
       "keywords": [
         "Machine Learning",
