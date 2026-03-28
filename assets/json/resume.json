@@ -65,22 +65,37 @@
     {
       "name": "Machine Learning & AI",
       "keywords": [
-        "Deep Learning", "GANs", "Vision Language Models (VLMs)", "NLP", "LoRA Fine-Tuning"
+        "Deep Learning",
+        "GANs",
+        "Vision Language Models (VLMs)",
+        "NLP",
+        "LoRA Fine-Tuning"
       ]
     },
     {
       "name": "Engineering & MLOps",
       "keywords": [
-        "Python", "FastAPI", "Docker", "AWS", "Airflow", "OOP", "System Design"
+        "Python",
+        "FastAPI",
+        "Docker",
+        "AWS",
+        "Airflow",
+        "OOP",
+        "System Design"
       ]
     },
     {
       "name": "Data & Tools",
       "keywords": [
-        "Git", "Jira", "LaTeX", "MetaTrader 5", "D3.js", "Chart.js", "Scientometrics"
+        "Git",
+        "Jira",
+        "LaTeX",
+        "MetaTrader 5",
+        "D3.js",
+        "Chart.js",
+        "Scientometrics"
       ]
     }
-
   ],
   "languages": [
     {
