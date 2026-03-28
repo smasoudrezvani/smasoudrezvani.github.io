@@ -158,7 +158,7 @@ collections:
       layout: post
     output: false
   projects:
-    output: false
+    output: true
   teachings:
     output: false
 
