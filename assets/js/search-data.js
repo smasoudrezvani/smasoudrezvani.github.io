@@ -37,15 +37,15 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-muon-optimizer",
+        },{id: "post-",
         
-          title: "Muon optimizer",
+          title: "",
         
         description: "",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2026/muon-optimizer/";
+            window.location.href = "/blog/2026/2026-03-30-muon-optimizer/";
           
         },
       },{id: "books-the-godfather",
