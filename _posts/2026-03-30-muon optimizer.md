@@ -1,7 +1,8 @@
+`````markdown
 ---
 layout: post
 title: "A New Era in Neural Network Optimization: From Adam to Muon"
-date: 2026-03-30 14:14:00
+date: 2026-03-30
 description: "Exploring the matrix-based Muon optimizer, Newton-Schultz orthogonalization, and MuonClip for attention stability."
 tags: optimization machine-learning muon adamw
 categories: ai-research
@@ -144,3 +145,6 @@ This post was heavily inspired by the phenomenal breakdown in the video: [This S
 {% include video.liquid path="https://www.google.com/search?q=https://www.youtube.com/embed/bO5nvE289ec" class="img-fluid rounded z-depth-1" %}
 \</div\>
 \</div\>
+
+```
+```
