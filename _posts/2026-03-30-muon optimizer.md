@@ -1,6 +1,7 @@
-
-
 ---
+layout: post
+title: "A New Era in Neural Network Optimization: From Adam to Muon"
+date: 2026-03-30 14:14:00
 layout: post
 title: "A New Era in Neural Network Optimization: From Adam to Muon"
 date: 2026-03-30 14:14:00
