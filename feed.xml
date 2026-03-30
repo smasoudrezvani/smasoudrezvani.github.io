@@ -1,87 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://smasoudrezvani.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://smasoudrezvani.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-03-30T14:09:45+00:00</updated><id>https://smasoudrezvani.github.io/feed.xml</id><title type="html">blank</title><subtitle>Data Scientist, MBA, and Master&apos;s student at UvA. Research interests include AI, Deep Learning, MLOps, and Computer Vision. </subtitle><entry><title type="html">Muon optimizer</title><link href="https://smasoudrezvani.github.io/blog/2026/muon-optimizer/" rel="alternate" type="text/html" title="Muon optimizer"/><published>2026-03-30T00:00:00+00:00</published><updated>2026-03-30T00:00:00+00:00</updated><id>https://smasoudrezvani.github.io/blog/2026/muon%20optimizer</id><content type="html" xml:base="https://smasoudrezvani.github.io/blog/2026/muon-optimizer/"><![CDATA[<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
-<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
-<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">A</span><span class="nv"> </span><span class="s">New</span><span class="nv"> </span><span class="s">Era</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">Neural</span><span class="nv"> </span><span class="s">Network</span><span class="nv"> </span><span class="s">Optimization:</span><span class="nv"> </span><span class="s">From</span><span class="nv"> </span><span class="s">Adam</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">Muon"</span>
-<span class="na">date</span><span class="pi">:</span> <span class="s">2026-03-30</span>
-<span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Exploring</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">matrix-based</span><span class="nv"> </span><span class="s">Muon</span><span class="nv"> </span><span class="s">optimizer,</span><span class="nv"> </span><span class="s">Newton-Schultz</span><span class="nv"> </span><span class="s">orthogonalization,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">MuonClip</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">attention</span><span class="nv"> </span><span class="s">stability."</span>
-<span class="na">tags</span><span class="pi">:</span> <span class="s">optimization machine-learning muon adamw</span>
-<span class="na">categories</span><span class="pi">:</span> <span class="s">ai-research</span>
-<span class="na">chart</span><span class="pi">:</span>
-  <span class="na">echarts</span><span class="pi">:</span> <span class="kc">true</span>
-<span class="na">mermaid</span><span class="pi">:</span>
-  <span class="na">enabled</span><span class="pi">:</span> <span class="kc">true</span>
-  <span class="na">zoomable</span><span class="pi">:</span> <span class="kc">true</span>
-<span class="na">pseudocode</span><span class="pi">:</span> <span class="kc">true</span>
-<span class="na">tabs</span><span class="pi">:</span> <span class="kc">true</span>
-<span class="nn">---</span>
-
-The search for good parameters is known as optimization, and the tool we use is known as an optimizer. For a long time, the Adam optimizer has been the default choice. But now there's a new, exciting challenger: the <span class="gs">**Muon optimizer**</span>. It is delivering impressive results on small language models and is about twice as computationally efficient as AdamW. In other words, you can train faster, use less memory, and still get great results.
-
-<span class="gu">### Vector-Based vs. Matrix-Based Optimization</span>
-
-In standard supervised learning, we use training data to compute the gradient of the loss with respect to each parameter. The gradient acts like a guide, showing which direction the parameters should move. Adam builds on this by maintaining two exponential moving averages: one for past gradients (momentum) and another for squared gradients.
-<span class="gt">
-&gt; ##### WARNING</span>
-<span class="gt">&gt; Adam treats all parameters as a single long vector, updating each value independently without considering any internal structure. Because of this, the optimizer state takes up about twice as much memory as the model itself.</span>
-{: .block-warning }
-
-To see the difference in overhead, we can compare their states:
-
-<span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"optimizer-state"</span> <span class="na">class=</span><span class="s">"tab"</span> <span class="na">data-tab=</span><span class="s">"87972252-29be-4515-a050-bf4e47ab1c7e"</span> <span class="na">data-name=</span><span class="s">"optimizer-state"</span><span class="nt">&gt;</span>
-  
-      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span> <span class="na">id=</span><span class="s">"optimizer-state-adamw"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>AdamW <span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;/li&gt;</span>
-  
-      <span class="nt">&lt;li</span> <span class="na">id=</span><span class="s">"optimizer-state-muon"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Muon <span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;/li&gt;</span>
-  
-<span class="nt">&lt;/ul&gt;</span>
-<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tab-content"</span> <span class="na">id=</span><span class="s">"87972252-29be-4515-a050-bf4e47ab1c7e"</span> <span class="na">data-name=</span><span class="s">"optimizer-state"</span><span class="nt">&gt;</span>
-  
-      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;p&gt;&lt;strong&gt;</span>State Tracking per Parameter:<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
-<span class="nt">&lt;ul&gt;</span>
-  <span class="nt">&lt;li&gt;</span>Current Weights (<span class="se">\(\t</span>heta<span class="se">\)</span>)<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li&gt;</span>Momentum (<span class="se">\(</span>m<span class="se">\)</span>)<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li&gt;</span>Squared Gradients (<span class="se">\(</span>v<span class="se">\)</span>)<span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span>
-
-<span class="nt">&lt;p&gt;&lt;em&gt;</span>Result:<span class="nt">&lt;/em&gt;</span> Heavy memory footprint during training.<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;/li&gt;</span>
-  
-      <span class="nt">&lt;li&gt;</span>
-<span class="nt">&lt;p&gt;&lt;strong&gt;</span>State Tracking per Parameter:<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
-<span class="nt">&lt;ul&gt;</span>
-  <span class="nt">&lt;li&gt;</span>Current Weights (<span class="se">\(\t</span>heta<span class="se">\)</span>)<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li&gt;</span>Momentum (<span class="se">\(</span>M<span class="se">\)</span>)<span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span>
-
-<span class="nt">&lt;p&gt;&lt;em&gt;</span>Result:<span class="nt">&lt;/em&gt;</span> Roughly 2x more memory efficient.<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;/li&gt;</span>
-  
-<span class="nt">&lt;/ul&gt;</span><span class="sb">
-
-
-</span>Linear layers in neural networks naturally form 2D matrices. With vector-based optimizers like Adam, the momentum matrix often becomes nearly low-rank, meaning only a small number of dominant directions truly drive the updates. Many other directions contribute very little, leading to inefficient optimization.
-
-<span class="gu">### The Muon Solution: Orthogonalization</span>
-
-The Muon optimizer tackles this issue by orthogonalizing the momentum matrix. By doing so, Muon amplifies the effect of rare directions that typically receive small or infrequent updates. Even though these directions seem minor, they are often essential for effective learning and capturing nuanced patterns in data. 
-
-We want to find a new matrix $$O$$that is as close as possible to our momentum matrix$$M$$, but with orthogonal rows and columns ($$O^T O = I$$). 
-Any linear transformation can be broken down using Singular Value Decomposition (SVD): $$M = U S V^T$$. By setting all singular values in the diagonal matrix $$S$$to one, we obtain our desired orthogonal matrix:$$O = U I V^T$$.
-
-<span class="gu">#### The Newton-Schultz Iteration</span>
-
-Performing SVD is computationally intensive and cannot be run for every update iteration. Luckily, we can use an odd polynomial matrix function, such as $$f(X) = a X + b X X^T X$$, which mathematically acts on the singular values in the same way as applying the function to each singular value individually without explicitly computing the SVD.
-
-Consider the polynomial $$<span class="se">\r</span>ho(s) = 1.5s - 0.5s^3$$. Our goal is to map any input value between 0 and 1 closer to 1. By applying this function repeatedly across multiple iterations, the values rapidly converge. 
-
-Interact with the chart below to see how applying this function iteratively pushes all singular values toward 1:
-
-<span class="p">````</span><span class="nl">markdown
-</span><span class="p">```</span><span class="nl">echarts
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://smasoudrezvani.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://smasoudrezvani.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-03-30T14:14:29+00:00</updated><id>https://smasoudrezvani.github.io/feed.xml</id><title type="html">blank</title><subtitle>Data Scientist, MBA, and Master&apos;s student at UvA. Research interests include AI, Deep Learning, MLOps, and Computer Vision. </subtitle><entry><title type="html">A New Era in Neural Network Optimization: From Adam to Muon</title><link href="https://smasoudrezvani.github.io/blog/2026/muon-optimizer/" rel="alternate" type="text/html" title="A New Era in Neural Network Optimization: From Adam to Muon"/><published>2026-03-30T00:00:00+00:00</published><updated>2026-03-30T00:00:00+00:00</updated><id>https://smasoudrezvani.github.io/blog/2026/muon%20optimizer</id><content type="html" xml:base="https://smasoudrezvani.github.io/blog/2026/muon-optimizer/"><![CDATA[<p>The search for good parameters is known as optimization, and the tool we use is known as an optimizer. For a long time, the Adam optimizer has been the default choice. But now there’s a new, exciting challenger: the <strong>Muon optimizer</strong>. It is delivering impressive results on small language models and is about twice as computationally efficient as AdamW. In other words, you can train faster, use less memory, and still get great results.</p> <h3 id="vector-based-vs-matrix-based-optimization">Vector-Based vs. Matrix-Based Optimization</h3> <p>In standard supervised learning, we use training data to compute the gradient of the loss with respect to each parameter. The gradient acts like a guide, showing which direction the parameters should move. Adam builds on this by maintaining two exponential moving averages: one for past gradients (momentum) and another for squared gradients.</p> <blockquote class="block-warning"> <h5 id="warning">WARNING</h5> <p>Adam treats all parameters as a single long vector, updating each value independently without considering any internal structure. Because of this, the optimizer state takes up about twice as much memory as the model itself.</p> </blockquote> <p>To see the difference in overhead, we can compare their states:</p> <ul id="optimizer-state" class="tab" data-tab="c52f4f1a-3e36-478d-9c8d-6fd9495962f0" data-name="optimizer-state"> <li class="active" id="optimizer-state-adamw"> <a href="#">AdamW </a> </li> <li id="optimizer-state-muon"> <a href="#">Muon </a> </li> </ul> <ul class="tab-content" id="c52f4f1a-3e36-478d-9c8d-6fd9495962f0" data-name="optimizer-state"> <li class="active"> <p><strong>State Tracking per Parameter:</strong></p> <ul> <li>Current Weights (\(\theta\))</li> <li>Momentum (\(m\))</li> <li>Squared Gradients (\(v\))</li> </ul> <p><em>Result:</em> Heavy memory footprint during training.</p> </li> <li> <p><strong>State Tracking per Parameter:</strong></p> <ul> <li>Current Weights (\(\theta\))</li> <li>Momentum (\(M\))</li> </ul> <p><em>Result:</em> Roughly 2x more memory efficient.</p> </li> </ul> <p>Linear layers in neural networks naturally form 2D matrices. With vector-based optimizers like Adam, the momentum matrix often becomes nearly low-rank, meaning only a small number of dominant directions truly drive the updates. Many other directions contribute very little, leading to inefficient optimization.</p> <h3 id="the-muon-solution-orthogonalization">The Muon Solution: Orthogonalization</h3> <p>The Muon optimizer tackles this issue by orthogonalizing the momentum matrix. By doing so, Muon amplifies the effect of rare directions that typically receive small or infrequent updates. Even though these directions seem minor, they are often essential for effective learning and capturing nuanced patterns in data.</p> <p>We want to find a new matrix \(O\)that is as close as possible to our momentum matrix\(M\), but with orthogonal rows and columns (\(O^T O = I\)). Any linear transformation can be broken down using Singular Value Decomposition (SVD): \(M = U S V^T\). By setting all singular values in the diagonal matrix \(S\)to one, we obtain our desired orthogonal matrix:\(O = U I V^T\).</p> <h4 id="the-newton-schultz-iteration">The Newton-Schultz Iteration</h4> <p>Performing SVD is computationally intensive and cannot be run for every update iteration. Luckily, we can use an odd polynomial matrix function, such as \(f(X) = a X + b X X^T X\), which mathematically acts on the singular values in the same way as applying the function to each singular value individually without explicitly computing the SVD.</p> <p>Consider the polynomial \(\rho(s) = 1.5s - 0.5s^3\). Our goal is to map any input value between 0 and 1 closer to 1. By applying this function repeatedly across multiple iterations, the values rapidly converge.</p> <p>Interact with the chart below to see how applying this function iteratively pushes all singular values toward 1:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">echarts
 </span><span class="sb">{
   "title": { "text": "Newton-Schultz Iterations: ρ(s) = 1.5s - 0.5s³", "left": "center" },
   "tooltip": { "trigger": "axis" },
@@ -129,4 +46,4 @@ Putting it all together, here is the formal update step for the Muon optimizer:
     classDef highlight fill:#ffce56,stroke:#333,stroke-width:2px;
     class G highlight;</span>
 <span class="p">```</span>
-</code></pre></div></div> <p>With MuonClip applied, maximum attention logits are effectively capped and stabilized, helping the optimizer maintain steady and reliable training. By moving beyond vector-based optimization and managing attention logits carefully, we achieve a highly efficient path forward for modern AI architectures.</p> <hr/> <p><strong>References:</strong> This post was heavily inspired by the phenomenal breakdown in the video: <a href="https://www.youtube.com/watch?v=bO5nvE289ec&amp;t=1s">This Simple Optimizer Is Revolutionizing How We Train AI [Muon]</a> by Jia-Bin Huang. Check out the full video below for an exceptional visual walkthrough!</p>]]></content><author><name></name></author><summary type="html"><![CDATA[`````markdown layout: post title: “A New Era in Neural Network Optimization: From Adam to Muon” date: 2026-03-30 description: “Exploring the matrix-based Muon optimizer, Newton-Schultz orthogonalization, and MuonClip for attention stability.” tags: optimization machine-learning muon adamw categories: ai-research chart: echarts: true mermaid: enabled: true zoomable: true pseudocode: true tabs: true —]]></summary></entry></feed>
+</code></pre></div></div> <p>With MuonClip applied, maximum attention logits are effectively capped and stabilized, helping the optimizer maintain steady and reliable training. By moving beyond vector-based optimization and managing attention logits carefully, we achieve a highly efficient path forward for modern AI architectures.</p> <hr/> <p><strong>References:</strong> This post was heavily inspired by the phenomenal breakdown in the video: <a href="https://www.youtube.com/watch?v=bO5nvE289ec&amp;t=1s">This Simple Optimizer Is Revolutionizing How We Train AI [Muon]</a> by Jia-Bin Huang. Check out the full video below for an exceptional visual walkthrough!</p>]]></content><author><name></name></author><category term="ai-research"/><category term="optimization"/><category term="machine-learning"/><category term="muon"/><category term="adamw"/><summary type="html"><![CDATA[Exploring the matrix-based Muon optimizer, Newton-Schultz orthogonalization, and MuonClip for attention stability.]]></summary></entry></feed>

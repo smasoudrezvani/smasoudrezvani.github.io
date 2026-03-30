@@ -37,11 +37,11 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-muon-optimizer",
+        },{id: "post-a-new-era-in-neural-network-optimization-from-adam-to-muon",
         
-          title: "Muon optimizer",
+          title: "A New Era in Neural Network Optimization: From Adam to Muon",
         
-        description: "",
+        description: "Exploring the matrix-based Muon optimizer, Newton-Schultz orthogonalization, and MuonClip for attention stability.",
         section: "Posts",
         handler: () => {
           
