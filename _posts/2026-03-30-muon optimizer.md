@@ -61,7 +61,6 @@ Consider the polynomial $$\rho(s) = 1.5s - 0.5s^3$$. Our goal is to map any inpu
 
 Interact with the chart below to see how applying this function iteratively pushes all singular values toward 1:
 
-````markdown
 ```echarts
 {
   "title": { "text": "Newton-Schultz Iterations: ρ(s) = 1.5s - 0.5s³", "left": "center" },
@@ -76,9 +75,7 @@ Interact with the chart below to see how applying this function iteratively push
     { "name": "Iter 3", "type": "line", "smooth": true, "data": [0, 0.328, 0.606, 0.804, 0.920, 0.974, 0.994, 0.999, 1.0, 1.0, 1.0] }
   ]
 }
-`````
-
-`````
+```
 
 By repeating this Newton-Schultz orthogonalization process five times, we obtain our matrix $$O$$ using only matrix multiplications, making it highly efficient for GPUs.
 
@@ -86,7 +83,6 @@ By repeating this Newton-Schultz orthogonalization process five times, we obtain
 
 Putting it all together, here is the formal update step for the Muon optimizer:
 
-````markdown
 ```pseudocode
 \begin{algorithm}
 \caption{Muon Optimizer Update}
@@ -101,7 +97,6 @@ Putting it all together, here is the formal update step for the Muon optimizer:
 \end{algorithmic}
 \end{algorithm}
 ```
-`````
 
 ### Stabilizing Attention: QK-Clipping and MuonClip
 
@@ -117,7 +112,7 @@ Things become significantly trickier with Multi-Head Latent Attention (MLA), whe
 
 If we applied standard per-head QK-clipping, the shared $$W^{KR}$$ matrix would be rescaled multiple times inappropriately. To handle this, the **MuonClip** technique rescales only the head-specific rotary queries by their respective $$\gamma_h$$, while leaving the shared rotary key matrix completely unchanged.
 
-````markdown
+
 ```mermaid
 graph TD
     A[Check Max Attention Logit: S_max^h > tau?] -->|Yes| B[Compute gamma_h = tau / S_max^h]
@@ -130,7 +125,7 @@ graph TD
     classDef highlight fill:#ffce56,stroke:#333,stroke-width:2px;
     class G highlight;
 ```
-````
+
 
 With MuonClip applied, maximum attention logits are effectively capped and stabilized, helping the optimizer maintain steady and reliable training. By moving beyond vector-based optimization and managing attention logits carefully, we achieve a highly efficient path forward for modern AI architectures.
 
