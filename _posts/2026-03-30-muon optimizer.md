@@ -1,4 +1,3 @@
-`````markdown
 ---
 layout: post
 title: "A New Era in Neural Network Optimization: From Adam to Muon"
