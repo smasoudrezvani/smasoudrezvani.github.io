@@ -14,11 +14,11 @@ The project features a full-stack implementation:
 * **Frontend:** An interactive interface allowing users to explore feature importance visuals dynamically.
 * **Deployment:** The entire system is fully containerized using Docker, ensuring consistent environments and scalable deployment.
 
-<div class="row justify-content-sm-center">
+<!-- <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.liquid path="assets/img/dashboard_ui.jpg" title="Dashboard Interface" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
     The primary dashboard interface, rendering real-time SHAP dependency plots and summary visualizations.
-</div>
+</div> -->
