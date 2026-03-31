@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "A New Era in Neural Network Optimization: From Adam to Muon"
+title: "From Adam to Muon (NN Optimization) "
 date: 2026-03-30
-description: "Exploring the matrix-based Muon optimizer, Newton-Schultz orthogonalization, and MuonClip for attention stability."
-tags: optimization machine-learning muon adamw
+# description: "Exploring the matrix-based Muon optimizer, Newton-Schultz orthogonalization, and MuonClip for attention stability."
+tags: optimization machine-learning muon adamw LLM
 categories: ai-research
 chart:
   echarts: true
