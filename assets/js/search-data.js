@@ -37,11 +37,22 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-a-new-era-in-neural-network-optimization-from-adam-to-muon",
+        },{id: "post-beyond-correlation-a-guide-to-causal-inference-and-impact-evaluation",
         
-          title: "A New Era in Neural Network Optimization: From Adam to Muon",
+          title: "Beyond Correlation: A Guide to Causal Inference and Impact Evaluation",
         
-        description: "Exploring the matrix-based Muon optimizer, Newton-Schultz orthogonalization, and MuonClip for attention stability.",
+        description: "Navigating the Potential Outcomes Framework to extract true causal signals from observational data.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Causal-Inference-and-Impact-Evaluation/";
+          
+        },
+      },{id: "post-from-adam-to-muon-nn-optimization",
+        
+          title: "From Adam to Muon (NN Optimization)",
+        
+        description: "",
         section: "Posts",
         handler: () => {
           
