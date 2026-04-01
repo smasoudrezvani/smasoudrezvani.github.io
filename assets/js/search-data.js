@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-beyond-correlation-a-guide-to-causal-inference-and-impact-evaluation",
+        },{id: "post-mapping-the-maze-a-comprehensive-introduction-to-reinforcement-learning",
+        
+          title: "Mapping the Maze: A Comprehensive Introduction to Reinforcement Learning",
+        
+        description: "A high-level map of Reinforcement Learning, from Multi-Armed Bandits to Direct Preference Optimization (DPO).",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/RL-intro/";
+          
+        },
+      },{id: "post-beyond-correlation-a-guide-to-causal-inference-and-impact-evaluation",
         
           title: "Beyond Correlation: A Guide to Causal Inference and Impact Evaluation",
         
