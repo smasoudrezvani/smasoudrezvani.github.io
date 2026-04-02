@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-mapping-the-maze-a-comprehensive-introduction-to-reinforcement-learning",
+        },{id: "post-part-2-the-multi-armed-bandit-mastering-the-art-of-choices",
+        
+          title: "Part 2: The Multi-Armed Bandit – Mastering the Art of Choices",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Armed-Bandit/";
+          
+        },
+      },{id: "post-mapping-the-maze-a-comprehensive-introduction-to-reinforcement-learning",
         
           title: "Mapping the Maze: A Comprehensive Introduction to Reinforcement Learning",
         
