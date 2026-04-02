@@ -104,7 +104,3 @@ Below is a chart visualizing the average performance of these three algorithms o
 Bandit algorithms are fantastic for making single decisions in a stationary setup. But what happens when taking an action changes the world around you? What if pulling a lever doesn't just give you a reward, but transports you to a completely different room with a new set of levers?
 
 In Part 3, we will introduce Markov Decision Processes (MDPs), where we step out of the casino and into environments that evolve based on our choices.
-
-```json?chameleon
-{"component":"LlmGeneratedComponent","props":{"height":"800px","prompt":"Create an interactive 10-Armed Bandit simulation. Initial values: epsilon = 0.1, c = 2.0. Let the user choose between Greedy, Epsilon-Greedy (adjustable epsilon slider 0 to 1), and UCB (adjustable c slider 0 to 5). Include 'Run 1 Step', 'Run 100 Steps', and 'Reset' buttons. Below the controls, display a line chart tracking the Average Reward over time. Below that, display a bar chart comparing the 'True Reward' vs 'Estimated Reward' for each of the 10 arms to visualize the learning process. Initialize 10 arms with hidden true rewards randomly distributed around 0 with a standard deviation of 1.","id":"im_29fa99748d011a71"}}
-```
