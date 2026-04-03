@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "From Adam to Muon (NN Optimization) "
+title: "Optimizers: From Adam to Muon "
 date: 2026-03-30
 # description: "Exploring the matrix-based Muon optimizer, Newton-Schultz orthogonalization, and MuonClip for attention stability."
 tags: optimization machine-learning muon adamw LLM
