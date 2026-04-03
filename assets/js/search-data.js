@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-part-2-the-multi-armed-bandit-mastering-the-art-of-choices",
+        },{id: "post-part-3-stepping-into-the-world-tabular-value-based-methods",
+        
+          title: "Part 3: Stepping into the World – Tabular Value-Based Methods",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Tabular-methods/";
+          
+        },
+      },{id: "post-part-2-the-multi-armed-bandit-mastering-the-art-of-choices",
         
           title: "Part 2: The Multi-Armed Bandit – Mastering the Art of Choices",
         
