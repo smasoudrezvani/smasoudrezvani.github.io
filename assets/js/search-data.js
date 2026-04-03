@@ -59,11 +59,11 @@ ninja.data = [{
             window.location.href = "/blog/2026/Armed-Bandit/";
           
         },
-      },{id: "post-mapping-the-maze-a-comprehensive-introduction-to-reinforcement-learning",
+      },{id: "post-part-1-a-comprehensive-introduction-to-reinforcement-learning-rl",
         
-          title: "Mapping the Maze: A Comprehensive Introduction to Reinforcement Learning",
+          title: "Part 1: A Comprehensive Introduction to Reinforcement Learning (RL)",
         
-        description: "A high-level map of Reinforcement Learning, from Multi-Armed Bandits to Direct Preference Optimization (DPO).",
+        description: "",
         section: "Posts",
         handler: () => {
           
@@ -81,9 +81,9 @@ ninja.data = [{
             window.location.href = "/blog/2026/Causal-Inference-and-Impact-Evaluation/";
           
         },
-      },{id: "post-from-adam-to-muon-nn-optimization",
+      },{id: "post-optimizers-from-adam-to-muon",
         
-          title: "From Adam to Muon (NN Optimization)",
+          title: "Optimizers: From Adam to Muon",
         
         description: "",
         section: "Posts",
