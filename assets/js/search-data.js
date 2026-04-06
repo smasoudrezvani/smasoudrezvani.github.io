@@ -48,6 +48,17 @@ ninja.data = [{
             window.location.href = "/blog/2026/Sarsa-vs.-qlearning/";
           
         },
+      },{id: "post-10-rl-stability-tests-that-detect-collapse-before-rewards-drop",
+        
+          title: "10 RL Stability Tests That Detect Collapse Before Rewards Drop",
+        
+        description: "How to catch reinforcement learning collapse early with the right stability tests, before headline reward metrics tell you everything is fine.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/RL-stability-tests/";
+          
+        },
       },{id: "post-part-3-stepping-into-the-world-tabular-value-based-methods",
         
           title: "Part 3: Stepping into the World – Tabular Value-Based Methods",
