@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "10 RL Stability Tests That Detect Collapse Before Rewards Drop"
-date: 2026-04-07
+date: 2026-04-06
 description: "How to catch reinforcement learning collapse early with the right stability tests, before headline reward metrics tell you everything is fine."
 tags: reinforcement-learning mlops deep-learning ai
 categories: ai-research
