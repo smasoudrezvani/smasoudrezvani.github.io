@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-part-3-stepping-into-the-world-tabular-value-based-methods",
+        },{id: "post-part-4-a-cliffhanger-comparing-sarsa-q-learning-and-expected-sarsa",
+        
+          title: "Part 4: A Cliffhanger - Comparing SARSA, Q-Learning, and Expected SARSA",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Sarsa-vs.-qlearning/";
+          
+        },
+      },{id: "post-part-3-stepping-into-the-world-tabular-value-based-methods",
         
           title: "Part 3: Stepping into the World – Tabular Value-Based Methods",
         
