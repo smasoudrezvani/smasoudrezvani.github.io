@@ -77,8 +77,32 @@ Modern algorithms (like DQN's use of "Target Networks" and "Experience Replay") 
 
 ### See Generalization in Action
 
-The difference between Tabular learning and Function Approximation is highly visual. Play with the widget below to see how updating a single point in a table isolates the knowledge, while updating a function smoothly generalizes to unseen states.
+The difference between Tabular learning and Function Approximation is highly visual. Imagine the agent experiences a highly rewarding event at State 50. 
 
-```json?chameleon
-{"component":"LlmGeneratedComponent","props":{"height":"600px","prompt":"1. Objective: Visualize the difference between Tabular Learning and Function Approximation generalization.\n2. Data State: 1D state space (X: 0 to 100), Value (Y: 0 to 10). Initial values: 0 everywhere.\n3. Strategy: Standard Layout.\n4. Inputs: Toggle button for 'Tabular Mode' vs 'Function Approximation Mode'. 'Reset' button.\n5. Behavior: Display an interactive 2D line chart. If 'Tabular Mode' is active: clicking on the chart increases the Y value of ONLY that specific X-coordinate (like an isolated bin). If 'Function Approximation Mode' is active: clicking on the chart applies a smooth bell-curve (Gaussian) update centered at the click, pulling up the values of nearby X-coordinates as well to demonstrate mathematical generalization. Distinguish the modes visually.","id":"im_5994f6b852fbaf02"}}
+Notice how the **Tabular** update only changes the exact state visited (a single isolated spike). In contrast, the **Function Approximation** update smoothly generalizes the reward to mathematically similar, unseen states nearby!
+
+```echarts
+{
+  "title": { "text": "State Value Update: Tabular vs Function Approximation", "left": "center" },
+  "tooltip": { "trigger": "axis" },
+  "legend": { "data": ["Tabular Update", "Function Approximation Update"], "bottom": 0 },
+  "xAxis": { "type": "category", "name": "State Space", "data": ["10", "20", "30", "40", "50", "60", "70", "80", "90"] },
+  "yAxis": { "type": "value", "name": "Estimated Value" },
+  "series": [
+    { 
+      "name": "Tabular Update", 
+      "type": "bar", 
+      "data": [0, 0, 0, 0, 1.0, 0, 0, 0, 0], 
+      "itemStyle": {"color": "#f44336"} 
+    },
+    { 
+      "name": "Function Approximation Update", 
+      "type": "line", 
+      "smooth": true, 
+      "data": [0.01, 0.05, 0.2, 0.6, 1.0, 0.6, 0.2, 0.05, 0.01], 
+      "lineStyle": {"width": 3, "color": "#2196F3"}, 
+      "areaStyle": {"opacity": 0.2, "color": "#2196F3"} 
+    }
+  ]
+}
 ```
