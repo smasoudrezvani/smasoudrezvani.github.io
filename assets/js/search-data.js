@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-part-4-a-cliffhanger-comparing-sarsa-q-learning-and-expected-sarsa",
+        },{id: "post-part-5-breaking-the-table-function-approximation",
+        
+          title: "Part 5: Breaking the Table – Function Approximation",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Function-approximation/";
+          
+        },
+      },{id: "post-part-4-a-cliffhanger-comparing-sarsa-q-learning-and-expected-sarsa",
         
           title: "Part 4: A Cliffhanger - Comparing SARSA, Q-Learning, and Expected SARSA",
         
