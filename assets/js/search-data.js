@@ -48,6 +48,17 @@ ninja.data = [{
             window.location.href = "/blog/2026/Policy-Gradient/";
           
         },
+      },{id: "post-part-7-the-complete-alignment-pipeline-from-sft-to-advanced-rl",
+        
+          title: "Part 7: The Complete Alignment Pipeline — From SFT to Advanced RL",
+        
+        description: "A complete guide to how PPO, DPO, and GRPO transform language models from pattern copiers into reasoning agents.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/PPO,-GRPO,-and-DPO/";
+          
+        },
       },{id: "post-part-5-breaking-the-table-function-approximation",
         
           title: "Part 5: Breaking the Table – Function Approximation",
