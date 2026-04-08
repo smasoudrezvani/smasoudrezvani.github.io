@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-part-5-breaking-the-table-function-approximation",
+        },{id: "post-part-6-cutting-out-the-middleman-policy-gradient-methods",
+        
+          title: "Part 6: Cutting Out the Middleman – Policy Gradient Methods",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Policy-Gradient/";
+          
+        },
+      },{id: "post-part-5-breaking-the-table-function-approximation",
         
           title: "Part 5: Breaking the Table – Function Approximation",
         
