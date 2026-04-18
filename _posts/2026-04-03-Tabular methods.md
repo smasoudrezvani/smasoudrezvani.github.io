@@ -18,6 +18,13 @@ Real life is a sequence of states. If you play a move in chess, you don't just g
 
 In an MDP, an agent looks at its current State ($$S_t$$), takes an Action ($$A_t$$), receives a Reward ($$R_{t+1}$$), and transitions to a new State ($$S_{t+1}$$).
 
+<style>
+  .mermaid {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+
 ```mermaid
 graph LR
     S[State S_t] -->|Action A_t| E((Environment))
