@@ -42,7 +42,7 @@ To navigate an MDP, the agent needs to figure out the value of being in each sta
 
 Dynamic Programming is less about "learning" through trial and error, and more about "planning."
 
-To use DP, the agent requires a perfect model of the environment. This means the agent has a cheat sheet containing the exact transition probabilities $$p(s', r | s, a)$$—it knows exactly the odds of ending up in state $$S'$$ if it takes action $$A$$ in state $$S$$. 
+To use DP, the agent requires a perfect model of the environment. This means the agent has a cheat sheet containing the exact transition probabilities $p(s', r | s, a)$ — it knows exactly the odds of ending up in state $S'$ if it takes action $A$ in state $S$. 
 
 Because it knows how the world works, the agent never actually has to play the game to learn. It sweeps through its table of states, updating the value of each state based on the calculated values of all possible next states.
 
