@@ -42,7 +42,7 @@ To navigate an MDP, the agent needs to figure out the value of being in each sta
 
 Dynamic Programming is less about "learning" through trial and error, and more about "planning."
 
-To use DP, the agent requires a perfect model of the environment. This means the agent has a cheat sheet containing the exact transition probabilities $$p(s', r \mid s, a)$$— it knows exactly the odds of ending up in state$$S'$$if it takes action$$A$$in state$$S$$. 
+To use DP, the agent requires a perfect model of the environment. This means the agent has a cheat sheet containing the exact transition probabilities $$p(s', r \mid s, a)$$— it knows exactly the odds of ending up in state $$S'$$ if it takes action $$A$$ in state $$S$$.
 
 Because it knows how the world works, the agent never actually has to play the game to learn. It sweeps through its table of states, updating the value of each state based on the calculated values of all possible next states.
 
@@ -99,6 +99,7 @@ To truly master tabular methods, you only need to understand how these three alg
 | **Dynamic Programming (DP)** | Yes | Yes | No |
 | **Monte Carlo (MC)** | No | No | Yes |
 | **Temporal Difference (TD)** | No | Yes | Yes |
+{: .table .table-bordered .table-striped }
 
 TD Learning forms the foundation for almost all advanced RL agents today. In fact, the two most famous tabular algorithms in the world—**Q-Learning** and **SARSA**—are both Temporal Difference methods.
 
@@ -145,6 +146,7 @@ Imagine a 12x4 grid where the agent must travel from the bottom-left to the bott
 | :--- | :--- | :--- |
 | **Q-Learning** | The absolute shortest path, directly along the edge of the cliff. | The $\max_a$ operator assumes it will always make the perfect move next. It ignores its own random exploration mistakes. |
 | **SARSA** | A longer, safer path that swings wide around the cliff. | Its update explicitly factors in the reality that it has a 10% chance of making a random move, realizing that standing next to the cliff is dangerous. |
+{: .table .table-bordered .table-striped }
 
 **Which is better?**
 If you want to deploy the agent with exploration turned entirely off ($$\epsilon = 0$$) after training, Q-Learning learned the mathematically superior path. If the agent must continue to explore or operate in a noisy environment where mistakes happen, SARSA's safer policy is practically superior.
