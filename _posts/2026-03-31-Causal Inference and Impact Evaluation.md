@@ -26,7 +26,7 @@ When treatment adoption is completely voluntary (endogenous), standard OLS regre
 
 **The Intuition:** Imagine offering a random subset of algorithmic traders a 50% discount on a new latency-reducing API. The discount itself doesn't make their trading algorithms better, but it encourages them to buy the API, which might.
 
-
+```html
 <div class="d-flex justify-content-center" markdown="1">
 
 ```mermaid
@@ -40,9 +40,10 @@ graph LR
     classDef default fill:#1a1a1a,stroke:#888,stroke-width:2px,color:#fff;
     classDef unobserved fill:#331111,stroke:#d32f2f,stroke-width:2px,color:#fff;
     class U unobserved;
-````
+```
 
-\</div\>
+</div>
+```
 
 **The Math:** The IV estimator isolates the variance in the treatment ($$D_i$$) driven purely by the instrument ($$Z_i$$). For a binary instrument, this simplifies to the Wald Estimator: 
 
