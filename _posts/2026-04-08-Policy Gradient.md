@@ -34,9 +34,9 @@ If Q-Learning and Deep Q-Networks (DQN) are so powerful, why do we need a new ap
 
 ### 2. The Math: The Policy Gradient Theorem
 
-In this paradigm, our policy is a mathematical function (usually a neural network), denoted as $$\pi(a|s, \boldsymbol{\theta})$$, where $$\boldsymbol{\theta}$$ represents the weights of the network.
+In this paradigm, our policy is a mathematical function (usually a neural network), denoted as $\pi(a \mid s, \boldsymbol{\theta})$, where $\boldsymbol{\theta}$ represents the weights of the network.
 
-Our goal is simple: find the weights $$\boldsymbol{\theta}$$that maximize the expected total reward,$$J(\boldsymbol{\theta})$$. To do this, we use gradient ascent—we calculate the gradient (the slope) of the reward and step uphill.
+Our goal is simple: find the weights $\boldsymbol{\theta}$ that maximize the expected total reward, $J(\boldsymbol{\theta})$. To do this, we use gradient ascent—we calculate the gradient (the slope) of the reward and step uphill.
 
 The breakthrough that makes this possible is the **Policy Gradient Theorem**:
 
