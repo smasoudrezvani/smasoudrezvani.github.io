@@ -139,11 +139,11 @@ Notice the $$\max_a$$ operator. By taking the maximum, Q-Learning artificially s
 
 ### The Canonical Example: Cliff Walking
 
-Imagine a 12x4 grid where the agent must travel from the bottom-left to the bottom-right. The entire bottom edge between start and goal is a cliff. Falling off yields a massive penalty of -100. Every other step costs -1. The agent uses an $$\epsilon$$-greedy policy.
+Imagine a 12x4 grid where the agent must travel from the bottom-left to the bottom-right. The entire bottom edge between start and goal is a cliff. Falling off yields a massive penalty of -100. Every other step costs -1. The agent uses an $\epsilon$-greedy policy.
 
 | Algorithm | What it learns | Why? |
 | :--- | :--- | :--- |
-| **Q-Learning** | The absolute shortest path, directly along the edge of the cliff. | The $$\max_a$$ operator assumes it will always make the perfect move next. It ignores its own random exploration mistakes. |
+| **Q-Learning** | The absolute shortest path, directly along the edge of the cliff. | The $\max_a$ operator assumes it will always make the perfect move next. It ignores its own random exploration mistakes. |
 | **SARSA** | A longer, safer path that swings wide around the cliff. | Its update explicitly factors in the reality that it has a 10% chance of making a random move, realizing that standing next to the cliff is dangerous. |
 
 **Which is better?**
