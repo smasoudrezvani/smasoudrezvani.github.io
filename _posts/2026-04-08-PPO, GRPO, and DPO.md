@@ -28,6 +28,7 @@ Before diving into the algorithms, here is the vocabulary that unifies them all 
 | **Reward ($$R$$)** | A scalar score evaluating the full response. |
 | **Critic / Value Function ($$V(s)$$)** | A separate network estimating expected future reward from state $$s$$. |
 | **Reward Model** | A model trained on human preferences to output scalar rewards. |
+{: .table .table-bordered .table-striped }
 
 ---
 
@@ -114,8 +115,7 @@ $$\text{REINFORCE} \xrightarrow{\text{stability}} \text{PPO} \xrightarrow{\text{
 | **Data Format** | Prompts + RM Scoring | Offline Preference Pairs | Prompts + Group Scoring |
 | **Compute Cost** | High | Low | Medium |
 | **Best Use Case** | Complex multi-objective alignment | Fast, efficient preference tuning | Math/code reasoning where online rollouts matter |
+{: .table .table-bordered .table-striped }
+
 
 Each step in this evolution traded a specific type of flexibility for simplicity and efficiency. The right choice depends entirely on your compute budget and whether your task requires deep, online exploration or straightforward style alignment.
-
-
-```

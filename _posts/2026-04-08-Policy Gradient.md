@@ -43,10 +43,10 @@ The breakthrough that makes this possible is the **Policy Gradient Theorem**:
 $$\nabla J(\boldsymbol{\theta}) \propto \sum_s \mu(s) \sum_a q_\pi(s,a) \nabla \pi(a|s,\boldsymbol{\theta})$$
 
 **What this actually means in plain English:**
-* $$\nabla \pi(a|s,\boldsymbol{\theta})$$: The direction we need to change the weights to make action $$a$$ happen more often.
-* $$q_\pi(s,a)$$: The value (expected reward) of taking that action.
+* $\nabla \pi(a \mid s,\boldsymbol{\theta})$: The direction we need to change the weights to make action $a$ happen more often.
+* $q_\pi(s,a)$: The value (expected reward) of taking that action.
 
-**The Result:** If an action is good (high $$q$$), we take a big mathematical step to make it more probable. If it's bad, we take a step to make it less probable.
+**The Result:** If an action is good (high $q$), we take a big mathematical step to make it more probable. If it's bad, we take a step to make it less probable.
 
 > ##### THE LOG-DERIVATIVE TRICK
 > In practice, algorithms like REINFORCE use a neat calculus trick to rewrite the gradient using logarithms: $$\nabla \ln \pi(A_t|S_t, \boldsymbol{\theta})$$. This converts the complex sum over all possible actions into an expectation we can actually sample from raw experience.
@@ -64,6 +64,13 @@ To fix this, we combine Policy Gradients (the **Actor**) with our old Value-Base
 * **The Critic:** The value network. It watches the Actor and evaluates how good the action was compared to what was expected.
 
 Instead of updating the Actor based on raw rewards, we update it based on the Critic's Advantage estimate: *Was this action better than average for this state?*
+
+<style>
+  .mermaid {
+    display: flex;
+    justify-content: center;
+  }
+</style>
 
 ```mermaid
 graph TD

@@ -172,6 +172,3 @@ That shift in mindset changes everything. It turns RL monitoring from vanity ana
 
 > Reward tells you the story after the damage starts. Stability tests tell you when the structure begins to crack.
 {: .block-warning }
-
-
-```
