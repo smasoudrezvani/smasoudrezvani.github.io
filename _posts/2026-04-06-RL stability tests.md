@@ -134,6 +134,13 @@ print("Mean KL:", kl_divergence(old_policy, new_policy))
 
 Here is a clean way to structure your pipeline:
 
+<style>
+  .mermaid {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+
 ```mermaid
 graph TD
     A[Environment Interaction] --> B[Trajectory Collection]
