@@ -130,4 +130,4 @@ We've zoomed out to see the whole map — from the classic Prisoner's Dilemma to
 
 In the upcoming posts, we will zoom in on each concept. We'll dissect the math line by line, work through canonical examples, and build the intuition needed to apply these ideas.
 
-Stay tuned for Part 2, where we will rigorously define Normal Form Games and build up to the Nash Equilibrium from first principles!
+Stay tuned for Part 2, where we will rigorously define Normal Form Games and build up to the Nash Equilibrium from first principles.
