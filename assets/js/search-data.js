@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-part-6-cutting-out-the-middleman-policy-gradient-methods",
+        },{id: "post-part-1-a-comprehensive-introduction-to-game-theory",
+        
+          title: "Part 1: A Comprehensive Introduction to Game Theory",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Game-theory-intro/";
+          
+        },
+      },{id: "post-part-6-cutting-out-the-middleman-policy-gradient-methods",
         
           title: "Part 6: Cutting Out the Middleman – Policy Gradient Methods",
         
