@@ -9,15 +9,8 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-blog",
-          title: "blog",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/blog/";
-          },
-        },{id: "nav-notes",
-          title: "notes",
+  },{id: "nav-book-paper-notes",
+          title: "Book/Paper Notes",
           description: "Structured reading notes organized by book and topic series.",
           section: "Navigation",
           handler: () => {
