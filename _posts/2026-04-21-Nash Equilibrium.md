@@ -160,4 +160,4 @@ Below is a chart of each player's payoff under both pure strategy profiles in th
 
 We have established the backbone of game theory: the strategic form game and its Nash Equilibrium. But we saw that some games — like Battle of the Sexes — have multiple equilibria, and others have none in pure strategies.
 
-In Part 3, we will introduce **Mixed Strategy Nash Equilibrium**, learn how to compute it, and see why randomization is a fundamental, rational behavior — not a sign of indecision.
+In Part 3, we will introduce **Mixed Strategy Nash Equilibrium**, learn how to compute it, and see why randomization is a fundamental, rational behavior — not a sign of indecision!
