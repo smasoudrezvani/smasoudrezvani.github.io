@@ -48,6 +48,39 @@ ninja.data = [{
             window.location.href = "/blog/2026/Nash-Equilibrium/";
           
         },
+      },{id: "post-part-3-embracing-randomness-mixed-strategy-nash-equilibrium",
+        
+          title: "Part 3: Embracing Randomness – Mixed Strategy Nash Equilibrium",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Mixed-Strategies/";
+          
+        },
+      },{id: "post-part-4-games-through-time-extensive-form-and-backward-induction",
+        
+          title: "Part 4: Games Through Time – Extensive Form and Backward Induction",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Extensive-Games/";
+          
+        },
+      },{id: "post-part-5-playing-in-the-dark-bayesian-games-and-incomplete-information",
+        
+          title: "Part 5: Playing in the Dark – Bayesian Games and Incomplete Information",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Bayesian-Games/";
+          
+        },
       },{id: "post-part-1-a-comprehensive-introduction-to-game-theory",
         
           title: "Part 1: A Comprehensive Introduction to Game Theory",
