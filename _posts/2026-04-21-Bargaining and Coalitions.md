@@ -4,7 +4,8 @@ title: "Part 6: Cooperation and Division – Bargaining Theory and Coalitional G
 date: 2026-04-25
 # description: "Nash Bargaining Solution, Rubinstein alternating offers, the core, and the Shapley Value in cooperative game theory."
 tags: game-theory economics mathematics bargaining shapley-value cooperative-games
-categories: ai-research
+categories: game-theory
+series: game-theory
 chart:
   echarts: true
 ---

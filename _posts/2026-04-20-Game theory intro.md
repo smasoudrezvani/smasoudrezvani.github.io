@@ -4,7 +4,8 @@ title: "Part 1: A Comprehensive Introduction to Game Theory"
 date: 2026-04-20
 # description: "A high-level map of Game Theory, from Nash Equilibrium to Bargaining and Coalitional Games."
 tags: game-theory economics mathematics nash-equilibrium
-categories: ai-research
+categories: game-theory
+series: game-theory
 mermaid:
   enabled: true
   zoomable: true

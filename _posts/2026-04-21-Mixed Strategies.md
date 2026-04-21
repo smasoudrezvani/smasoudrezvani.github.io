@@ -4,7 +4,8 @@ title: "Part 3: Embracing Randomness – Mixed Strategy Nash Equilibrium"
 date: 2026-04-21
 # description: "Why rational players sometimes randomize, how to compute mixed strategy equilibria, and the indifference principle."
 tags: game-theory economics mathematics mixed-strategies nash-equilibrium
-categories: ai-research
+categories: game-theory
+series: game-theory
 chart:
   echarts: true
 ---

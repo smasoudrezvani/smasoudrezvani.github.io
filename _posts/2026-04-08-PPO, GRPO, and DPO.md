@@ -4,7 +4,8 @@ title: "Part 7: The Complete Alignment Pipeline — From SFT to Advanced RL"
 date: 2026-04-08
 description: "A complete guide to how PPO, DPO, and GRPO transform language models from pattern copiers into reasoning agents."
 tags: reinforcement-learning machine-learning ai ppo dpo grpo
-categories: ai-research
+categories: reinforcement-learning
+series: reinforcement-learning
 ---
 
 *If you missed our previous discussion on Policy Gradients and Actor-Critic architectures, start here: [Part 6: Cutting Out the Middleman – Policy Gradient Methods](https://smasoudrezvani.github.io/blog/2026/Policy-Gradient/)*

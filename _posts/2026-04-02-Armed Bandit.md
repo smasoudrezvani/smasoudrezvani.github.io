@@ -4,7 +4,8 @@ title: "Part 2: The Multi-Armed Bandit – Mastering the Art of Choices"
 date: 2026-04-02
 # description: "Exploring the fundamental dilemma of Reinforcement Learning: Exploration vs. Exploitation using the k-Armed Bandit problem."
 tags: reinforcement-learning machine-learning ai multi-armed-bandit
-categories: ai-research
+categories: reinforcement-learning
+series: reinforcement-learning
 chart:
   echarts: true
 ---

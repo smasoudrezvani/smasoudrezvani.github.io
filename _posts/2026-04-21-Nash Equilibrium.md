@@ -4,7 +4,8 @@ title: "Part 2: The Cornerstone – Nash Equilibrium in Normal Form Games"
 date: 2026-04-21
 # description: "A rigorous deep dive into strategic form games, dominant strategies, best responses, and the Nash Equilibrium."
 tags: game-theory economics mathematics nash-equilibrium prisoner-dilemma
-categories: ai-research
+categories: game-theory
+series: game-theory
 chart:
   echarts: true
 ---

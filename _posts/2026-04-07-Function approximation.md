@@ -4,7 +4,8 @@ title: "Part 5: Breaking the Table – Function Approximation"
 date: 2026-04-07
 # description: "Overcoming the Curse of Dimensionality in RL using neural networks, SGD, and avoiding the Deadly Triad."
 tags: reinforcement-learning machine-learning ai deep-rl
-categories: ai-research
+categories: reinforcement-learning
+series: reinforcement-learning
 chart:
   echarts: true
 ---

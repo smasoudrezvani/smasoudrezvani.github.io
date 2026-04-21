@@ -4,7 +4,8 @@ title: "Part 3: Stepping into the World – Tabular Value-Based Methods"
 date: 2026-04-03
 # description: "Solving Markov Decision Processes using Dynamic Programming, Monte Carlo, and Temporal Difference learning."
 tags: reinforcement-learning machine-learning ai mdp sarsa q-learning
-categories: ai-research
+categories: reinforcement-learning
+series: reinforcement-learning
 mermaid:
   enabled: true
   zoomable: true

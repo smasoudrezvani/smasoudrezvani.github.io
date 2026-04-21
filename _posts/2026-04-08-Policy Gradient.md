@@ -4,7 +4,8 @@ title: "Part 6: Cutting Out the Middleman – Policy Gradient Methods"
 date: 2026-04-08
 # description: "Transitioning from value-based methods to learning policies directly, featuring the Policy Gradient Theorem and Actor-Critic architecture."
 tags: reinforcement-learning machine-learning ai policy-gradients actor-critic
-categories: ai-research
+categories: reinforcement-learning
+series: reinforcement-learning
 mermaid:
   enabled: true
   zoomable: true

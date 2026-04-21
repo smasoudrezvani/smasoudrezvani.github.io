@@ -1,0 +1,13 @@
+- id: reinforcement-learning
+  title: "Reinforcement Learning"
+  subtitle: "Sutton & Barto (2018)"
+  description: "A complete walkthrough from the multi-armed bandit problem to modern deep RL and large-language-model alignment techniques (PPO, GRPO, DPO)."
+  icon: "fa-solid fa-robot"
+  url: /notes/reinforcement-learning/
+
+- id: game-theory
+  title: "Game Theory"
+  subtitle: "Osborne (2003)"
+  description: "Strategic interactions explored from Nash Equilibrium and mixed strategies through extensive-form games, Bayesian games, and cooperative bargaining."
+  icon: "fa-solid fa-chess"
+  url: /notes/game-theory/
