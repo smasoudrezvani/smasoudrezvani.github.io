@@ -1,16 +1,16 @@
 ---
 layout: page
 permalink: /notes/
-title: notes
+title: Book/Paper Notes
 description: Structured reading notes organized by book and topic series.
 nav: true
-nav_order: 2
+nav_order: 1
 ---
 
 <div class="post">
 
   <div class="header-bar">
-    <h1>Reading Notes</h1>
+    <h1>Book/Paper Notes</h1>
     <h2>Structured notes organized by book and topic series</h2>
   </div>
 

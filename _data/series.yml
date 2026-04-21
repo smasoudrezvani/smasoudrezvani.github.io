@@ -5,6 +5,13 @@
   icon: "fa-solid fa-robot"
   url: /notes/reinforcement-learning/
 
+- id: ml-papers
+  title: "ML Papers"
+  subtitle: "Standalone deep-dives"
+  description: "In-depth notes on individual machine learning papers and techniques, from modern optimizers to causal inference."
+  icon: "fa-solid fa-file-lines"
+  url: /notes/ml-papers/
+
 - id: game-theory
   title: "Game Theory"
   subtitle: "Osborne (2003)"

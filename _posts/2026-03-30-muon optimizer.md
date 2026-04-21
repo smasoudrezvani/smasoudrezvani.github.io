@@ -4,7 +4,8 @@ title: "Optimizers: From Adam to Muon "
 date: 2026-03-30
 # description: "Exploring the matrix-based Muon optimizer, Newton-Schultz orthogonalization, and MuonClip for attention stability."
 tags: optimization machine-learning muon adamw LLM
-categories: ai-research
+categories: ml-papers
+series: ml-papers
 chart:
   echarts: true
 mermaid:

@@ -4,7 +4,8 @@ title: "Beyond Correlation: A Guide to Causal Inference and Impact Evaluation"
 date: 2026-03-31 12:00:00
 description: "Navigating the Potential Outcomes Framework to extract true causal signals from observational data."
 tags: data-science machine-learning causal-inference impact-evaluation
-categories: ai-research
+categories: ml-papers
+series: ml-papers
 chart:
   echarts: true
 mermaid:
