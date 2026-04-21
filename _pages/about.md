@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: Data Scientist | MSc Student at UvA | AI & MLOps
 
