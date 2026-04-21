@@ -10,15 +10,16 @@ chart:
   echarts: true
 ---
 
-*If you missed the previous chapter, start here: [Part 5: Bayesian Games and Incomplete Information](https://smasoudrezvani.github.io/blog/2026/Bayesian-Games/)*
+_If you missed the previous chapter, start here: [Part 5: Bayesian Games and Incomplete Information](https://smasoudrezvani.github.io/blog/2026/Bayesian-Games/)_
 
 Welcome to the final chapter of our game theory series! In Parts 2–5, we studied **non-cooperative games**: players make decisions independently, and agreements can't be enforced. Today we shift to **cooperative game theory**, where players can form binding agreements, communicate freely, and jointly decide how to split the gains from cooperation.
 
 Two central questions arise: **How much will the whole group cooperate?** and **How should the gains be distributed?**
 
 > ##### REFERENCE NOTE
-> The concepts and mathematics in this post are drawn from Chapters 7 and 8 of *An Introduction to Game Theory* by Martin J. Osborne (Oxford University Press, 2003).
-{: .block-tip }
+>
+> The concepts and mathematics in this post are drawn from Chapters 7 and 8 of _An Introduction to Game Theory_ by Martin J. Osborne (Oxford University Press, 2003).
+> {: .block-tip }
 
 ---
 
@@ -48,8 +49,9 @@ Rather than modeling the negotiation process explicitly, John Nash (1950) propos
 $$f^{NB}(S, d) = \underset{(u_1, u_2) \in S,\; u_i \geq d_i}{\text{argmax}} \; (u_1 - d_1)(u_2 - d_2)$$
 
 > ##### THE CORE CONCEPT
+>
 > The Nash Bargaining Solution maximizes the **product of utility gains** over the disagreement point. Players cooperate to find the point that jointly maximizes the multiplicative "pie" above their outside options.
-{: .block-tip }
+> {: .block-tip }
 
 **Geometric Intuition:** The Nash product $$(u_1 - d_1)(u_2 - d_2) = k$$ is a hyperbola in the $$(u_1, u_2)$$ plane. The Nash solution is the point on the Pareto frontier of $$S$$ that is tangent to the highest such hyperbola.
 
@@ -57,12 +59,13 @@ $$f^{NB}(S, d) = \underset{(u_1, u_2) \in S,\; u_i \geq d_i}{\text{argmax}} \; (
 
 ## 3. The Rubinstein Alternating Offers Game
 
-The Nash axiomatic approach tells us *what* the outcome should be, but not *why* — the process of negotiation is a black box. Ariel Rubinstein (1982) filled this gap with an explicit sequential bargaining model.
+The Nash axiomatic approach tells us _what_ the outcome should be, but not _why_ — the process of negotiation is a black box. Ariel Rubinstein (1982) filled this gap with an explicit sequential bargaining model.
 
 **Setup:** Two players alternately propose how to split a pie of size 1. Player 1 proposes first.
-* If the opponent **accepts**, the game ends and that split is implemented.
-* If the opponent **rejects**, they make a counter-offer in the next period.
-* Each period of delay costs: Player $$i$$'s payoff in period $$t$$ is discounted by $$\delta_i^t \in (0,1)$$.
+
+- If the opponent **accepts**, the game ends and that split is implemented.
+- If the opponent **rejects**, they make a counter-offer in the next period.
+- Each period of delay costs: Player $$i$$'s payoff in period $$t$$ is discounted by $$\delta_i^t \in (0,1)$$.
 
 **The Unique SPE:** By backward induction on the infinite horizon (the game ends in finite time in equilibrium), the unique Subgame Perfect Equilibrium has Player 1 offering and Player 2 **immediately accepting**:
 
@@ -70,13 +73,14 @@ $$u_1^* = \frac{1 - \delta_2}{1 - \delta_1 \delta_2}, \quad u_2^* = \frac{\delta
 
 **Key Implications:**
 
-* **Patience pays:** A more patient player (higher $$\delta_i$$) receives a larger share.
-* **No delay:** Rational players agree immediately — delay is costly and gains nothing.
-* **Equal patience → equal split:** If $$\delta_1 = \delta_2 = \delta$$, as $$\delta \to 1$$, $$u_1^* \to \frac{1}{2}$$ — the 50/50 split.
+- **Patience pays:** A more patient player (higher $$\delta_i$$) receives a larger share.
+- **No delay:** Rational players agree immediately — delay is costly and gains nothing.
+- **Equal patience → equal split:** If $$\delta_1 = \delta_2 = \delta$$, as $$\delta \to 1$$, $$u_1^* \to \frac{1}{2}$$ — the 50/50 split.
 
 > ##### THE CORE CONCEPT
+>
 > The Rubinstein solution **converges to the Nash Bargaining Solution** with equal disagreement payoffs as discount factors approach 1. The axiomatic approach and the strategic approach reach the same destination from opposite directions.
-{: .block-tip }
+> {: .block-tip }
 
 ---
 
@@ -84,8 +88,8 @@ $$u_1^* = \frac{1 - \delta_2}{1 - \delta_1 \delta_2}, \quad u_2^* = \frac{\delta
 
 With more than two players, coalitions can form and split off. A **coalitional game** (in characteristic function form) is defined by:
 
-* A player set $$N = \{1, 2, \ldots, n\}$$.
-* A **characteristic function** $$v : 2^N \rightarrow \mathbb{R}$$, assigning a real value $$v(S)$$ to every coalition $$S \subseteq N$$, with $$v(\emptyset) = 0$$.
+- A player set $$N = \{1, 2, \ldots, n\}$$.
+- A **characteristic function** $$v : 2^N \rightarrow \mathbb{R}$$, assigning a real value $$v(S)$$ to every coalition $$S \subseteq N$$, with $$v(\emptyset) = 0$$.
 
 $$v(S)$$ is the **total payoff** that coalition $$S$$ can guarantee its members by cooperating, regardless of what the other players do.
 
@@ -105,15 +109,16 @@ $$\sum_{i \in S} x_i < v(S)$$
 $$\text{Core}(v) = \left\{ x \in \mathbb{R}^n : \sum_{i \in N} x_i = v(N), \; \sum_{i \in S} x_i \geq v(S) \; \forall S \subseteq N \right\}$$
 
 **Properties:**
-* The core may be **empty** — no allocation is stable against all possible defections.
-* The core may be a **large set** — many allocations are stable.
-* Balancedness conditions (Bondareva–Shapley theorem) characterize when the core is non-empty.
+
+- The core may be **empty** — no allocation is stable against all possible defections.
+- The core may be a **large set** — many allocations are stable.
+- Balancedness conditions (Bondareva–Shapley theorem) characterize when the core is non-empty.
 
 ---
 
 ## 6. The Shapley Value: A Unique Fair Allocation
 
-The core describes *stable* allocations but doesn't uniquely prescribe how to split the pie. Lloyd Shapley (1953) took the axiomatic approach, asking: what is the **uniquely fair** way to distribute the grand coalition's value?
+The core describes _stable_ allocations but doesn't uniquely prescribe how to split the pie. Lloyd Shapley (1953) took the axiomatic approach, asking: what is the **uniquely fair** way to distribute the grand coalition's value?
 
 **The Four Shapley Axioms:**
 
@@ -141,14 +146,15 @@ $$v(\{1,2\}) = 6, \; v(\{1,3\}) = 4, \; v(\{2,3\}) = 2, \; v(\{1,2,3\}) = 9$$
 
 **Computing $$\phi_1$$:** We need the marginal contribution of Player 1 in each of the $$3! = 6$$ orderings:
 
-| Ordering | Coalition before 1 | Marginal contribution |
-| :--- | :---: | :---: |
-| (1, 2, 3) | $$\emptyset$$ | $$v(\{1\}) - v(\emptyset) = 0$$ |
-| (1, 3, 2) | $$\emptyset$$ | $$0$$ |
-| (2, 1, 3) | $$\{2\}$$ | $$v(\{1,2\}) - v(\{2\}) = 6$$ |
-| (3, 1, 2) | $$\{3\}$$ | $$v(\{1,3\}) - v(\{3\}) = 4$$ |
-| (2, 3, 1) | $$\{2,3\}$$ | $$v(\{1,2,3\}) - v(\{2,3\}) = 7$$ |
-| (3, 2, 1) | $$\{2,3\}$$ | $$7$$ |
+| Ordering  | Coalition before 1 |       Marginal contribution       |
+| :-------- | :----------------: | :-------------------------------: |
+| (1, 2, 3) |   $$\emptyset$$    |  $$v(\{1\}) - v(\emptyset) = 0$$  |
+| (1, 3, 2) |   $$\emptyset$$    |               $$0$$               |
+| (2, 1, 3) |     $$\{2\}$$      |   $$v(\{1,2\}) - v(\{2\}) = 6$$   |
+| (3, 1, 2) |     $$\{3\}$$      |   $$v(\{1,3\}) - v(\{3\}) = 4$$   |
+| (2, 3, 1) |    $$\{2,3\}$$     | $$v(\{1,2,3\}) - v(\{2,3\}) = 7$$ |
+| (3, 2, 1) |    $$\{2,3\}$$     |               $$7$$               |
+
 {: .table .table-bordered .table-striped }
 
 $$\phi_1 = \frac{1}{6}(0 + 0 + 6 + 4 + 7 + 7) = \frac{24}{6} = 4$$
@@ -184,14 +190,15 @@ Similarly: $$\phi_2 = \frac{1}{6}(6+6+0+0+2+2) \cdot \frac{1}{6}$$ ... working t
 
 We have now traveled through the full landscape of game theory — from two players choosing simultaneously without a word spoken, all the way to large coalitions distributing joint gains by fairness axioms.
 
-| Post | Topic | Core Concept |
-| :--- | :--- | :--- |
-| Part 1 | Introduction | The strategic interaction framework |
-| Part 2 | Nash Equilibrium | Self-enforcing unilateral stability |
-| Part 3 | Mixed Strategies | Randomization and the indifference principle |
-| Part 4 | Extensive Games | Backward induction and credible threats (SPE) |
-| Part 5 | Bayesian Games | Private types, BNE, and auction theory |
+| Post   | Topic                   | Core Concept                                       |
+| :----- | :---------------------- | :------------------------------------------------- |
+| Part 1 | Introduction            | The strategic interaction framework                |
+| Part 2 | Nash Equilibrium        | Self-enforcing unilateral stability                |
+| Part 3 | Mixed Strategies        | Randomization and the indifference principle       |
+| Part 4 | Extensive Games         | Backward induction and credible threats (SPE)      |
+| Part 5 | Bayesian Games          | Private types, BNE, and auction theory             |
 | Part 6 | Bargaining & Coalitions | Nash solution, Rubinstein, core, and Shapley value |
+
 {: .table .table-bordered .table-striped }
 
 Game theory is not just an abstract mathematical exercise. Its ideas appear in AI (multi-agent reinforcement learning, mechanism design for LLMs, RLHF), economics (auction design, contract theory), political science (voting theory, international relations), and evolutionary biology (evolutionarily stable strategies). The language of rational strategic interaction is universal.

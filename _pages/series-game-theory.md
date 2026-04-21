@@ -17,7 +17,7 @@ nav: false
     <i class="fa-solid fa-arrow-left fa-sm"></i>&nbsp; All Series
   </a>
 
-  {% assign series_posts = site.posts | where: "series", "game-theory" | sort: "date" %}
+{% assign series_posts = site.posts | where: "series", "game-theory" | sort: "date" %}
 
   <ul class="post-list">
     {% for post in series_posts %}

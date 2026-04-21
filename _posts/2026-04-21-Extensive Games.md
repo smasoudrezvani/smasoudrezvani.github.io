@@ -11,13 +11,14 @@ mermaid:
   zoomable: true
 ---
 
-*If you missed the previous chapter, start here: [Part 3: Mixed Strategy Nash Equilibrium](https://smasoudrezvani.github.io/blog/2026/Mixed-Strategies/)*
+_If you missed the previous chapter, start here: [Part 3: Mixed Strategy Nash Equilibrium](https://smasoudrezvani.github.io/blog/2026/Mixed-Strategies/)_
 
 Welcome back! So far, our players have made decisions simultaneously, in isolation. But many of the most interesting strategic situations unfold over time — one player moves, the other observes the move and responds, and so on. Today we model these **sequential interactions** using extensive form games.
 
 > ##### REFERENCE NOTE
-> The concepts and mathematics in this post are drawn from Chapters 5–6 of *An Introduction to Game Theory* by Martin J. Osborne (Oxford University Press, 2003).
-{: .block-tip }
+>
+> The concepts and mathematics in this post are drawn from Chapters 5–6 of _An Introduction to Game Theory_ by Martin J. Osborne (Oxford University Press, 2003).
+> {: .block-tip }
 
 ---
 
@@ -25,11 +26,11 @@ Welcome back! So far, our players have made decisions simultaneously, in isolati
 
 An **extensive form game** (with perfect information) is described by a game tree with the following components:
 
-* **Nodes:** Each node represents a point where some player must make a decision.
-* **Branches:** Each branch at a node represents an available action.
-* **Terminal Nodes:** Leaf nodes where the game ends and payoffs are assigned.
-* **Player Assignment:** Each non-terminal node is assigned to the player who moves there.
-* **Payoffs:** At each terminal node, a vector $$(u_1, \ldots, u_n)$$ of payoffs for all players.
+- **Nodes:** Each node represents a point where some player must make a decision.
+- **Branches:** Each branch at a node represents an available action.
+- **Terminal Nodes:** Leaf nodes where the game ends and payoffs are assigned.
+- **Player Assignment:** Each non-terminal node is assigned to the player who moves there.
+- **Payoffs:** At each terminal node, a vector $$(u_1, \ldots, u_n)$$ of payoffs for all players.
 
 **Perfect information** means every player, when making a decision, knows the complete history of all previous moves. This is the sequential analog of seeing the full state of a chess board.
 
@@ -60,13 +61,14 @@ The diagram above is the **Entry Deterrence Game**: an entrant (Player 1) decide
 
 ## 2. Strategies in Extensive Games
 
-In an extensive form game, a **strategy** for player $$i$$ is a **complete contingency plan** — it specifies an action at *every* decision node assigned to player $$i$$, even nodes that might not be reached given earlier choices.
+In an extensive form game, a **strategy** for player $$i$$ is a **complete contingency plan** — it specifies an action at _every_ decision node assigned to player $$i$$, even nodes that might not be reached given earlier choices.
 
-This is subtler than it sounds. Even if Player 1's first move is "Stay Out," Player 2 must still have a strategy specifying what they would do *if* Player 1 had entered. These "off-path" plans matter for determining credibility.
+This is subtler than it sounds. Even if Player 1's first move is "Stay Out," Player 2 must still have a strategy specifying what they would do _if_ Player 1 had entered. These "off-path" plans matter for determining credibility.
 
 **Strategy Space:** In the Entry Deterrence Game:
-* Player 1's strategies: $$\{Enter, \, Stay\;Out\}$$
-* Player 2's strategies: $$\{Accommodate, \, Fight\}$$ (what to do if entered)
+
+- Player 1's strategies: $$\{Enter, \, Stay\;Out\}$$
+- Player 2's strategies: $$\{Accommodate, \, Fight\}$$ (what to do if entered)
 
 ---
 
@@ -90,8 +92,9 @@ Step 2: Now Player 1 looks ahead: if they Enter, they get 2 (since Player 2 will
 **Backward induction outcome:** (Enter, Accommodate) with payoffs (2, 1).
 
 > ##### THE CORE CONCEPT
+>
 > The backward induction solution is unique in any **finite game of perfect information with no ties**. It captures the idea that rational players anticipate rational future behavior and plan accordingly.
-{: .block-tip }
+> {: .block-tip }
 
 ---
 
@@ -158,21 +161,23 @@ $$\frac{d\pi_1}{dq_1} = \frac{a - 2q_1}{2} = 0 \implies q_1^* = \frac{a}{2}$$
 $$q_1^* = \frac{a}{2}, \quad q_2^* = \frac{a}{4}, \quad P^* = \frac{a}{4}$$
 
 > ##### THE CORE CONCEPT
-> The Leader produces *twice* as much as the Follower and earns higher profits. Moving first is a **strategic advantage** — called **first-mover advantage** — because the Leader commits to a quantity that forces the Follower into a weaker position.
-{: .block-tip }
+>
+> The Leader produces _twice_ as much as the Follower and earns higher profits. Moving first is a **strategic advantage** — called **first-mover advantage** — because the Leader commits to a quantity that forces the Follower into a weaker position.
+> {: .block-tip }
 
 ---
 
 ## Summary
 
-| Concept | Meaning |
-| :--- | :--- |
-| **Extensive Form Game** | Sequential game modeled as a tree |
-| **Strategy** | Complete contingency plan (action at every node) |
-| **Backward Induction** | Solve from terminal nodes backwards |
-| **Subgame** | Subtree starting at a single decision node |
-| **SPE** | NE in every subgame; eliminates non-credible threats |
+| Concept                   | Meaning                                                     |
+| :------------------------ | :---------------------------------------------------------- |
+| **Extensive Form Game**   | Sequential game modeled as a tree                           |
+| **Strategy**              | Complete contingency plan (action at every node)            |
+| **Backward Induction**    | Solve from terminal nodes backwards                         |
+| **Subgame**               | Subtree starting at a single decision node                  |
+| **SPE**                   | NE in every subgame; eliminates non-credible threats        |
 | **First-Mover Advantage** | Commitment to action forces followers into weaker positions |
+
 {: .table .table-bordered .table-striped }
 
 ---

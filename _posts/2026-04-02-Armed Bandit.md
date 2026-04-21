@@ -10,15 +10,16 @@ chart:
   echarts: true
 ---
 
-*If you missed the beginning of our series, start here: [Part 1: Mapping the Maze](https://smasoudrezvani.github.io/blog/2026/RL-intro/)*
+_If you missed the beginning of our series, start here: [Part 1: Mapping the Maze](https://smasoudrezvani.github.io/blog/2026/RL-intro/)_
 
 Welcome back to our journey through the maze of Reinforcement Learning (RL)! In Part 1, we mapped out the big picture. Now, we are rolling up our sleeves and starting at the very beginning.
 
 Before an AI can learn to play chess or navigate a complex environment, it must learn how to make a single choice among multiple options. To understand this, we turn to a classic thought experiment in probability and RL: The $k$-Armed Bandit Problem.
 
 > ##### REFERENCE NOTE
-> The concepts and mathematics in this post are drawn directly from Chapter 2 of *Reinforcement Learning: An Introduction* by Sutton and Barto.
-{: .block-tip }
+>
+> The concepts and mathematics in this post are drawn directly from Chapter 2 of _Reinforcement Learning: An Introduction_ by Sutton and Barto.
+> {: .block-tip }
 
 ### The Setup: A Casino Dilemma
 
@@ -26,8 +27,8 @@ Imagine you are in a casino standing in front of $k$ slot machines (historically
 
 Every time you pull an arm, you face the most fundamental dilemma in all of Reinforcement Learning: **Exploration vs. Exploitation**.
 
-* **Exploitation:** Do you pull the arm that has given you the highest payout so far?
-* **Exploration:** Do you try an arm you haven't pulled much, hoping it has an even higher payout?
+- **Exploitation:** Do you pull the arm that has given you the highest payout so far?
+- **Exploration:** Do you try an arm you haven't pulled much, hoping it has an even higher payout?
 
 If you only exploit, you might get stuck pulling a mediocre machine forever, never realizing the machine next to it is a jackpot. If you only explore, you waste your time pulling bad machines and never cash in on the good ones.
 
@@ -36,8 +37,9 @@ Let's look at how RL agents solve this mathematically.
 ### The Foundation: Action-Value Methods
 
 To make good decisions, our agent needs to estimate the value of each action.
-* We denote the true (but hidden) value of an action $a$ as $q_*(a)$.
-* We denote the agent's estimated value of action $a$ at time step $t$ as $Q_t(a)$.
+
+- We denote the true (but hidden) value of an action $a$ as $q_*(a)$.
+- We denote the agent's estimated value of action $a$ at time step $t$ as $Q_t(a)$.
 
 The easiest way to estimate $Q_t(a)$ is to average the rewards actually received when taking action $a$:
 
@@ -63,17 +65,18 @@ To fix the flaw of the pure greedy method, we force the agent to explore occasio
 
 ### Method 3: Upper Confidence Bound (UCB)
 
-$\epsilon$-greedy explores blindly—when it explores, it picks randomly. Can we be smarter? Yes. 
+$\epsilon$-greedy explores blindly—when it explores, it picks randomly. Can we be smarter? Yes.
 
-Upper Confidence Bound (UCB) explores based on *uncertainty*. It favors actions that might be great, either because their estimated value is high, or because we haven't tried them enough to know for sure.
+Upper Confidence Bound (UCB) explores based on _uncertainty_. It favors actions that might be great, either because their estimated value is high, or because we haven't tried them enough to know for sure.
 
 **The Math:**
 $$A_t \doteq \underset{a}{\text{argmax}} \left[ Q_t(a) + c \sqrt{\frac{\ln t}{N_t(a)}} \right]$$
 
 **Breaking it down:**
-* $Q_t(a)$: The current estimated value (Exploitation).
-* $c$: A parameter you set to control how much you want to explore.
-* $\sqrt{\frac{\ln t}{N_t(a)}}$: The uncertainty bonus (Exploration). $t$ is the total number of steps taken, and $N_t(a)$ is how many times action $a$ has been picked. If an action hasn't been picked much, $N_t(a)$ is small, making this fraction massive. This forces the agent to try it!
+
+- $Q_t(a)$: The current estimated value (Exploitation).
+- $c$: A parameter you set to control how much you want to explore.
+- $\sqrt{\frac{\ln t}{N_t(a)}}$: The uncertainty bonus (Exploration). $t$ is the total number of steps taken, and $N_t(a)$ is how many times action $a$ has been picked. If an action hasn't been picked much, $N_t(a)$ is small, making this fraction massive. This forces the agent to try it!
 
 ---
 

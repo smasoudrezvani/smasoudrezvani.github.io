@@ -28,9 +28,9 @@ latest_posts:
 
 I am a Data Scientist and an MBA graduate, currently pursuing my Master's in Data Science at the University of Amsterdam (UvA). My work focuses on bridging the gap between advanced machine learning research and robust, scalable engineering practices.
 
-My core research interests lie at the intersection of **Deep Learning, NLP, and MLOps**. For my master's thesis, I am investigating the efficiency of optimization algorithms in Large Language Models. Specifically, I am conducting a comparative study between Muon and AdamW optimizers for fine-tuning LLMs with LoRA on text classification tasks. 
+My core research interests lie at the intersection of **Deep Learning, NLP, and MLOps**. For my master's thesis, I am investigating the efficiency of optimization algorithms in Large Language Models. Specifically, I am conducting a comparative study between Muon and AdamW optimizers for fine-tuning LLMs with LoRA on text classification tasks.
 
-Beyond academic research, I prioritize rigorous system design and deployment. I actively build end-to-end ML pipelines, and my recent applied projects include developing a machine learning architecture for algorithmic trading and conducting a large-scale scientometric analysis of over 67,000 papers from the ACL Anthology. 
+Beyond academic research, I prioritize rigorous system design and deployment. I actively build end-to-end ML pipelines, and my recent applied projects include developing a machine learning architecture for algorithmic trading and conducting a large-scale scientometric analysis of over 67,000 papers from the ACL Anthology.
 
 I am currently based in Amsterdam and am actively seeking a PhD position in Computer Science, as well as Data Scientist or ML Engineering internships where I can apply scalable engineering practices to research frontiers.
 

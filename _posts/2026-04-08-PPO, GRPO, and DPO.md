@@ -8,9 +8,9 @@ categories: reinforcement-learning
 series: reinforcement-learning
 ---
 
-*If you missed our previous discussion on Policy Gradients and Actor-Critic architectures, start here: [Part 6: Cutting Out the Middleman – Policy Gradient Methods](https://smasoudrezvani.github.io/blog/2026/Policy-Gradient/)*
+_If you missed our previous discussion on Policy Gradients and Actor-Critic architectures, start here: [Part 6: Cutting Out the Middleman – Policy Gradient Methods](https://smasoudrezvani.github.io/blog/2026/Policy-Gradient/)_
 
-To truly master Proximal Policy Optimization (PPO), Direct Preference Optimization (DPO), and Group Relative Policy Optimization (GRPO), we need to understand exactly where they fit in the lifecycle of a Large Language Model (LLM). 
+To truly master Proximal Policy Optimization (PPO), Direct Preference Optimization (DPO), and Group Relative Policy Optimization (GRPO), we need to understand exactly where they fit in the lifecycle of a Large Language Model (LLM).
 
 Before any reinforcement learning happens, a model goes through **Pretraining** (learning general language from massive unlabeled data) and **Supervised Fine-Tuning (SFT)** (imitating curated human demonstrations to learn how to follow instructions). This SFT model becomes our frozen "Reference Model" ($$\pi_{\text{ref}}$$).
 
@@ -20,38 +20,41 @@ However, SFT is insufficient on its own. It suffers from static behavior (it str
 
 Before diving into the algorithms, here is the vocabulary that unifies them all in the context of LLMs:
 
-| Term | Meaning in LLM Context |
-| :--- | :--- |
-| **State ($$s_t$$)** | The prompt + all tokens generated so far. |
-| **Action ($$a_t$$)** | The next token being generated. |
-| **Policy ($$\pi_\theta$$)** | The LLM itself — a probability distribution over tokens. |
-| **Trajectory ($$\tau$$)** | The full prompt-to-EOS sequence. |
-| **Reward ($$R$$)** | A scalar score evaluating the full response. |
+| Term                                   | Meaning in LLM Context                                                 |
+| :------------------------------------- | :--------------------------------------------------------------------- |
+| **State ($$s_t$$)**                    | The prompt + all tokens generated so far.                              |
+| **Action ($$a_t$$)**                   | The next token being generated.                                        |
+| **Policy ($$\pi_\theta$$)**            | The LLM itself — a probability distribution over tokens.               |
+| **Trajectory ($$\tau$$)**              | The full prompt-to-EOS sequence.                                       |
+| **Reward ($$R$$)**                     | A scalar score evaluating the full response.                           |
 | **Critic / Value Function ($$V(s)$$)** | A separate network estimating expected future reward from state $$s$$. |
-| **Reward Model** | A model trained on human preferences to output scalar rewards. |
+| **Reward Model**                       | A model trained on human preferences to output scalar rewards.         |
+
 {: .table .table-bordered .table-striped }
 
 ---
 
 ## 1. PPO: Proximal Policy Optimization
 
-PPO is the most mature, battle-tested algorithm in the alignment space. It is an online policy gradient method that optimizes token probabilities while using clipping mechanisms to ensure training stability. 
+PPO is the most mature, battle-tested algorithm in the alignment space. It is an online policy gradient method that optimizes token probabilities while using clipping mechanisms to ensure training stability.
 
 If a model writes an excellent response but hallucinates at the very end, standard policy gradients (like REINFORCE) punish every token equally. PPO fixes this massive variance through three key innovations:
 
-**1. Advantage Estimation:** Instead of weighting updates by the full trajectory reward, PPO uses the advantage: $$\hat{A}_t = Q(s_t, a_t) - V(s_t)$$. This answers: *"How much better was this specific token than what I'd expect on average?"* **2. Actor-Critic Architecture:** PPO requires four models loaded simultaneously in memory, making it highly computationally expensive:
-* Actor (the policy $$\pi_\theta$$ being trained)
-* Critic (value network $$V(s)$$)
-* Reward Model $$R(s,a)$$
-* Reference Model $$\pi_{\text{ref}}$$ (frozen SFT model)
+**1. Advantage Estimation:** Instead of weighting updates by the full trajectory reward, PPO uses the advantage: $$\hat{A}_t = Q(s_t, a_t) - V(s_t)$$. This answers: _"How much better was this specific token than what I'd expect on average?"_ **2. Actor-Critic Architecture:** PPO requires four models loaded simultaneously in memory, making it highly computationally expensive:
+
+- Actor (the policy $$\pi_\theta$$ being trained)
+- Critic (value network $$V(s)$$)
+- Reward Model $$R(s,a)$$
+- Reference Model $$\pi_{\text{ref}}$$ (frozen SFT model)
 
 **3. Clipped Surrogate Objective:** This is PPO's defining contribution. It limits how much the policy can change in a single update step to prevent catastrophic collapse. If the probability ratio between the new and old policy is $$r_t(\theta)$$, the objective is:
 
 $$L^{\text{CLIP}}(\theta) = \mathbb{E}\left[\min\left(r_t(\theta)\hat{A}_t,\ \text{clip}(r_t(\theta), 1-\varepsilon, 1+\varepsilon)\hat{A}_t\right)\right]$$
 
 > ##### KL DIVERGENCE: TRUST-REGION VS. DRIFT
+>
 > PPO relies on two different KL penalties. **Trust-Region KL** (a forward KL) stabilizes individual update steps against the immediately previous policy. **Drift KL** (a reverse KL) prevents reward hacking by penalizing the policy if it drifts too far from the natural language of the frozen SFT model ($$\pi_{\text{ref}}$$).
-{: .block-warning }
+> {: .block-warning }
 
 ---
 
@@ -89,16 +92,17 @@ By optimizing this loss directly, the model increases the log-probability of pre
 
 While DPO is highly efficient, PPO's active trial-and-feedback loop is demonstrably better at teaching complex, multi-step reasoning tasks (like math and coding). GRPO offers the ultimate middle ground: the active exploration of PPO, but without the massive memory overhead of the Value Function Critic. This is the algorithm that powered DeepSeek-R1 and V3.
 
-Instead of a Value Function evaluating a single response, GRPO uses a **Group Generator**. 
+Instead of a Value Function evaluating a single response, GRPO uses a **Group Generator**.
 
 Given $$G$$sampled responses for the same prompt with rewards$$\{R_1, \ldots, R_G\}$$, the advantage for response $$i$$ is calculated using a simple z-score normalization across the group:
 
 $$A_i = \frac{R_i - \text{mean}(R_1, \ldots, R_G)}{\text{std}(R_1, \ldots, R_G)}$$
 
-By calculating the advantage using group statistics rather than a dedicated Critic network, GRPO dramatically reduces computational costs. 
+By calculating the advantage using group statistics rather than a dedicated Critic network, GRPO dramatically reduces computational costs.
 
 ### The KL Estimator Subtlety
-GRPO places the Drift KL penalty *inside* the loss function rather than subtracting it directly from the reward. Recent literature (like *A Comedy of Estimators*, Shah et al. 2026) highlights that GRPO uses the $$K3$$estimator in its loss. While this works beautifully in practice, it is technically biased compared to applying a$$K1$$ estimator directly to the reward—a subtle mathematical quirk that impacts how open-source RL libraries implement the algorithm.
+
+GRPO places the Drift KL penalty _inside_ the loss function rather than subtracting it directly from the reward. Recent literature (like _A Comedy of Estimators_, Shah et al. 2026) highlights that GRPO uses the $$K3$$estimator in its loss. While this works beautifully in practice, it is technically biased compared to applying a$$K1$$ estimator directly to the reward—a subtle mathematical quirk that impacts how open-source RL libraries implement the algorithm.
 
 ---
 
@@ -108,15 +112,15 @@ To summarize how we got here:
 
 $$\text{REINFORCE} \xrightarrow{\text{stability}} \text{PPO} \xrightarrow{\text{simplicity}} \text{DPO} \xrightarrow{\text{efficiency}} \text{GRPO}$$
 
-| Dimension | PPO | DPO | GRPO |
-| :--- | :--- | :--- | :--- |
-| **Reward Model** | Required (Explicit) | None (Implicit) | Optional (Can use Rules) |
-| **Critic Network**| Required | None | None |
-| **Models in Memory**| 4 (Actor, Ref, RM, Critic) | 2 (Actor, Ref) | 2–3 |
-| **Data Format** | Prompts + RM Scoring | Offline Preference Pairs | Prompts + Group Scoring |
-| **Compute Cost** | High | Low | Medium |
-| **Best Use Case** | Complex multi-objective alignment | Fast, efficient preference tuning | Math/code reasoning where online rollouts matter |
-{: .table .table-bordered .table-striped }
+| Dimension            | PPO                               | DPO                               | GRPO                                             |
+| :------------------- | :-------------------------------- | :-------------------------------- | :----------------------------------------------- |
+| **Reward Model**     | Required (Explicit)               | None (Implicit)                   | Optional (Can use Rules)                         |
+| **Critic Network**   | Required                          | None                              | None                                             |
+| **Models in Memory** | 4 (Actor, Ref, RM, Critic)        | 2 (Actor, Ref)                    | 2–3                                              |
+| **Data Format**      | Prompts + RM Scoring              | Offline Preference Pairs          | Prompts + Group Scoring                          |
+| **Compute Cost**     | High                              | Low                               | Medium                                           |
+| **Best Use Case**    | Complex multi-objective alignment | Fast, efficient preference tuning | Math/code reasoning where online rollouts matter |
 
+{: .table .table-bordered .table-striped }
 
 Each step in this evolution traded a specific type of flexibility for simplicity and efficiency. The right choice depends entirely on your compute budget and whether your task requires deep, online exploration or straightforward style alignment.

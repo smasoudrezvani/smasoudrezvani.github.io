@@ -18,9 +18,7 @@
       "studyType": "Master of Science",
       "startDate": "2025-09",
       "endDate": "Expected 2026",
-      "courses": [
-        "Thesis: Evaluating the Muon Optimizer vs. AdamW for High-Dimensional LLM Adaptation via LoRA."
-      ]
+      "courses": ["Thesis: Evaluating the Muon Optimizer vs. AdamW for High-Dimensional LLM Adaptation via LoRA."]
     },
     {
       "institution": "University of Tehran",
@@ -28,9 +26,7 @@
       "studyType": "MBA",
       "startDate": "2017-09",
       "endDate": "2019-09",
-      "courses": [
-        "Focus on strategic management and quantitative analysis."
-      ]
+      "courses": ["Focus on strategic management and quantitative analysis."]
     },
     {
       "institution": "Amirkabir University of Technology",
@@ -104,46 +100,19 @@
   "skills": [
     {
       "name": "Machine Learning & AI",
-      "keywords": [
-        "Deep Learning",
-        "GANs",
-        "Vision Language Models (VLMs)",
-        "NLP",
-        "LoRA Fine-Tuning"
-      ]
+      "keywords": ["Deep Learning", "GANs", "Vision Language Models (VLMs)", "NLP", "LoRA Fine-Tuning"]
     },
     {
       "name": "Engineering & MLOps",
-      "keywords": [
-        "Python",
-        "PyTorch",
-        "FastAPI",
-        "Docker",
-        "AWS",
-        "Airflow",
-        "OOP",
-        "System Design",
-        "Go",
-        "Rust",
-        "HTML"
-      ]
+      "keywords": ["Python", "PyTorch", "FastAPI", "Docker", "AWS", "Airflow", "OOP", "System Design", "Go", "Rust", "HTML"]
     },
     {
       "name": "Data & Tools",
-      "keywords": [
-        "Git",
-        "LaTeX",
-        "MetaTrader 5",
-        "GUROBI"
-      ]
+      "keywords": ["Git", "LaTeX", "MetaTrader 5", "GUROBI"]
     },
     {
       "name": "Soft Skills",
-      "keywords": [
-        "Problem Solving",
-        "Clear Communication",
-        "Cross-team coordination"
-      ]
+      "keywords": ["Problem Solving", "Clear Communication", "Cross-team coordination"]
     }
   ],
   "languages": [
@@ -167,12 +136,7 @@
     {
       "name": "interests",
       "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Machine Learning",
-        "Deep Learning",
-        "LLM",
-        "Diffusion Models"
-      ]
+      "keywords": ["Machine Learning", "Deep Learning", "LLM", "Diffusion Models"]
     }
   ]
 }

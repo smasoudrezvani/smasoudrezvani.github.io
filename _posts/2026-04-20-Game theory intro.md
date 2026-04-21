@@ -37,8 +37,9 @@ graph LR
 In this series, we will break down the mechanics of how rational agents interact. Before we dive into the details, this introductory guide will serve as our map — covering all the major concepts, their mathematical engines, and where they connect.
 
 > ##### A NOTE ON OUR SOURCES
-> The foundational concepts, terminology, and theorems discussed in this series are drawn directly from *An Introduction to Game Theory* by Martin J. Osborne (Oxford University Press, 2003). If you want to master the theory with full mathematical rigor, that book is your starting line.
-{: .block-tip }
+>
+> The foundational concepts, terminology, and theorems discussed in this series are drawn directly from _An Introduction to Game Theory_ by Martin J. Osborne (Oxford University Press, 2003). If you want to master the theory with full mathematical rigor, that book is your starting line.
+> {: .block-tip }
 
 ---
 
@@ -46,9 +47,9 @@ In this series, we will break down the mechanics of how rational agents interact
 
 The most fundamental model in game theory is the **strategic (normal) form game**. It captures a situation where players choose their strategies simultaneously, without observing each other's choices. A game in normal form is defined by three components:
 
-* **Players:** A finite set $$N = \{1, 2, \ldots, n\}$$.
-* **Actions (Strategies):** For each player $$i$$, a set of available actions $$A_i$$.
-* **Payoff Functions:** For each player $$i$$, a function $$u_i : A \rightarrow \mathbb{R}$$ that assigns a real-valued reward to every combination of actions $$a = (a_1, \ldots, a_n) \in A$$.
+- **Players:** A finite set $$N = \{1, 2, \ldots, n\}$$.
+- **Actions (Strategies):** For each player $$i$$, a set of available actions $$A_i$$.
+- **Payoff Functions:** For each player $$i$$, a function $$u_i : A \rightarrow \mathbb{R}$$ that assigns a real-valued reward to every combination of actions $$a = (a_1, \ldots, a_n) \in A$$.
 
 The central solution concept is the **Nash Equilibrium**: a strategy profile $$a^* = (a_1^*, \ldots, a_n^*)$$ where no player can improve their payoff by unilaterally deviating.
 
@@ -102,11 +103,11 @@ A canonical example is the **first-price sealed-bid auction**: bidders don't kno
 
 When two parties must agree on how to divide a surplus — a salary negotiation, a peace treaty, a business partnership — we enter the world of **bargaining theory**. Two main approaches exist:
 
-* **Nash Bargaining Solution (Axiomatic):** Rather than modeling the negotiation process explicitly, Nash postulated four axioms any fair solution should satisfy (efficiency, symmetry, scale invariance, independence of irrelevant alternatives) and derived a unique solution.
+- **Nash Bargaining Solution (Axiomatic):** Rather than modeling the negotiation process explicitly, Nash postulated four axioms any fair solution should satisfy (efficiency, symmetry, scale invariance, independence of irrelevant alternatives) and derived a unique solution.
 
   **The Math:** Maximize $$(u_1 - d_1)(u_2 - d_2)$$, where $$d = (d_1, d_2)$$ is the **disagreement point** — what each player gets if talks break down.
 
-* **Rubinstein Alternating Offers:** A dynamic model where players alternate making offers. The unique SPE outcome is immediate agreement, with the split determined by each player's **discount factor** $$\delta_i$$ (their patience).
+- **Rubinstein Alternating Offers:** A dynamic model where players alternate making offers. The unique SPE outcome is immediate agreement, with the split determined by each player's **discount factor** $$\delta_i$$ (their patience).
 
 ---
 
@@ -116,9 +117,9 @@ When players can form groups and coordinate their strategies, we enter **coopera
 
 The key questions are: Which coalitions will form? How should the jointly created value be distributed?
 
-* **The Core:** The set of payoff distributions from which no coalition would want to deviate. A distribution $$x$$ is in the core if $$\sum_{i \in S} x_i \geq v(S)$$ for every coalition $$S$$.
+- **The Core:** The set of payoff distributions from which no coalition would want to deviate. A distribution $$x$$ is in the core if $$\sum_{i \in S} x_i \geq v(S)$$ for every coalition $$S$$.
 
-* **The Shapley Value:** A unique, axiomatically justified payoff to each player based on their average marginal contribution across all possible orderings.
+- **The Shapley Value:** A unique, axiomatically justified payoff to each player based on their average marginal contribution across all possible orderings.
 
   **The Math:**
   $$\phi_i(v) = \sum_{S \subseteq N \setminus \{i\}} \frac{|S|!\,(|N| - |S| - 1)!}{|N|!} \left[ v(S \cup \{i\}) - v(S) \right]$$

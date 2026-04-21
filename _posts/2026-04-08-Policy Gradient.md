@@ -11,7 +11,7 @@ mermaid:
   zoomable: true
 ---
 
-*If you missed our previous discussion on breaking the table with Neural Networks, start here: [Part 5: Breaking the Table – Function Approximation](https://smasoudrezvani.github.io/blog/2026/Function-approximation/)*
+_If you missed our previous discussion on breaking the table with Neural Networks, start here: [Part 5: Breaking the Table – Function Approximation](https://smasoudrezvani.github.io/blog/2026/Function-approximation/)_
 
 Welcome back! In Part 5, we used Neural Networks to approximate the value of states. The agent would look at its value function, figure out which action had the highest expected return, and take it.
 
@@ -25,9 +25,9 @@ This is the domain of **Policy Gradient Methods** (covered in Chapter 13 of Sutt
 
 If Q-Learning and Deep Q-Networks (DQN) are so powerful, why do we need a new approach? Value-based methods hit a wall in three specific scenarios:
 
-* **Continuous Action Spaces:** If you are controlling a robot arm, the joint angles aren't discrete choices like "Left" or "Right." They are continuous (e.g., $$43.5^\circ$$). Finding the max action in a continuous value function requires running an expensive optimization loop at every single millisecond step.
-* **Stochastic Policies:** In games like Rock-Paper-Scissors, the optimal strategy is to play randomly. A pure value-based method will always pick the single action it thinks is best, making it predictable and easy to beat.
-* **Slight Changes, Massive Jumps:** In value-based methods, a tiny change to a weight in your neural network might make action A slightly better than action B, causing the policy to instantly flip 100% of its behavior to A. This makes training highly unstable.
+- **Continuous Action Spaces:** If you are controlling a robot arm, the joint angles aren't discrete choices like "Left" or "Right." They are continuous (e.g., $$43.5^\circ$$). Finding the max action in a continuous value function requires running an expensive optimization loop at every single millisecond step.
+- **Stochastic Policies:** In games like Rock-Paper-Scissors, the optimal strategy is to play randomly. A pure value-based method will always pick the single action it thinks is best, making it predictable and easy to beat.
+- **Slight Changes, Massive Jumps:** In value-based methods, a tiny change to a weight in your neural network might make action A slightly better than action B, causing the policy to instantly flip 100% of its behavior to A. This makes training highly unstable.
 
 **Policy Gradients solve this.** They output a smooth probability distribution over actions (e.g., 70% chance to go Left, 30% chance to go Right). If you tweak the network weights slightly, the probabilities just shift slightly to 71% and 29%.
 
@@ -44,14 +44,16 @@ The breakthrough that makes this possible is the **Policy Gradient Theorem**:
 $$\nabla J(\boldsymbol{\theta}) \propto \sum_s \mu(s) \sum_a q_\pi(s,a) \nabla \pi(a|s,\boldsymbol{\theta})$$
 
 **What this actually means in plain English:**
-* $\nabla \pi(a \mid s,\boldsymbol{\theta})$: The direction we need to change the weights to make action $a$ happen more often.
-* $q_\pi(s,a)$: The value (expected reward) of taking that action.
+
+- $\nabla \pi(a \mid s,\boldsymbol{\theta})$: The direction we need to change the weights to make action $a$ happen more often.
+- $q_\pi(s,a)$: The value (expected reward) of taking that action.
 
 **The Result:** If an action is good (high $q$), we take a big mathematical step to make it more probable. If it's bad, we take a step to make it less probable.
 
 > ##### THE LOG-DERIVATIVE TRICK
+>
 > In practice, algorithms like REINFORCE use a neat calculus trick to rewrite the gradient using logarithms: $$\nabla \ln \pi(A_t|S_t, \boldsymbol{\theta})$$. This converts the complex sum over all possible actions into an expectation we can actually sample from raw experience.
-{: .block-tip }
+> {: .block-tip }
 
 ---
 
@@ -61,10 +63,10 @@ The purest policy gradient method (REINFORCE) suffers from terrible variance. Be
 
 To fix this, we combine Policy Gradients (the **Actor**) with our old Value-Based methods (the **Critic**).
 
-* **The Actor:** The policy network. It decides what to do.
-* **The Critic:** The value network. It watches the Actor and evaluates how good the action was compared to what was expected.
+- **The Actor:** The policy network. It decides what to do.
+- **The Critic:** The value network. It watches the Actor and evaluates how good the action was compared to what was expected.
 
-Instead of updating the Actor based on raw rewards, we update it based on the Critic's Advantage estimate: *Was this action better than average for this state?*
+Instead of updating the Actor based on raw rewards, we update it based on the Critic's Advantage estimate: _Was this action better than average for this state?_
 
 <style>
   .mermaid {
@@ -82,7 +84,7 @@ graph TD
     C_net -->|Calculates TD Error δ_t| Update[Dual Update]
     Update -.->|Updates Weights| A_net
     Update -.->|Updates Weights| C_net
-    
+
     classDef default fill:#1a1a1a,stroke:#888,stroke-width:2px,color:#fff;
     classDef actor fill:#2196F3,stroke:#fff,stroke-width:2px,color:#fff;
     classDef critic fill:#4CAF50,stroke:#fff,stroke-width:2px,color:#fff;
@@ -104,8 +106,11 @@ graph TD
    If $$\delta_t$$ is positive, the action was better than expected (an Advantage). If negative, it was worse.
 
 4. **The Dual Update (Adjusting the Weights)**
-   * **Actor Update:** The Actor adjusts its weights to increase the probability of $$A_t$$ proportionally to the Critic's $$\delta_t$$.
-   * **Critic Update:** The Critic adjusts its own weights to make its value prediction $$V(S_t)$$ closer to the newly observed reality.
+   - **Actor Update:** The Actor adjusts its weights to increase the probability of $$A_t$$ proportionally to the Critic's $$\delta_t$$.
+   - **Critic Update:** The Critic adjusts its own weights to make its value prediction $$V(S_t)$$ closer to the newly observed reality.
 
 Policy Gradients are beautiful because they directly optimize what we actually care about: the behavior. By pairing them with a Critic, we get the stability of value methods with the flexibility of policy learning.
+
+```
+
 ```

@@ -10,13 +10,14 @@ chart:
   echarts: true
 ---
 
-*If you missed the beginning of our series, start here: [Part 1: A Comprehensive Introduction to Game Theory](https://smasoudrezvani.github.io/blog/2026/Game-theory-intro/)*
+_If you missed the beginning of our series, start here: [Part 1: A Comprehensive Introduction to Game Theory](https://smasoudrezvani.github.io/blog/2026/Game-theory-intro/)_
 
 Welcome back! In Part 1, we mapped out the entire landscape of game theory. Now we roll up our sleeves and start at the very foundation: the **strategic (normal) form game** and its central solution concept, the **Nash Equilibrium**.
 
 > ##### REFERENCE NOTE
-> The concepts and mathematics in this post are drawn from Chapters 1–3 of *An Introduction to Game Theory* by Martin J. Osborne (Oxford University Press, 2003).
-{: .block-tip }
+>
+> The concepts and mathematics in this post are drawn from Chapters 1–3 of _An Introduction to Game Theory_ by Martin J. Osborne (Oxford University Press, 2003).
+> {: .block-tip }
 
 ---
 
@@ -24,18 +25,18 @@ Welcome back! In Part 1, we mapped out the entire landscape of game theory. Now 
 
 Before we can solve a game, we need to describe it precisely. A **strategic game** (or normal form game) is a model for situations where:
 
-1. A finite set of **players** each choose a strategy *simultaneously* and *independently*.
+1. A finite set of **players** each choose a strategy _simultaneously_ and _independently_.
 2. Every combination of strategies produces a well-defined **payoff** for each player.
 
 **Formal Definition:**
 
 A strategic game is a triple $$\langle N, \{A_i\}_{i \in N}, \{u_i\}_{i \in N} \rangle$$ consisting of:
 
-* A finite set of players $$N = \{1, 2, \ldots, n\}$$.
-* For each player $$i \in N$$, a nonempty set of **actions** $$A_i$$ (also called pure strategies).
-* For each player $$i \in N$$, a **payoff function** $$u_i : A \rightarrow \mathbb{R}$$, where $$A = A_1 \times A_2 \times \cdots \times A_n$$ is the set of all action profiles.
+- A finite set of players $$N = \{1, 2, \ldots, n\}$$.
+- For each player $$i \in N$$, a nonempty set of **actions** $$A_i$$ (also called pure strategies).
+- For each player $$i \in N$$, a **payoff function** $$u_i : A \rightarrow \mathbb{R}$$, where $$A = A_1 \times A_2 \times \cdots \times A_n$$ is the set of all action profiles.
 
-An **action profile** is a tuple $$a = (a_1, a_2, \ldots, a_n)$$ specifying one action for each player. We write $$a_{-i}$$ for the actions of all players *except* player $$i$$.
+An **action profile** is a tuple $$a = (a_1, a_2, \ldots, a_n)$$ specifying one action for each player. We write $$a_{-i}$$ for the actions of all players _except_ player $$i$$.
 
 ---
 
@@ -47,10 +48,11 @@ For two-player games with finite action sets, the most compact representation is
 
 Two suspects are interrogated separately. Each can either **Cooperate (C)** (stay silent) or **Defect (D)** (betray the other). The payoffs are (years in prison, negated so higher is better):
 
-|  | **C** | **D** |
-| :--- | :---: | :---: |
+|       | **C**  | **D**  |
+| :---- | :----: | :----: |
 | **C** | (3, 3) | (0, 5) |
 | **D** | (5, 0) | (1, 1) |
+
 {: .table .table-bordered .table-striped }
 
 Here, $$(3,3)$$ means both get 3 years of freedom, $$(0, 5)$$ means Player 1 gets 0 and Player 2 gets 5. The tragedy: both players choose D, landing at $$(1,1)$$, even though both prefer $$(3,3)$$.
@@ -67,8 +69,9 @@ $$u_i(a_i, a_{-i}) > u_i(a_i', a_{-i}) \quad \forall a_{-i} \in A_{-i}$$
 A rational player will **never** play a strictly dominated action. In the Prisoner's Dilemma, D strictly dominates C for both players: regardless of what the opponent does, defecting always yields a strictly higher payoff.
 
 > ##### THE CORE CONCEPT
+>
 > When every player has a **dominant strategy**, the outcome is uniquely determined. The result is called a **dominant strategy equilibrium** — and it is a Nash Equilibrium.
-{: .block-tip }
+> {: .block-tip }
 
 **Iterated Elimination of Strictly Dominated Strategies (IESDS):** Even when dominant strategies don't exist for everyone, we can iteratively remove dominated actions. If the process leads to a unique outcome, that outcome is the unique Nash Equilibrium.
 
@@ -81,7 +84,7 @@ For most games, no player has a dominant strategy. We need a more general soluti
 **Definition (Best Response):** Player $$i$$'s **best response** to the strategy profile $$a_{-i}$$ of the others is:
 $$B_i(a_{-i}) = \underset{a_i \in A_i}{\text{argmax}} \; u_i(a_i, a_{-i})$$
 
-The best response is the optimal action *given what everyone else does*. A Nash Equilibrium is a profile where every player is simultaneously playing their best response.
+The best response is the optimal action _given what everyone else does_. A Nash Equilibrium is a profile where every player is simultaneously playing their best response.
 
 **Definition (Nash Equilibrium):** A strategy profile $$a^* = (a_1^*, \ldots, a_n^*)$$ is a **Nash Equilibrium** if, for every player $$i \in N$$:
 
@@ -90,8 +93,9 @@ $$u_i(a_i^*, a_{-i}^*) \geq u_i(a_i, a_{-i}^*) \quad \forall a_i \in A_i$$
 Equivalently: $$a_i^* \in B_i(a_{-i}^*)$$ for all $$i$$.
 
 > ##### THE CORE CONCEPT
-> In a Nash Equilibrium, no player has a **unilateral incentive to deviate**. It is a *self-enforcing* agreement: if all players expect equilibrium play, then playing the equilibrium action is individually rational.
-{: .block-tip }
+>
+> In a Nash Equilibrium, no player has a **unilateral incentive to deviate**. It is a _self-enforcing_ agreement: if all players expect equilibrium play, then playing the equilibrium action is individually rational.
+> {: .block-tip }
 
 ---
 
@@ -101,26 +105,29 @@ Equivalently: $$a_i^* \in B_i(a_{-i}^*)$$ for all $$i$$.
 
 A couple wants to spend an evening together. Player 1 prefers **Opera (O)**, Player 2 prefers **Football (F)**, but both prefer being together over being apart.
 
-|  | **O** | **F** |
-| :--- | :---: | :---: |
+|       | **O**  | **F**  |
+| :---- | :----: | :----: |
 | **O** | (2, 1) | (0, 0) |
 | **F** | (0, 0) | (1, 2) |
+
 {: .table .table-bordered .table-striped }
 
 Checking best responses:
-* If Player 2 plays O: Player 1 prefers O (payoff 2 > 0). ✓
-* If Player 2 plays F: Player 1 prefers F (payoff 1 > 0). ✓
+
+- If Player 2 plays O: Player 1 prefers O (payoff 2 > 0). ✓
+- If Player 2 plays F: Player 1 prefers F (payoff 1 > 0). ✓
 
 By symmetry, both **(O, O)** and **(F, F)** are Nash Equilibria in pure strategies. There is also a third, mixed strategy equilibrium (covered in Part 3).
 
 ### The Stag Hunt
 
-Two hunters can cooperate to hunt a **Stag (S)** (large reward if *both* cooperate) or individually hunt a **Hare (H)** (small but certain reward).
+Two hunters can cooperate to hunt a **Stag (S)** (large reward if _both_ cooperate) or individually hunt a **Hare (H)** (small but certain reward).
 
-|  | **S** | **H** |
-| :--- | :---: | :---: |
+|       | **S**  | **H**  |
+| :---- | :----: | :----: |
 | **S** | (4, 4) | (0, 3) |
 | **H** | (3, 0) | (3, 3) |
+
 {: .table .table-bordered .table-striped }
 
 Both **(S, S)** and **(H, H)** are Nash Equilibria. The **(S, S)** equilibrium is **Pareto superior** (both players prefer it), but **(H, H)** is **risk dominant** — it is safe regardless of what the other player does. The Stag Hunt models a deep tension between **social optimality** and **individual risk aversion**.

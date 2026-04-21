@@ -10,13 +10,14 @@ chart:
   echarts: true
 ---
 
-*If you missed the previous chapter, start here: [Part 2: Nash Equilibrium in Normal Form Games](https://smasoudrezvani.github.io/blog/2026/Nash-Equilibrium/)*
+_If you missed the previous chapter, start here: [Part 2: Nash Equilibrium in Normal Form Games](https://smasoudrezvani.github.io/blog/2026/Nash-Equilibrium/)_
 
-Welcome back! In Part 2, we saw that some games — like the Battle of the Sexes — have multiple Nash Equilibria in pure strategies. Others, like Matching Pennies, have *none* at all. Today we resolve this puzzle by expanding the strategy space to allow **randomization**.
+Welcome back! In Part 2, we saw that some games — like the Battle of the Sexes — have multiple Nash Equilibria in pure strategies. Others, like Matching Pennies, have _none_ at all. Today we resolve this puzzle by expanding the strategy space to allow **randomization**.
 
 > ##### REFERENCE NOTE
-> The concepts and mathematics in this post are drawn from Chapter 4 of *An Introduction to Game Theory* by Martin J. Osborne (Oxford University Press, 2003).
-{: .block-tip }
+>
+> The concepts and mathematics in this post are drawn from Chapter 4 of _An Introduction to Game Theory_ by Martin J. Osborne (Oxford University Press, 2003).
+> {: .block-tip }
 
 ---
 
@@ -24,17 +25,19 @@ Welcome back! In Part 2, we saw that some games — like the Battle of the Sexes
 
 Consider **Matching Pennies**: two players each put a coin on a table. If both show Heads or both show Tails (they **match**), Player 1 wins (+1, -1). If they differ, Player 2 wins (-1, +1).
 
-|  | **H** | **T** |
-| :--- | :---: | :---: |
+|       |  **H**  |  **T**  |
+| :---- | :-----: | :-----: |
 | **H** | (1, −1) | (−1, 1) |
 | **T** | (−1, 1) | (1, −1) |
+
 {: .table .table-bordered .table-striped }
 
 Player 1 wants to match. Player 2 wants to mismatch. Check all four pure profiles:
-* **(H, H):** Player 2 wants to switch to T. Not a NE.
-* **(H, T):** Player 1 wants to switch to T. Not a NE.
-* **(T, H):** Player 1 wants to switch to H. Not a NE.
-* **(T, T):** Player 2 wants to switch to H. Not a NE.
+
+- **(H, H):** Player 2 wants to switch to T. Not a NE.
+- **(H, T):** Player 1 wants to switch to T. Not a NE.
+- **(T, H):** Player 1 wants to switch to H. Not a NE.
+- **(T, T):** Player 2 wants to switch to H. Not a NE.
 
 No pure strategy Nash Equilibrium exists. The game is **zero-sum** — whatever one player gains, the other loses — and it is inherently competitive and unpredictable. The solution is randomization.
 
@@ -80,10 +83,11 @@ Simplifying: $$U_1(p, q) = (2q - 1)(2p - 1)$$
 How do we find a mixed strategy Nash Equilibrium? The key insight is the **indifference condition**.
 
 > ##### THE CORE CONCEPT
+>
 > In any Nash Equilibrium, if player $$i$$ mixes over a set of pure strategies $$S \subseteq A_i$$, then every strategy in $$S$$ must yield the **same expected payoff**. If one action were strictly better, the player would shift all probability onto it — contradicting mixing.
-{: .block-tip }
+> {: .block-tip }
 
-This gives us a powerful algorithm: set up equations that make the *opponent* indifferent among their mixed strategies, then solve for the mixing probabilities.
+This gives us a powerful algorithm: set up equations that make the _opponent_ indifferent among their mixed strategies, then solve for the mixing probabilities.
 
 ### Solving Matching Pennies
 
@@ -108,10 +112,11 @@ The unique Nash Equilibrium is $$(\sigma_1^*, \sigma_2^*) = \left(\frac{1}{2}H +
 
 The Battle of the Sexes also has a mixed strategy Nash Equilibrium alongside its two pure ones. Player 1 prefers Opera (O), Player 2 prefers Football (F).
 
-|  | **O** | **F** |
-| :--- | :---: | :---: |
+|       | **O**  | **F**  |
+| :---- | :----: | :----: |
 | **O** | (2, 1) | (0, 0) |
 | **F** | (0, 0) | (1, 2) |
+
 {: .table .table-bordered .table-striped }
 
 Let $$p = \sigma_1(O)$$ and $$q = \sigma_2(O)$$.
@@ -129,7 +134,7 @@ $$U_1(O, q) = 2q, \quad U_1(F, q) = 1-q$$
 
 Setting equal: $$2q = 1-q \Rightarrow q^* = \frac{1}{3}$$
 
-The mixed NE is $$\left(\frac{2}{3}O + \frac{1}{3}F, \; \frac{1}{3}O + \frac{2}{3}F\right)$$. Crucially, the expected payoffs at this equilibrium are lower for *both* players than at either pure strategy equilibrium — the "coordination failure" has a real cost.
+The mixed NE is $$\left(\frac{2}{3}O + \frac{1}{3}F, \; \frac{1}{3}O + \frac{2}{3}F\right)$$. Crucially, the expected payoffs at this equilibrium are lower for _both_ players than at either pure strategy equilibrium — the "coordination failure" has a real cost.
 
 ---
 
@@ -168,13 +173,14 @@ When Player 2 mixes with $$q=0.5$$, Player 1's payoff is **flat at 0** regardles
 
 ## Summary
 
-| Concept | Key Idea |
-| :--- | :--- |
-| **Mixed Strategy** | Probability distribution over pure actions |
-| **Expected Payoff** | Probability-weighted average of pure-strategy payoffs |
-| **Mixed NE** | Each player best-responds to others' mixed strategies |
+| Concept                    | Key Idea                                                        |
+| :------------------------- | :-------------------------------------------------------------- |
+| **Mixed Strategy**         | Probability distribution over pure actions                      |
+| **Expected Payoff**        | Probability-weighted average of pure-strategy payoffs           |
+| **Mixed NE**               | Each player best-responds to others' mixed strategies           |
 | **Indifference Condition** | Mixing player is indifferent among all actions in their support |
-| **Nash's Theorem** | Every finite game has at least one NE (possibly mixed) |
+| **Nash's Theorem**         | Every finite game has at least one NE (possibly mixed)          |
+
 {: .table .table-bordered .table-striped }
 
 ---
