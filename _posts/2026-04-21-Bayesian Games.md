@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Part 5: Playing in the Dark – Bayesian Games and Incomplete Information"
-date: 2026-04-24
+date: 2026-04-21
 # description: "Modeling games where players have private information using types, beliefs, and Bayesian Nash Equilibrium."
 tags: game-theory economics mathematics bayesian-games incomplete-information auctions
 categories: ai-research

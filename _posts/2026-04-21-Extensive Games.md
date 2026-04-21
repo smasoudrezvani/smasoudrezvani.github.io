@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Part 4: Games Through Time – Extensive Form and Backward Induction"
-date: 2026-04-23
+date: 2026-04-21
 # description: "Sequential games, game trees, backward induction, and Subgame Perfect Equilibrium for credible strategic reasoning."
 tags: game-theory economics mathematics extensive-form backward-induction subgame-perfect
 categories: ai-research
