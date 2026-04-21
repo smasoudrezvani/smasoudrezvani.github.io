@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-part-1-a-comprehensive-introduction-to-game-theory",
+        },{id: "post-part-2-the-cornerstone-nash-equilibrium-in-normal-form-games",
+        
+          title: "Part 2: The Cornerstone – Nash Equilibrium in Normal Form Games",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Nash-Equilibrium/";
+          
+        },
+      },{id: "post-part-1-a-comprehensive-introduction-to-game-theory",
         
           title: "Part 1: A Comprehensive Introduction to Game Theory",
         
