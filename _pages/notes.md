@@ -5,13 +5,16 @@ title: Book/Paper Notes
 description: Structured reading notes organized by book and topic series.
 nav: true
 nav_order: 1
+_styles: >-
+  .post-header { display: none !important; }
+  .header-bar { padding-top: 0.5rem; padding-bottom: 1.5rem; }
+  .header-bar h1 { font-size: 2.2rem; }
 ---
 
 <div class="post">
 
   <div class="header-bar">
     <h1>Book/Paper Notes</h1>
-    <h2>Structured notes organized by book and topic series</h2>
   </div>
 
   <ul class="post-list mt-4">
