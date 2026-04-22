@@ -26,7 +26,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a Data Scientist and an MBA graduate, currently pursuing my Master's in Data Science at the University of Amsterdam (UvA). My work focuses on bridging the gap between advanced machine learning research and robust, scalable engineering practices.
+I am **Masoud Rezvani** (Masoud Rezvaninejad), a Data Scientist and MBA graduate, currently pursuing my Master's in Data Science at the University of Amsterdam (UvA). My work focuses on bridging the gap between advanced machine learning research and robust, scalable engineering practices.
 
 My core research interests lie at the intersection of **Deep Learning, NLP, and MLOps**. For my master's thesis, I am investigating the efficiency of optimization algorithms in Large Language Models. Specifically, I am conducting a comparative study between Muon and AdamW optimizers for fine-tuning LLMs with LoRA on text classification tasks.
 
