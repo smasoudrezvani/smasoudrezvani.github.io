@@ -158,6 +158,8 @@ The **One Big Table (OBT)** pattern takes denormalisation to the extreme: fold a
 | **Best for**    | Homogeneous, well-understood data       | Heterogeneous or rapidly evolving data              |
 | **Analogy**     | Static typing (compiler checks)         | Dynamic typing (runtime checks)                     |
 
+{: .table .table-bordered .table-striped}
+
 ---
 
 ## 7. Graph Data Models

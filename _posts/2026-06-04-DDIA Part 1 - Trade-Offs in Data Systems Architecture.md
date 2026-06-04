@@ -33,6 +33,8 @@ Modern systems serve two fundamentally different classes of users, each with rad
 | **End users**             | Interact with the live application | High-frequency, low-latency point lookups |
 | **Analysts / scientists** | Understand trends in the business  | Rare, expensive scans over large datasets |
 
+{: .table .table-bordered .table-striped}
+
 Trying to serve both audiences with the same database is one of the most common early-stage performance mistakes.
 
 ---
@@ -84,6 +86,8 @@ A data warehouse works beautifully for questions you already know how to ask. Bu
 | **Schema enforcement** | Schema-on-write (rejected at ingest) | Schema-on-read (interpreted at query time) |
 | **Typical storage**    | Columnar files (Parquet, ORC)        | Raw files on object storage (S3, GCS)      |
 | **Best for**           | Known analytical queries             | Exploratory ML, NLP, feature engineering   |
+
+{: .table .table-bordered .table-striped}
 
 The practical rule: a data warehouse answers questions you already understand; a data lake holds raw material for questions you haven't thought of yet. Both often coexist in the same organisation.
 
@@ -146,6 +150,8 @@ Serverless takes the pay-as-you-go model to its logical extreme. You deploy indi
 | Zero cost at zero traffic                    | **Cold start latency** (~100ms–1s on first invocation) |
 | Scales to millions of requests automatically | **Stateless** — no memory between requests             |
 | No OS patching or server management          | Requires event-driven, asynchronous architecture       |
+
+{: .table .table-bordered .table-striped}
 
 ---
 

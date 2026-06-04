@@ -82,7 +82,14 @@ Supported rich content in posts:
 - **Mermaid diagrams** — fenced ```mermaid blocks (enable in frontmatter)
 - **ECharts** — interactive charts via ```echarts blocks
 - **Block tips** — `{: .block-tip}`, `{: .block-warning}`, `{: .block-danger}`
-- **Tables** — use `.table .table-bordered .table-striped` classes
+- **Tables** — ALWAYS add `{: .table .table-bordered .table-striped}` on the line immediately after the last row of every markdown table (kramdown IAL syntax — without this, borders are invisible on the site):
+  ```markdown
+  | Col A | Col B |
+  | ----- | ----- |
+  | data  | data  |
+
+  {: .table .table-bordered .table-striped}
+  ```
 
 Posts created with the help of NotebookLM should include two block-tip callouts after the intro:
 
