@@ -37,7 +37,73 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-part-2-the-cornerstone-nash-equilibrium-in-normal-form-games",
+        },{id: "post-part-5-encoding-and-evolution",
+        
+          title: "Part 5: Encoding and Evolution",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/DDIA-Part-5-Encoding-and-Evolution/";
+          
+        },
+      },{id: "post-part-4-storage-and-retrieval",
+        
+          title: "Part 4: Storage and Retrieval",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/DDIA-Part-4-Storage-and-Retrieval/";
+          
+        },
+      },{id: "post-part-3-data-models-and-query-languages",
+        
+          title: "Part 3: Data Models and Query Languages",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/DDIA-Part-3-Data-Models-and-Query-Languages/";
+          
+        },
+      },{id: "post-part-2-defining-non-functional-requirements",
+        
+          title: "Part 2: Defining Non-Functional Requirements",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/DDIA-Part-2-Defining-Nonfunctional-Requirements/";
+          
+        },
+      },{id: "post-part-1-trade-offs-in-data-systems-architecture",
+        
+          title: "Part 1: Trade-Offs in Data Systems Architecture",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/DDIA-Part-1-Trade-Offs-in-Data-Systems-Architecture/";
+          
+        },
+      },{id: "post-part-6-cooperation-and-division-bargaining-theory-and-coalitional-games",
+        
+          title: "Part 6: Cooperation and Division – Bargaining Theory and Coalitional Games",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Bargaining-and-Coalitions/";
+          
+        },
+      },{id: "post-part-2-the-cornerstone-nash-equilibrium-in-normal-form-games",
         
           title: "Part 2: The Cornerstone – Nash Equilibrium in Normal Form Games",
         
