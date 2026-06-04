@@ -70,6 +70,11 @@ layout: default
       {{ content }}
     </div>
   </article>
+  <script>
+    document.querySelectorAll('#markdown-content table').forEach(function (t) {
+      t.classList.add('table', 'table-bordered', 'table-striped');
+    });
+  </script>
 
   {% if page.citation %}
     {% include citation.liquid %}

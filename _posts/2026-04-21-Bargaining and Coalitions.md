@@ -155,8 +155,6 @@ $$v(\{1,2\}) = 6, \; v(\{1,3\}) = 4, \; v(\{2,3\}) = 2, \; v(\{1,2,3\}) = 9$$
 | (2, 3, 1) |    $$\{2,3\}$$     | $$v(\{1,2,3\}) - v(\{2,3\}) = 7$$ |
 | (3, 2, 1) |    $$\{2,3\}$$     |               $$7$$               |
 
-{: .table .table-bordered .table-striped }
-
 $$\phi_1 = \frac{1}{6}(0 + 0 + 6 + 4 + 7 + 7) = \frac{24}{6} = 4$$
 
 Similarly: $$\phi_2 = \frac{1}{6}(6+6+0+0+2+2) \cdot \frac{1}{6}$$ ... working through all orderings yields $$\phi_2 = \frac{17}{6} \approx 2.83$$ and $$\phi_3 = \frac{13}{6} \approx 2.17$$. Check: $$4 + \frac{17}{6} + \frac{13}{6} = 4 + 5 = 9 = v(N)$$ ✓
@@ -198,7 +196,5 @@ We have now traveled through the full landscape of game theory — from two play
 | Part 4 | Extensive Games         | Backward induction and credible threats (SPE)      |
 | Part 5 | Bayesian Games          | Private types, BNE, and auction theory             |
 | Part 6 | Bargaining & Coalitions | Nash solution, Rubinstein, core, and Shapley value |
-
-{: .table .table-bordered .table-striped }
 
 Game theory is not just an abstract mathematical exercise. Its ideas appear in AI (multi-agent reinforcement learning, mechanism design for LLMs, RLHF), economics (auction design, contract theory), political science (voting theory, international relations), and evolutionary biology (evolutionarily stable strategies). The language of rational strategic interaction is universal.

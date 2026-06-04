@@ -30,8 +30,6 @@ Consider **Matching Pennies**: two players each put a coin on a table. If both s
 | **H** | (1, −1) | (−1, 1) |
 | **T** | (−1, 1) | (1, −1) |
 
-{: .table .table-bordered .table-striped }
-
 Player 1 wants to match. Player 2 wants to mismatch. Check all four pure profiles:
 
 - **(H, H):** Player 2 wants to switch to T. Not a NE.
@@ -117,8 +115,6 @@ The Battle of the Sexes also has a mixed strategy Nash Equilibrium alongside its
 | **O** | (2, 1) | (0, 0) |
 | **F** | (0, 0) | (1, 2) |
 
-{: .table .table-bordered .table-striped }
-
 Let $$p = \sigma_1(O)$$ and $$q = \sigma_2(O)$$.
 
 **Making Player 2 indifferent over O vs. F** (finding $$p^*$$):
@@ -180,8 +176,6 @@ When Player 2 mixes with $$q=0.5$$, Player 1's payoff is **flat at 0** regardles
 | **Mixed NE**               | Each player best-responds to others' mixed strategies           |
 | **Indifference Condition** | Mixing player is indifferent among all actions in their support |
 | **Nash's Theorem**         | Every finite game has at least one NE (possibly mixed)          |
-
-{: .table .table-bordered .table-striped }
 
 ---
 

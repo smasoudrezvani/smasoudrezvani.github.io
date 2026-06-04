@@ -180,8 +180,6 @@ The Avro library matches fields by **name** (not by tag number) and reconciles d
 | Reader expects a field the writer didn't include | Use the declared default value                            |
 | Writer type differs from reader type             | Apply defined type promotion rules (e.g., `int` → `long`) |
 
-{: .table .table-bordered .table-striped}
-
 This active translation happens without any human assigning tags. You can write a script that reads a relational database schema, generates an Avro schema dynamically, and dumps any table without manual intervention.
 
 ### Schema Delivery

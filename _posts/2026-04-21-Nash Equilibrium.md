@@ -53,8 +53,6 @@ Two suspects are interrogated separately. Each can either **Cooperate (C)** (sta
 | **C** | (3, 3) | (0, 5) |
 | **D** | (5, 0) | (1, 1) |
 
-{: .table .table-bordered .table-striped }
-
 Here, $$(3,3)$$ means both get 3 years of freedom, $$(0, 5)$$ means Player 1 gets 0 and Player 2 gets 5. The tragedy: both players choose D, landing at $$(1,1)$$, even though both prefer $$(3,3)$$.
 
 ---
@@ -110,8 +108,6 @@ A couple wants to spend an evening together. Player 1 prefers **Opera (O)**, Pla
 | **O** | (2, 1) | (0, 0) |
 | **F** | (0, 0) | (1, 2) |
 
-{: .table .table-bordered .table-striped }
-
 Checking best responses:
 
 - If Player 2 plays O: Player 1 prefers O (payoff 2 > 0). ✓
@@ -127,8 +123,6 @@ Two hunters can cooperate to hunt a **Stag (S)** (large reward if _both_ coopera
 | :---- | :----: | :----: |
 | **S** | (4, 4) | (0, 3) |
 | **H** | (3, 0) | (3, 3) |
-
-{: .table .table-bordered .table-striped }
 
 Both **(S, S)** and **(H, H)** are Nash Equilibria. The **(S, S)** equilibrium is **Pareto superior** (both players prefer it), but **(H, H)** is **risk dominant** — it is safe regardless of what the other player does. The Stag Hunt models a deep tension between **social optimality** and **individual risk aversion**.
 

@@ -102,16 +102,12 @@ Consider a game where Player 2 can be one of two types: **Strong (S)** with prob
 | **U** | (1, 2) | (0, 0) |
 | **D** | (0, 0) | (2, 1) |
 
-{: .table .table-bordered .table-striped }
-
 **If Player 2 is type W:**
 
 |       | **L**  | **R**  |
 | :---- | :----: | :----: |
 | **U** | (1, 0) | (0, 1) |
 | **D** | (0, 2) | (2, 0) |
-
-{: .table .table-bordered .table-striped }
 
 Player 2 knows their type and picks accordingly. Player 1 must pick U or D **before** knowing the type. Player 1's expected payoff of choosing U:
 
@@ -176,8 +172,6 @@ This makes the second-price auction **strategy-proof** — a highly desirable pr
 | **Bid Shading**            | First-price equilibrium bids strictly below valuations                   |
 | **Revenue Equivalence**    | Standard auction formats yield equal expected revenue in BNE             |
 | **Second-Price Auction**   | Dominant strategy to bid true valuation (strategy-proof)                 |
-
-{: .table .table-bordered .table-striped }
 
 ---
 

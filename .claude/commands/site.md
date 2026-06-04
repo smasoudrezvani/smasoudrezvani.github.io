@@ -82,21 +82,7 @@ Supported rich content in posts:
 - **Mermaid diagrams** — fenced ```mermaid blocks (enable in frontmatter)
 - **ECharts** — interactive charts via ```echarts blocks
 - **Block tips** — `{: .block-tip}`, `{: .block-warning}`, `{: .block-danger}`
-- **Tables** — ALWAYS add `{: .table .table-bordered .table-striped}` on the line **immediately** after the last row of every markdown table, with **NO blank line** between the table and the IAL (kramdown ignores IAL separated by a blank line, which makes borders invisible):
-  ```markdown
-  | Col A | Col B |
-  | ----- | ----- |
-  | data  | data  |
-
-  {: .table .table-bordered .table-striped}
-  ```
-  > **WRONG** (blank line before IAL — borders will not render):
-  >
-  > ```markdown
-  > | data | data |
-  >
-  > {: .table .table-bordered .table-striped}
-  > ```
+- **Tables** — write standard markdown tables. Bootstrap classes (`.table .table-bordered .table-striped`) are applied automatically by a JavaScript snippet in `_layouts/post.liquid`. **Do NOT add `{: .table ...}` IAL** — Prettier always inserts a blank line before it, which breaks kramdown and makes borders invisible.
 
 Posts created with the help of NotebookLM should include two block-tip callouts after the intro:
 

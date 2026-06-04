@@ -101,8 +101,6 @@ Line up all response times from fastest to slowest:
 | **P99**          | 99% of requests are faster than this          |
 | **P99.9**        | 999 out of 1000 requests are faster than this |
 
-{: .table .table-bordered .table-striped}
-
 Amazon optimises for P99.9 because the slowest 0.1% tend to be customers with the largest order histories — their most valuable, most frequent buyers. If you only optimise the median, you systematically penalise your best customers.
 
 > **Rule of thumb:** Set SLOs (Service Level Objectives) in percentiles, never averages. Typical targets: P99 < 200ms, P99.9 < 1s.

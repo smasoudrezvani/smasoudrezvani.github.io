@@ -104,8 +104,6 @@ To truly master tabular methods, you only need to understand how these three alg
 | **Monte Carlo (MC)**         |        No         |             No             |          Yes          |
 | **Temporal Difference (TD)** |        No         |            Yes             |          Yes          |
 
-{: .table .table-bordered .table-striped }
-
 TD Learning forms the foundation for almost all advanced RL agents today. In fact, the two most famous tabular algorithms in the world—**Q-Learning** and **SARSA**—are both Temporal Difference methods.
 
 ---
@@ -156,8 +154,6 @@ Imagine a 12x4 grid where the agent must travel from the bottom-left to the bott
 | :------------- | :---------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Q-Learning** | The absolute shortest path, directly along the edge of the cliff. | The $\max_a$ operator assumes it will always make the perfect move next. It ignores its own random exploration mistakes.                               |
 | **SARSA**      | A longer, safer path that swings wide around the cliff.           | Its update explicitly factors in the reality that it has a 10% chance of making a random move, realizing that standing next to the cliff is dangerous. |
-
-{: .table .table-bordered .table-striped }
 
 **Which is better?**
 If you want to deploy the agent with exploration turned entirely off ($$\epsilon = 0$$) after training, Q-Learning learned the mathematically superior path. If the agent must continue to explore or operate in a noisy environment where mistakes happen, SARSA's safer policy is practically superior.

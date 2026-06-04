@@ -164,8 +164,6 @@ LSM trees: check MemTable, then SSTable 1, then SSTable 2, … Bloom filters mak
 | **Worst-case read latency** | Higher (compaction I/O spikes)      | Lower (predictable)                 |
 | **Use case sweet spot**     | Write-heavy (logging, IoT, metrics) | Read-heavy (OLTP, general web apps) |
 
-{: .table .table-bordered .table-striped}
-
 ---
 
 ## 7. Columnar Storage for Analytics

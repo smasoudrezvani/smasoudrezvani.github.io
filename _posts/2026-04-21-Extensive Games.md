@@ -178,8 +178,6 @@ $$q_1^* = \frac{a}{2}, \quad q_2^* = \frac{a}{4}, \quad P^* = \frac{a}{4}$$
 | **SPE**                   | NE in every subgame; eliminates non-credible threats        |
 | **First-Mover Advantage** | Commitment to action forces followers into weaker positions |
 
-{: .table .table-bordered .table-striped }
-
 ---
 
 ## What's Next?
