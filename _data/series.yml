@@ -18,3 +18,10 @@
   description: "Strategic interactions explored from Nash Equilibrium and mixed strategies through extensive-form games, Bayesian games, and cooperative bargaining."
   icon: "fa-solid fa-chess"
   url: /notes/game-theory/
+
+- id: ddia
+  title: "Designing Data-Intensive Applications"
+  subtitle: "Kleppmann & Riccomini (2nd ed.)"
+  description: "Chapter-by-chapter notes on the engineering trade-offs behind modern data systems — from storage engines and data models to distributed consistency and stream processing."
+  icon: "fa-solid fa-database"
+  url: /notes/ddia/

@@ -84,6 +84,20 @@ Supported rich content in posts:
 - **Block tips** — `{: .block-tip}`, `{: .block-warning}`, `{: .block-danger}`
 - **Tables** — use `.table .table-bordered .table-striped` classes
 
+Posts created with the help of NotebookLM should include two block-tip callouts after the intro:
+
+```markdown
+> ##### Source
+>
+> Notes drawn from Chapter N of _Book Title_ by Author.
+> {: .block-tip }
+
+> ##### Created With
+>
+> These notes were structured with the help of [NotebookLM](https://notebooklm.google.com), using podcast-style audio overviews generated from the book chapters.
+> {: .block-tip }
+```
+
 ---
 
 ## Series Architecture
@@ -98,11 +112,12 @@ Each series has a dedicated page at `/notes/<series-id>/` that filters posts wit
 
 ### Current Series
 
-| id                       | Title                  | Source                | Page                                      |
-| ------------------------ | ---------------------- | --------------------- | ----------------------------------------- |
-| `reinforcement-learning` | Reinforcement Learning | Sutton & Barto (2018) | `_pages/series-reinforcement-learning.md` |
-| `ml-papers`              | ML Papers              | Standalone deep-dives | `_pages/series-ml-papers.md`              |
-| `game-theory`            | Game Theory            | Osborne (2003)        | `_pages/series-game-theory.md`            |
+| id                       | Title                                 | Source                          | Page                                      |
+| ------------------------ | ------------------------------------- | ------------------------------- | ----------------------------------------- |
+| `reinforcement-learning` | Reinforcement Learning                | Sutton & Barto (2018)           | `_pages/series-reinforcement-learning.md` |
+| `ml-papers`              | ML Papers                             | Standalone deep-dives           | `_pages/series-ml-papers.md`              |
+| `game-theory`            | Game Theory                           | Osborne (2003)                  | `_pages/series-game-theory.md`            |
+| `ddia`                   | Designing Data-Intensive Applications | Kleppmann & Riccomini (2nd ed.) | `_pages/series-ddia.md`                   |
 
 ### Adding a New Series
 
@@ -139,27 +154,50 @@ Each series has a dedicated page at `/notes/<series-id>/` that filters posts wit
 - `2026-03-30-muon optimizer.md`
 - `2026-03-31-Causal Inference and Impact Evaluation.md`
 
+### Designing Data-Intensive Applications series (`series: ddia`) — based on Kleppmann & Riccomini (2nd ed.)
+
+Notes created with the help of NotebookLM from podcast-style audio overviews of the book chapters.
+
+- `2026-06-04-DDIA Part 1 - Trade-Offs in Data Systems Architecture.md`
+- `2026-06-04-DDIA Part 2 - Defining Nonfunctional Requirements.md`
+- `2026-06-04-DDIA Part 3 - Data Models and Query Languages.md`
+- `2026-06-04-DDIA Part 4 - Storage and Retrieval.md`
+- `2026-06-04-DDIA Part 5 - Encoding and Evolution.md`
+
 ---
 
 ## Pre-Commit Checklist
 
-1. Run Prettier: `npx prettier . --write`
+1. **Run Prettier** (mandatory — always, no exceptions): `npx prettier . --write`
 2. Build locally: `docker compose up --build`
 3. Check http://localhost:8080 — navigation, pages, dark mode
 4. Never commit: data files, model weights, `.env`
 
 ---
 
+## Automated Steps When Using This Skill
+
+> **IMPORTANT:** After creating or editing ANY post, page, or data file using this skill,
+> you MUST run `npx prettier . --write` before finishing. This is not optional —
+> the site's CI pipeline enforces Prettier formatting and will reject non-conforming files.
+> Run it unconditionally; it is safe to run on unchanged files (they will be reported as `unchanged`).
+
+---
+
 ## Common Tasks (Quick Reference)
 
 **Publish a new post:**
-Create `_posts/YYYY-MM-DD-Title.md` with correct frontmatter (series + categories fields).
+
+1. Create `_posts/YYYY-MM-DD-Title.md` with correct frontmatter (series + categories fields).
+2. Run `npx prettier . --write`.
 
 **Add a nav page:**
-Add `nav: true` + `nav_order: N` + capitalized `title:` to the page's frontmatter.
+
+1. Add `nav: true` + `nav_order: N` + capitalized `title:` to the page's frontmatter.
+2. Run `npx prettier . --write`.
 
 **Change social links:**
-Edit `_data/socials.yml` — changes take effect after rebuild.
+Edit `_data/socials.yml` — changes take effect after rebuild. Run `npx prettier . --write`.
 
 **Add a new series:**
-Edit `_data/series.yml` + create `_pages/series-<id>.md`.
+Edit `_data/series.yml` + create `_pages/series-<id>.md`. Run `npx prettier . --write`.
