@@ -37,7 +37,40 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-part-5-encoding-and-evolution",
+        },{id: "post-part-8-transactions",
+        
+          title: "Part 8: Transactions",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/DDIA-Part-8-Transactions/";
+          
+        },
+      },{id: "post-part-7-sharding",
+        
+          title: "Part 7: Sharding",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/DDIA-Part-7-Sharding/";
+          
+        },
+      },{id: "post-part-6-replication",
+        
+          title: "Part 6: Replication",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/DDIA-Part-6-Replication/";
+          
+        },
+      },{id: "post-part-5-encoding-and-evolution",
         
           title: "Part 5: Encoding and Evolution",
         
