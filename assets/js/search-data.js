@@ -342,6 +342,16 @@ ninja.data = [{
           description: "Local S3-compatible storage and AWS EC2 deployment",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_s3_minio/";
+            },},{id: "projects-care-gnn-reconstruction",
+          title: 'CARE-GNN Reconstruction',
+          description: "Reproducing NeurIPS 2021 graph-based fraud detection from scratch",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/6_care_gnn/";
+            },},{id: "projects-algorithmic-trading-system",
+          title: 'Algorithmic Trading System',
+          description: "ML research framework for XAUUSD and forex trading strategies",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/7_algo_trading/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
