@@ -1,0 +1,811 @@
+- "no": 1
+  category: NLP
+  title: Neural Probabilistic Language Model
+  authors: Bengio et al.
+  journal: Journal of Machine Learning Research
+  year: 2003
+  link: https://jmlr.org/papers/volume3/tmp/bengio03a.pdf
+  why: Foundation of neural language modelin
+  summary: instead of using n-gram, in order to predict the next word (based on probabilities),
+    they convert each sentence into a semantic vector --> show similarity --> understand
+    language patterns
+  status: done
+- "no": 2
+  category: CV
+  title: Deep Residual Learning for Image Recognition
+  authors: He et al.
+  journal: archive
+  year: 2015
+  link: ""
+  why: Introduced Residual Networks (ResNet) & solved the "vanishing gradient" problem
+  summary: nstead of learning H(x), learn F(x) = H(x) - x, then add x back (diff bt
+    layers) ---> easier
+  status: done
+- "no": 3
+  category: LLM
+  title: Recursive Language Model
+  authors: Alex L. Zhang et al.
+  journal: archive
+  year: 2026
+  link: ""
+  why: New paradigm - wanted to explore
+  summary: For huge prompts, they used Python to store the input in a variable, then
+    wrote code to process it in smaller chunks and recursively called the model on
+    each chunk to solve the query. (A --> call ---> B ---> call and so on)
+  status: done
+- "no": 4
+  category: CV
+  title: "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"
+  authors: Dosovitskiy et al.
+  journal: ICLR
+  year: 2020
+  link: ""
+  why: Transformer architecture could beat standard CNNs at image recognition by splitting
+    images into "patches" (tokens) ---> ViT
+  summary: chop images into patches, treat them like words, and throw a standard Transformer
+    at it. 1) At small compute budgets, ResNets and hybrids slightly edge out ViT.
+    2)As compute increases, ViT overtakes them all
+  status: done
+- "no": 5
+  category: NN
+  title: Batch Normalization
+  authors: Ioffe & Szegedy
+  journal: archive
+  year: 2015
+  link: ""
+  why: Training stability
+  summary: "normalize the train data in mini batch --> cal mean and var of each batch\
+    \ ---> xi hat = (xi - mean) / sqrt(var**2 +  \nϵ) --> yi = \\gamma \\hat{xi} +\
+    \ \\beta"
+  status: done
+- "no": 6
+  category: CV
+  title: Learning Transferable Visual Models From Natural Language Supervision
+  authors: Radford et al.
+  journal: archive
+  year: 2021
+  link: ""
+  why: Introduced CLIP and the backbone for modern zero-shot image classification
+    and multimodal understanding.
+  summary: "ViTs are limited by fixed categories and expensive labels. Solution :
+    Train on 400 million image-text pairs from the internet with a simple contrastive
+    objective – make matching pairs close, non-matching pairs far ---> CLIP : A Zero-shot
+    model that matches supervised ResNet-50 on ImageNet & way more robust"
+  status: done
+- "no": 7
+  category: NN
+  title: Adam Optimizer
+  authors: Kingma & Ba
+  journal: ICLR
+  year: 2014
+  link: https://arxiv.org/abs/1412.6980
+  why: Adaptive learning rates
+  summary: "θ = θ − (momentum 1 /sqrt(momentum 2)) which mom 1 = avg & mom 2 = var
+
+    ​"
+  status: done
+- "no": 8
+  category: CV
+  title: A Simple Framework for Contrastive Learning of Visual Representations
+  authors: Geoffrey Hinton et al.
+  journal: archive
+  year: 2020
+  link: ""
+  why: Simplifies self-supervised contrastive learning, showing how heavy data augmentation
+    combined with a contrastive loss can learn powerful visual representations without
+    any labels.
+  summary: "Different from other models (supervised learning on ImageNet) : data augmentation
+    + non-linear head at the end of network + loss function"
+  status: done
+- "no": 9
+  category: NLP
+  title: Word2Vec
+  authors: Mikolov et al.
+  journal: archive
+  year: 2013
+  link: https://arxiv.org/abs/1301.3781
+  why: Learned embeddings — foundation of all modern NLP
+  summary: vector("King")−vector("Man")+vector("Woman")≈vector("Queen")
+  status: done
+- "no": 10
+  category: CV
+  title: ImageNet-trained CNNs are biased towards texture; increasing shape bias improves
+    accuracy and robustness
+  authors: Robert Geirhos et al.
+  journal: ICLR
+  year: 2019
+  link: ""
+  why: Shows standard CNNs (like ResNet) learn to classify images based on local textures
+    rather than global shapes.
+  summary: ImageNet-trained CNNs are texture machines != humans -->  Train on Stylized-ImageNet
+    where textures are uninformative ( bias towards shapes) ---> more robust, better
+    at detection, and match human behavior
+  status: done
+- "no": 11
+  category: LLM
+  title: Seq2Seq with Attention
+  authors: Bahdanau et al.
+  journal: ICLR
+  year: 2014
+  link: https://arxiv.org/abs/1409.0473
+  why: Where the attention mechanism was born
+  summary: "1) English sentence → Encoder → ONE vector → Decoder → French sentence
+    2) The alignment model :                 score = v * tanh(W * decoder_state +
+    U * encoder_state)"
+  status: done
+- "no": 12
+  category: CV
+  title: "RandAugment: Practical automated data augmentation with a reduced search
+    space"
+  authors: Ekin D. Cubuk et al.
+  journal: archive
+  year: 2019
+  link: https://arxiv.org/abs/1909.13719
+  why: RandAugment is a highly practical, state-of-the-art technique for automating
+    data augmentation strategies without needing to manually tune endless augmentation
+    parameters.
+  summary: "AutoAugment (RL) and friends required expensive separate search on proxy
+    tasks ---> Solution : Reduce the entire augmentation policy to 2 parameters –
+    N (# of transforms) and M (global magnitude). Randomly select transforms, apply
+    with same magnitude."
+  status: done
+- "no": 13
+  category: CV
+  title: ImageNet Large Scale Visual Recognition Challenge
+  authors: Olga Russakovsky et al.
+  journal: archive
+  year: 2015
+  link: ""
+  why: it fundamentally shifted the paradigm of computer vision from focusing on algorithms
+    to focusing on data scale and quality
+  summary: "Data + Compute + Deep Networks
+
+    defeated handcrafted computer vision features."
+  status: done
+- "no": 14
+  category: GAN
+  title: Generative Adversarial Networks (GAN)
+  authors: Goodfellow et al.
+  journal: archive
+  year: 2014
+  link: https://arxiv.org/abs/1406.2661
+  why: Generative modeling before diffusion took over
+  summary: "min​ G max D ​V(D,G)                                                                             D
+    tries to maximize its ability to detect fake samples.
+
+    G tries to minimize D’s ability to detect them.       V(D,G)=Ex∼pdata​​[logD(x)]+Ez∼pz​​[log(1−D(G(z)))]                                                                                   If
+    image is real → D should say 1
+
+    If image is fake → D should say 0
+
+    G wants D to be wrong"
+  status: done
+- "no": 15
+  category: CV
+  title: "AutoAugment: Learning Augmentation Policies from Data"
+  authors: Ekin D. Cubu et al.
+  journal: archive
+  year: 2019
+  link: https://arxiv.org/abs/1805.09501
+  why: Pioneered the shift from manually designed data augmentation to automated,
+    data-driven approaches in computer vision (RL).
+  summary: 'AutoAugment frames augmentation design as a search problem ---> The Search
+    Space: A Policy of Sub-Policies : A policy consists of 5 sub-policies. For each
+    image in a mini-batch, one sub-policy is chosen at random and applied. Each sub-policy
+    has 2 operations (applied sequentially) ---> They use a RNN controller that predicts
+    augmentation policies. The controller has 30 softmax predictions. 1. Train a "child
+    model" (small neural network) on the target dataset using this augmentation policy
+
+
+    2. Evaluate the child model on a validation set to get accuracy
+
+
+    3. Use that accuracy as a reward signal to update the controller via Proximal
+    Policy Optimization (PPO)                Insane part : these policies transfer
+    to other datasets and architectures!'
+  status: done
+- "no": 16
+  category: LLM
+  title: Attention Is All You Need
+  authors: Vaswani et al.
+  journal: archive
+  year: 2017
+  link: https://arxiv.org/abs/1706.03762
+  why: THE paper. Start of modern AI.
+  summary: "Attention(Q,K,V) = softmax(QK^T / √d_k) V                                                   PE(pos,
+    2i) = sin(pos / 10000^(2i/d_model))
+
+    PE(pos, 2i+1) = cos(pos / 10000^(2i/d_model))"
+  status: done
+- "no": 17
+  category: CV
+  title: A Simple Framework for Contrastive Learning of Visual Representations
+  authors: Hinton et al.
+  journal: archive
+  year: 2020
+  link: https://arxiv.org/abs/2002.05709
+  why: Bridged the performance gap between self-supervised learning (SSL) and supervised
+    learning in computer vision + InfoNCE Loss
+  summary: "1.Original image\n      ↓\nTwo augmented versions\n      ↓\n2.image →\
+    \ neural network → vector (representation)\n      ↓\n3.Image\n  ↓\nEncoder (ResNet)\n\
+    \  ↓\nProjection head (MLP)\n  ↓\nRepresentation used for training\n  ↓\nContrastive\
+    \ Loss"
+  status: done
+- "no": 18
+  category: LLM
+  title: BERT
+  authors: Devlin et al.
+  journal: archive
+  year: 2018
+  link: https://arxiv.org/abs/1810.04805
+  why: Bidirectional pretraining revolution
+  summary: "The sun rises in the [MASK].\n  ↓\n  1.Masked LM: predict randomly masked\
+    \ words using FULL context\n\n2.Next Sentence Prediction: predict if two sentences\
+    \ are consecutive"
+  status: done
+- "no": 19
+  category: LLM
+  title: GPT-2
+  authors: Radford et al.
+  journal: "---"
+  year: 2019
+  link: https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf
+  why: Scale works + "too dangerous to release"
+  summary: huge data + huge model → learn many tasks automatically
+  status: done
+- "no": 20
+  category: CV
+  title: "FaceNet: A Unified Embedding for Face Recognition and Clustering"
+  authors: Schroff et al.
+  journal: archive
+  year: 2015
+  link: https://arxiv.org/abs/1503.03832
+  why: Triplet Loss
+  summary: "A triplet contains:
+
+
+    1. Anchor face
+
+
+    2. Positive face (same person)
+
+
+    3. Negative face (different person)
+
+
+    Goal : distance(anchor, positive)  <  distance(anchor, negative)"
+  status: done
+- "no": 21
+  category: LLM
+  title: Language Models are Few-Shot Learners
+  authors: Brown et al.
+  journal: archive
+  year: 2020
+  link: https://arxiv.org/abs/2005.14165
+  why: Few-shot learning and emergent abilities + GPT-3
+  summary: "Big language model
+
+    + examples in prompt
+
+    = new task solved"
+  status: done
+- "no": 22
+  category: ML
+  title: Dimensionality Reduction by Learning an Invariant Mapping
+  authors: LeCun et al.
+  journal: CVPR
+  year: 2005
+  link: http://yann.lecun.com/exdb/publis/pdf/hadsell-chopra-lecun-06.pdf
+  why: The contrastive loss + Siamese Networks
+  summary: "Instead of classifying data directly,
+
+    learn a space where similarity becomes distance."
+  status: done
+- "no": 23
+  category: LLM
+  title: Scaling Laws for Neural Language Models
+  authors: Kaplan et al.
+  journal: archive
+  year: 2020
+  link: https://arxiv.org/abs/2001.08361
+  why: The empirical case for bigger = better
+  summary: "If we keep scaling models and data, performance keeps improving smoothly.\
+    \ \nIf you have fixed compute, you should not:\n\nmake the model extremely huge\n\
+    \nor use extremely huge data\n\nInstead:\n\nYou should balance them."
+  status: done
+- "no": 24
+  category: GEN-AI
+  title: Auto-Encoding Variational Bayes
+  authors: Diederik P Kingma, Max Welling
+  journal: archive
+  year: 2013
+  link: https://arxiv.org/abs/1312.6114
+  why: Variational Autoencoders (VAEs)
+  summary: "A generative model: pθ(z) * pθ(x | z) (prior + decoder)\n  ↓\nProblem\
+    \ is that we don't have true posterior pθ(x | z)\n  ↓\nApproximate the marginal\
+    \ likelihood pθ(x) ---> qϕ(z∣x)\n  ↓\nUse the reparameterization trick to get\
+    \ low-variance gradients\n  ↓\nOptimize the variational lower bound (ELBO) with\
+    \ SGD"
+  status: done
+- "no": 25
+  category: LLM
+  title: Chinchilla (Training Compute-Optimal LLMs)
+  authors: Hoffmann et al.
+  journal: archive
+  year: 2022
+  link: https://arxiv.org/abs/2203.15556
+  why: Balance model size with data — changed how every lab trains
+  summary: Training tokens ≈ 20 × number of parameters
+  status: done
+- "no": 26
+  category: CV
+  title: Deep Unsupervised Learning using Nonequilibrium Thermodynamics
+  authors: Sohl-Dickstein et al.
+  journal: archive
+  year: 2015
+  link: https://arxiv.org/abs/1503.03585
+  why: intro to diffusion Models
+  summary: "Real Image\n↓\nEventually → pure random noise\n↓\nx0 → x1 → x2 → ... →\
+    \ xT\n↓\nxT → xT-1 → xT-2 → ... → x0\n↓\n pθ​(xt−1​∣xt​)\n↓\nGiven a noisy sample,\
+    \ predict the less noisy version."
+  status: done
+- "no": 27
+  category: CV
+  title: Denoising Diffusion Probabilistic Models
+  authors: Jonathan Ho et al.
+  journal: NeurIPS
+  year: 2020
+  link: https://arxiv.org/abs/2006.11239
+  why: connected diffusion models with denoising score matching
+  summary: 'We define a Markov chain:
+
+    Forward Process
+
+    ↓
+
+    q(xt​∣xt−1​) = N(xt​;1−βt​
+
+    ​xt−1​,βt​I)
+
+    ↓
+
+    Add a little Gaussian noise xT​∼N(0,I)
+
+    ↓
+
+    Reverse process (learned) :  we want : pθ​(xt−1​∣xt​) --> ϵθ​(xt​,t)
+
+    ↓
+
+    Loss=E[∣∣ϵ−ϵθ​(xt​,t)∣∣2]
+
+    ↓
+
+    Given a noisy sample, predict the less noisy version."'
+  status: done
+- "no": 28
+  category: LLM
+  title: Switch Transformer (Mixture of Experts)
+  authors: Fedus et al.
+  journal: archive
+  year: 2021
+  link: https://arxiv.org/abs/2101.03961
+  why: Scale without proportional compute cost
+  summary: "In transformer layer, instead of FeedForward(x), we can use:\n↓\nExpert_i(x)\
+    \   (only one selected)\n↓\nchosen by : router(x) → probabilities over experts\n\
+    ↓\nThen : \npick argmax → choose one expert"
+  status: done
+- "no": 29
+  category: CV
+  title: Latent Diffusion (Stable Diffusion)
+  authors: Rombach et al.
+  journal: archive
+  year: 2022
+  link: https://arxiv.org/abs/2112.10752
+  why: How diffusion became practical — behind the images you generate
+  summary: "1.Train an autoencoder to compress images into a small, meaningful latent
+    space — do this once.
+
+    ↓
+
+    2.Train a diffusion model (U-Net with cross-attention) to denoise in that latent
+    space, conditioned on text or other signals.
+
+    ↓
+
+    3. At inference: sample noise in latent space, run the U-Net iteratively to denoise
+    it, then decode back to pixels."
+  status: done
+- "no": 30
+  category: CV
+  title: "U-Net: Convolutional Networks for Biomedical Image Segmentation"
+  authors: Ronneberger et al.
+  journal: archive
+  year: 2015
+  link: https://arxiv.org/abs/1505.04597
+  why: introduced a highly efficient encoder-decoder architecture with skip connections,
+    enabling accurate image segmentation—particularly in medical imaging
+  summary: "Contracting path (encoder) ↓\n            bottleneck\nExpanding path (decoder)\
+    \ ↑"
+  status: done
+- "no": 31
+  category: LLM
+  title: Training language models to follow instructions with human feedback
+  authors: Ouyang et al.
+  journal: archive
+  year: 2022
+  link: https://arxiv.org/abs/2203.02155
+  why: Why ChatGPT behaves like ChatGPT
+  summary: "maxE[rϕ​(x,y)] using PPO↓\n          Objective : Reward−β⋅KL(policy∣∣basemodel)\n\
+    They don’t let the model drift too far."
+  status: done
+- "no": 32
+  category: LLM
+  title: Chain-of-Thought Prompting
+  authors: Wei et al.
+  journal: archive
+  year: 2022
+  link: https://arxiv.org/abs/2201.11903
+  why: Foundation of reasoning models (o1 / DeepSeek-R1)
+  summary: "transforming inference into a structured latent-variable generation process\n\
+    \         ↓\n  p(y∣x)=z∑​p(y∣z,x)p(z∣x)"
+  status: done
+- "no": 33
+  category: LLM
+  title: LoRA
+  authors: Hu et al.
+  journal: archive
+  year: 2021
+  link: https://arxiv.org/abs/2106.09685
+  why: Fine-tune billion-parameter models on one GPU
+  summary: "Φ←Φ0​+ΔΦ (ΔW = fine tuned mat)\n         ↓\nΔW=BA\n         ↓\nW=W0​+BA\
+    \ --> h=W0​x+BAx ---> h = w0x+Bz\n         ↓\nLoRA learns:\n“Which r-dimensional\
+    \ subspace of the input-output mapping should be modified?”\n         ↓\nFIrst\
+    \ : A∼N(0,2) and\n\U0001D435=0 ---> ΔW=0\n         ↓\nΔWx←rα​BAx --> rank(ΔW)≪d"
+  status: done
+- "no": 34
+  category: LLM
+  title: FlashAttention
+  authors: Dao et al.
+  journal: archive
+  year: 2022
+  link: https://arxiv.org/abs/2205.14135
+  why: Why you can have 100K+ context windows today
+  summary: "Standard attention: Compute → write → read → compute → write → read\n\
+    \         ↓\nFlashAttention: Load once → compute everything → write once\n   \
+    \      ↓\nTo do this, they calculate softmax in another way : \n         normal\
+    \ softmax : softmax(xi​)=∑j​exj​exi​​\n         ↓\n Decomposable Softmax : m(x)=max(x),ℓ(x)=i∑​exi​−m(x)\n\
+    \         ↓\n  Then for two blocks \U0001D465(1),\U0001D465(2)\nm=max(m1​,m2​)\
+    \ & ℓ=em1​−mℓ1​+em2​−mℓ2​\n         ↓ \nIt is not straightforward, ask chatgpt\
+    \ fot proof"
+  status: done
+- "no": 35
+  category: RL
+  title: DPO (Direct Preference Optimization)
+  authors: Rafailov et al.
+  journal: archive
+  year: 2023
+  link: https://arxiv.org/abs/2305.18290
+  why: Simpler alternative to RLHF — most open-source models use this now
+  summary: ""
+  status: to-read
+- "no": 36
+  category: ""
+  title: LLaMA
+  authors: Touvron et al.
+  journal: ""
+  year: 2023
+  link: https://arxiv.org/abs/2302.13971
+  why: Kicked off the open-source LLM movement
+  summary: ""
+  status: to-read
+- "no": 37
+  category: ""
+  title: RAG (Retrieval-Augmented Generation)
+  authors: Lewis et al.
+  journal: ""
+  year: 2020
+  link: https://arxiv.org/abs/2005.11401
+  why: How most production LLM apps work today
+  summary: ""
+  status: to-read
+- "no": 38
+  category: ""
+  title: LLaVA (Visual Instruction Tuning)
+  authors: Liu et al.
+  journal: ""
+  year: 2023
+  link: https://arxiv.org/abs/2304.08485
+  why: Multimodal LLMs — simple and open
+  summary: ""
+  status: to-read
+- "no": 39
+  category: ""
+  title: Mamba (State Space Models)
+  authors: Gu & Dao
+  journal: ""
+  year: 2023
+  link: https://arxiv.org/abs/2312.00752
+  why: What if transformers aren't the final form?
+  summary: ""
+  status: to-read
+- "no": 40
+  category: ""
+  title: DeepSeek-R1
+  authors: DeepSeek-AI
+  journal: ""
+  year: 2025
+  link: https://arxiv.org/abs/2501.12948
+  why: Cheap frontier models + reasoning via RL
+  summary: ""
+  status: to-read
+- "no": 41
+  category: ""
+  title: Segment Anything (SAM)
+  authors: Kirillov et al.
+  journal: ""
+  year: 2023
+  link: https://arxiv.org/abs/2304.02643
+  why: Foundation model for vision — capstone for your vision interest
+  summary: ""
+  status: to-read
+- "no": 42
+  category: ""
+  title: sentence bert
+  authors: ""
+  journal: ""
+  year: null
+  link: https://arxiv.org/abs/1908.10084
+  why: ""
+  summary: ""
+  status: to-read
+- "no": 43
+  category: ""
+  title: "Adaptive Inference-Time Compute: LLMs Can Predict if They Can Do Better,
+    Even Mid-Generation"
+  authors: ""
+  journal: ""
+  year: null
+  link: https://arxiv.org/abs/2410.02725
+  why: ""
+  summary: ""
+  status: to-read
+- "no": 44
+  category: ""
+  title: Generative Modeling by Estimating Gradients of the Data Distribution
+  authors: ""
+  journal: ""
+  year: null
+  link: https://arxiv.org/abs/1907.05600
+  why: ""
+  summary: ""
+  status: to-read
+- "no": 45
+  category: ""
+  title: Score-Based Generative Modeling through Stochastic Differential Equations
+  authors: ""
+  journal: ""
+  year: null
+  link: https://arxiv.org/abs/2011.13456
+  why: ""
+  summary: ""
+  status: to-read
+- "no": 46
+  category: ""
+  title: Bayesian Learning via Stochastic Gradient Langevin Dynamics
+  authors: ""
+  journal: ""
+  year: null
+  link: https://www.stats.ox.ac.uk/~teh/research/compstats/WelTeh2011a.pdf
+  why: ""
+  summary: ""
+  status: to-read
+- "no": 47
+  category: ""
+  title: "RoBERTa: A Robustly Optimized BERT Pretraining Approach"
+  authors: ""
+  journal: ""
+  year: null
+  link: https://arxiv.org/abs/1907.11692
+  why: ""
+  summary: ""
+  status: to-read
+- "no": 48
+  category: ""
+  title: Flow Matching for Generative Modeling
+  authors: Lipman et al.
+  journal: ""
+  year: null
+  link: https://arxiv.org/abs/2210.02747
+  why: ""
+  summary: ""
+  status: to-read
+- "no": 49
+  category: ""
+  title: An Introduction to Flow Matching and Diffusion Models
+  authors: Peter Holderrieth, Ezra Erives
+  journal: ""
+  year: null
+  link: https://arxiv.org/abs/2506.02070
+  why: ""
+  summary: ""
+  status: to-read
+- "no": 50
+  category: ""
+  title: Training Compute-Optimal Large Language Models
+  authors: ""
+  journal: ""
+  year: null
+  link: https://arxiv.org/abs/2203.15556
+  why: Chinchilla law
+  summary: ""
+  status: to-read
+- "no": 51
+  category: ""
+  title: "DeepSeek LLM: Scaling Open-Source Language Models with Longtermism"
+  authors: DeepSeek-AI et al.
+  journal: ""
+  year: null
+  link: https://arxiv.org/abs/2401.02954
+  why: ""
+  summary: ""
+  status: to-read
+- "no": 52
+  category: ""
+  title: "BloombergGPT: A Large Language Model for Finance"
+  authors: ""
+  journal: ""
+  year: null
+  link: https://arxiv.org/abs/2303.17564
+  why: ""
+  summary: ""
+  status: to-read
+- "no": 53
+  category: xAI
+  title: '"Why Should I Trust You?": Explaining the Predictions of Any Classifier'
+  authors: Tulio Ribeiro et al.
+  journal: ""
+  year: 2016
+  link: https://arxiv.org/abs/1602.04938
+  why: LIME
+  summary: 2) min g𝛜G L(f,g,𝜋x0)+𝛀(g)                                                                          3)
+    𝜋x'(z') = exp(-D(x',z)**2 / 𝝈**2)                                                                  4)
+    L(f,g,𝜋x0) = 𝛴 𝜋x'(z') (fx(z0) g(z0))**2
+  status: in-progress
+- "no": 54
+  category: xAI
+  title: A Unified Approach to Interpreting Model Predictions
+  authors: Scott Lundberg, Su-In Lee
+  journal: ""
+  year: null
+  link: https://arxiv.org/abs/1705.07874
+  why: SHAP
+  summary: "ϕi(f,x)=∑z′⊆x′ \n∣z′∣!(M−∣z′∣−1)! / M! [fx(z′)−fx(z′∖i)]             \
+    \                                                  for each subset z' of features\
+    \ :\n\n1) Calculate the weight |z'|!(M - |z'| - 1)!/M!\n\n2) Calculate the marginal\
+    \ contribution [f_x(z') - f_x(z' \\ i)]\n\n3)Sum it all up\n\nGives the fair contribution\
+    \ of feature i to the prediction"
+  status: in-progress
+- "no": 55
+  category: xAI
+  title: "SmoothGrad: removing noise by adding noise"
+  authors: ""
+  journal: ""
+  year: null
+  link: https://arxiv.org/abs/1706.03825
+  why: ""
+  summary: ""
+  status: to-read
+- "no": 56
+  category: ""
+  title: "TabTransformer: Tabular Data Modeling Using Contextual Embeddings"
+  authors: ""
+  journal: ""
+  year: null
+  link: https://arxiv.org/abs/2012.06678
+  why: ""
+  summary: ""
+  status: to-read
+- "no": 57
+  category: ""
+  title: "FT-Transformer: Resilient and Reliable Transformer with End-to-End Fault
+    Tolerant Attention"
+  authors: ""
+  journal: ""
+  year: null
+  link: https://arxiv.org/abs/2504.02211
+  why: ""
+  summary: ""
+  status: to-read
+- "no": 58
+  category: ""
+  title: "SAINT: Improved Neural Networks for Tabular Data via Row Attention and Contrastive
+    Pre-Training"
+  authors: ""
+  journal: ""
+  year: null
+  link: https://arxiv.org/abs/2106.01342
+  why: ""
+  summary: ""
+  status: to-read
+- "no": 59
+  category: ""
+  title: "TabPFN-2.5: Advancing the State of the Art in Tabular Foundation Models"
+  authors: ""
+  journal: ""
+  year: null
+  link: https://arxiv.org/abs/2511.08667
+  why: ""
+  summary: ""
+  status: to-read
+- "no": 60
+  category: ""
+  title: Neural Oblivious Decision Ensembles for Deep Learning on Tabular Data
+  authors: ""
+  journal: ""
+  year: null
+  link: https://arxiv.org/abs/1909.06312
+  why: ""
+  summary: ""
+  status: to-read
+- "no": 61
+  category: ""
+  title: "TabNet: Attentive Interpretable Tabular Learning"
+  authors: ""
+  journal: ""
+  year: null
+  link: https://arxiv.org/abs/1908.07442
+  why: ""
+  summary: ""
+  status: to-read
+- "no": 62
+  category: ""
+  title: "MLP-Mixer: An all-MLP Architecture for Vision"
+  authors: ""
+  journal: ""
+  year: null
+  link: https://arxiv.org/abs/2105.01601
+  why: ""
+  summary: ""
+  status: to-read
+- "no": 63
+  category: ""
+  title: "DeepGBM: A Deep Learning Framework Distilled by GBDT for Online Prediction
+    Tasks"
+  authors: ""
+  journal: ""
+  year: null
+  link: https://www.semanticscholar.org/paper/DeepGBM%3A-A-Deep-Learning-Framework-Distilled-by-for-Ke-Xu/06840e0725b10a5876f42ea19ad7b2778488b9c5
+  why: ""
+  summary: ""
+  status: to-read
+- "no": 64
+  category: ""
+  title: "Neural Additive Models: Interpretable Machine Learning with Neural Nets"
+  authors: ""
+  journal: ""
+  year: null
+  link: https://arxiv.org/abs/2004.13912
+  why: ""
+  summary: ""
+  status: to-read
+- "no": 65
+  category: ""
+  title: "NODE-GAM: Neural Generalized Additive Model for Interpretable Deep Learning"
+  authors: ""
+  journal: ""
+  year: null
+  link: https://arxiv.org/abs/2106.01613
+  why: ""
+  summary: ""
+  status: to-read
+- "no": 66
+  category: ""
+  title: "TabDDPM: Modelling Tabular Data with Diffusion Models"
+  authors: ""
+  journal: ""
+  year: null
+  link: https://arxiv.org/abs/2209.15421
+  why: ""
+  summary: ""
+  status: to-read

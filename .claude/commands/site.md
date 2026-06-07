@@ -22,6 +22,7 @@ Load this full context before taking any action on the site.
 | `_config.yml`                           | Global Jekyll config (url, baseurl, plugins)                              |
 | `_data/socials.yml`                     | Social media links (CV, email, LinkedIn, Scholar, GitHub)                 |
 | `_data/series.yml`                      | Series metadata (id, title, subtitle, description, icon, url)             |
+| `_data/papers.yml`                      | ML/AI reading list — 66 papers with category, status, why, summary        |
 | `_pages/`                               | All static pages (about, notes, publications, projects, cv, series pages) |
 | `_posts/`                               | All blog posts — filename format `YYYY-MM-DD-Title.md`                    |
 | `_includes/`                            | Liquid partials (header.liquid, footer.liquid, etc.)                      |
@@ -40,6 +41,7 @@ Current nav items (all title-cased, `nav: true` in frontmatter):
 | ---------------- | ------------------------ | -------------------- |
 | About            | `_pages/about.md`        | (home, permalink: /) |
 | Book/Paper Notes | `_pages/notes.md`        | 1                    |
+| Reading List     | `_pages/papers.md`       | 2                    |
 | Publications     | `_pages/publications.md` | 3                    |
 | Projects         | `_pages/projects.md`     | 4                    |
 | CV               | `_pages/cv.md`           | 5                    |
