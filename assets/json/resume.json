@@ -1,56 +1,54 @@
 {
   "basics": {
-    "name": "Masoud Rezvaninejad",
-    "label": "Deep Learning Researcher & Data Scientist",
+    "name": "Masoud Rezvani",
+    "label": "ML Engineer & Data Scientist",
     "image": "",
     "email": "s.masoudrezvani@gmail.com",
     "location": {
       "city": "Amsterdam",
       "countryCode": "NL"
     },
-    "summary": "Deep Learning researcher and Master's student (UvA) with a published track record in Generative AI (GANs). Brings 4+ years of engineering experience in building robust data pipelines (Airflow, Python) and deploying models at scale (Docker, AWS). Passionate about advancing state-of-the-art Vision Language Models (VLMs) and applying rigorous engineering practices to research frontiers.",
+    "summary": "ML Engineer and Data Scientist with 5+ years of production experience spanning fraud detection, RAG systems, and LLM engineering. Currently completing an MSc in Data Science at UvA. Published in Expert Systems with Applications (ESWA, 2025). Sweet spot: read a paper, turn it into production-ready code, and ship it.",
     "profiles": []
   },
   "education": [
     {
-      "institution": "Universiteit Van Amsterdam (UvA)",
+      "institution": "University of Amsterdam (UvA)",
       "area": "Data Science",
       "studyType": "Master of Science",
       "startDate": "2025-09",
-      "endDate": "Expected 2026",
-      "courses": ["Thesis: Evaluating the Muon Optimizer vs. AdamW for High-Dimensional LLM Adaptation via LoRA."]
+      "endDate": "2026-06",
+      "courses": ["Thesis: Evaluating the Muon Optimizer — From Symbolic Regression Geometry to High-Dimensional LLM Adaptation"]
     },
     {
       "institution": "University of Tehran",
       "area": "Business Administration",
       "studyType": "MBA",
       "startDate": "2017-09",
-      "endDate": "2019-09",
-      "courses": ["Focus on strategic management and quantitative analysis."]
+      "endDate": "2019-09"
     },
     {
-      "institution": "Amirkabir University of Technology",
+      "institution": "Amirkabir University of Technology (Tehran Polytechnic)",
       "area": "Industrial Engineering",
       "studyType": "BSc",
       "startDate": "2012-09",
       "endDate": "2016-11"
     }
   ],
-  "publications": [
-    {
-      "name": "WDAE-GAN: A hybrid dual autoencoder and generative adversarial framework with wavelet denoising for credit card fraud detection",
-      "publisher": "Expert Systems with Applications (ESWA)",
-      "releaseDate": "2026",
-      "summary": "Developed a Wasserstein GAN and dual autoencoder framework to solve severe class imbalance in financial datasets. Achieved near-perfect detection accuracy (0.9999 AUC) while maintaining extremely low false-positive rates."
-    },
-    {
-      "name": "Scientometric Analysis of the ACL Anthology",
-      "publisher": "Academic Project",
-      "releaseDate": "2026",
-      "summary": "Processed and analyzed a dataset of over 67,000 papers to extract trends in NLP research, authorships, and institutional impact."
-    }
-  ],
   "work": [
+    {
+      "name": "Talk360",
+      "position": "AI Automation Intern",
+      "startDate": "2026-04",
+      "endDate": "Present",
+      "summary": "International calling service (Amsterdam).",
+      "highlights": [
+        "Built an HR policy assistant using hybrid retrieval (ChromaDB semantic + BM25 keyword) reranked by a Cross-Encoder, achieving 98% faithfulness on a 22-question golden dataset; added inline source citations via system prompt design and an LLM-based prompt-injection firewall.",
+        "Built a semantic caching layer to reduce repeat-query API costs; implemented a custom LLM-as-judge pipeline (GPT-4o) to track regression before deploying new code.",
+        "Built autonomous LangChain + Gemini agents to interpret execution logs and diagnose system failures.",
+        "Engineered n8n ETL pipelines ingesting Mixpanel usage metrics and routing anomaly alerts to Slack."
+      ]
+    },
     {
       "name": "Baly.iq (Rocket Internet)",
       "position": "Data Scientist",
@@ -58,61 +56,158 @@
       "endDate": "2025-11",
       "summary": "The #1 super app in Iraq.",
       "highlights": [
-        "Engineered large-scale data processing pipelines using Python and Airflow to curate and clean unstructured datasets, directly enabling downstream ML training.",
-        "Built reproducible Airflow pipelines and Python ETL modules to process unstructured and semi-structured fraud data, reducing manual work by 30%.",
-        "Analyzed customer and transaction journey data to map data sources and improve anomaly detection accuracy.",
-        "Tuned database systems using Percona PMM to speed up query response by 20%, ensuring 99.8% HA.",
-        "Deployed containerized services with Docker and Ansible to deliver key business features faster when the tech team's backlog delayed development; took ownership of deployment to keep operations on schedule."
+        "Built and tuned XGBoost and logistic regression models for fraud detection, reaching 95% accuracy and contributing to $500K in estimated annual savings.",
+        "Built reproducible Airflow and Python ETL pipelines to process unstructured fraud data, cutting manual work by 30% and making updates repeatable across environments.",
+        "Led a team of analysts to improve fraud ring detection by 10% using GNNs; built a graph visualization tool that surfaced fraudulent connections, saving ~$1,000 daily.",
+        "Deployed containerized fraud-detection services with Docker and Ansible across multi-server environments; tuned MySQL and PostgreSQL query performance with Percona PMM, improving response time by 20%.",
+        "Maintained AWS EC2 server environments: configured monitoring (Grafana, Netdata), managed pipeline scheduling (Airflow, cronjobs), and resolved network issues (iptables, DNS)."
       ]
     },
     {
       "name": "Snapp! (Rocket Internet)",
-      "position": "Fraud Data Analyst",
+      "position": "Data Analyst",
       "startDate": "2020-09",
       "endDate": "2024-02",
-      "summary": "The #1 super app and ride-hailing app in Iran.",
+      "summary": "The #1 ride-hailing super app in Iran.",
       "highlights": [
-        "Investigated raw logs, relational tables, and metadata sources to design SQL and Python detection rules, identifying anomalies 40% faster.",
-        "Collaborated on dataset curation for foundation model training by structuring raw logs into high-quality, ML-ready formats.",
-        "Built tagging logic for fraud categories and structured irregular transaction flows into ML-ready datasets.",
-        "Took initiative to learn automation and containerization, laying the groundwork for more scalable fraud-detection tools later used in production."
+        "Investigated raw logs, relational tables, and metadata to design SQL and Python detection rules, identifying anomalies 40% faster than manual review.",
+        "Applied CNNs and GNNs to detect complex fraud patterns and fraud rings, improving detection efficiency by 10%.",
+        "Built tagging logic for fraud categories and structured irregular transaction flows into ML-ready datasets; collaborated with downstream modeling teams on feature curation.",
+        "Led collaborative fraud case reviews with operations and legal teams to surface business logic loopholes across driver, passenger, and payment channels.",
+        "Self-taught and implemented Airflow and Docker pipelines to automate fraud-data workflows, later forming the production foundation at Baly.iq."
       ]
+    }
+  ],
+  "publications": [
+    {
+      "name": "WDAE-GAN: A Hybrid Dual Autoencoder and Generative Adversarial Framework with Wavelet Denoising for Credit Card Fraud Detection",
+      "publisher": "Expert Systems with Applications (ESWA)",
+      "releaseDate": "2025-10",
+      "url": "https://doi.org/10.1016/j.eswa.2025.130078",
+      "summary": "Developed a Wasserstein GAN and dual autoencoder framework with wavelet denoising to solve severe class imbalance in financial fraud datasets. Achieved near-perfect detection accuracy while maintaining extremely low false-positive rates."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Vision-Language Model for DocVQA",
+      "description": "Multimodal pipeline fusing CLIP and ResNet with a transformer LLM for document question answering, trained end-to-end in PyTorch.",
+      "highlights": [
+        "Fused visual embeddings (ResNet + CLIP) with OCR text outputs fed into a transformer LLM.",
+        "Evaluated on standard DocVQA benchmarks; trained end-to-end in PyTorch."
+      ],
+      "startDate": "2026",
+      "endDate": "2026",
+      "keywords": ["PyTorch", "CLIP", "ResNet", "Transformers", "Computer Vision", "NLP"]
     },
     {
-      "name": "Algorithmic Trading ML Infrastructure",
-      "position": "Project Lead / ML Engineer",
-      "summary": "Architected an end-to-end machine learning pipeline for algorithmic trading.",
+      "name": "SemArt: Texture Bias in CNNs on Historical Art",
+      "description": "Investigated texture bias in CNNs on historical art; benchmarked ResNet-50 and CLIP using InfoNCE contrastive learning; visualized latent space with UMAP and inter-class distance metrics.",
       "highlights": [
-        "Managed a 6-person engineering team using Kanban/Jira methodologies.",
-        "Developed custom technical indicators for MetaTrader 5 integration."
-      ]
+        "Benchmarked ResNet-50 and CLIP using InfoNCE contrastive learning.",
+        "Quantified texture bias via UMAP visualization and inter-class distance metrics."
+      ],
+      "startDate": "2025",
+      "endDate": "2025",
+      "keywords": ["PyTorch", "ResNet", "CLIP", "Contrastive Learning", "UMAP"]
     },
     {
-      "name": "ML-IncomeInsightHub",
-      "position": "MLOps Engineer",
-      "summary": "Built a comprehensive machine learning dashboard prioritizing interpretability.",
+      "name": "Interactive Model Interpretation Dashboard",
+      "description": "SHAP and feature-importance dashboard deployed via FastAPI and Docker; exposes end-to-end model training, evaluation, and visualization through a web interface.",
       "highlights": [
-        "Implemented SHAP value visualizations for feature importance.",
-        "Engineered the backend using FastAPI, established secure geospatial routing with JWT authentication, and containerized the deployment via Docker."
-      ]
+        "Backend built with FastAPI; frontend exposes real-time SHAP dependency plots.",
+        "Fully containerized with Docker for reproducible deployment."
+      ],
+      "startDate": "2025-05",
+      "endDate": "2025-05",
+      "keywords": ["SHAP", "FastAPI", "Docker", "Python", "scikit-learn"]
+    },
+    {
+      "name": "Algorithmic Trading System",
+      "description": "End-to-end ML research framework for XAUUSD and forex pairs, using Polars for feature engineering and Weights & Biases for experiment tracking.",
+      "highlights": [
+        "Feature engineering over price-action patterns (support/resistance, volume profiles, candlestick structures) with Polars.",
+        "All experiments tracked with Weights & Biases for systematic ablations across feature sets and models."
+      ],
+      "startDate": "2024-09",
+      "endDate": "2025-09",
+      "keywords": ["Python", "Polars", "XGBoost", "Weights & Biases", "scikit-learn"]
+    },
+    {
+      "name": "LLM Arabic Fraud Detection",
+      "description": "Fine-tuned a transformer LLM for Arabic-text fraud detection in Iraqi ride-hailing services with reproducible evaluation pipelines.",
+      "highlights": [
+        "Engineered data-cleaning and tokenization strategies suited for Arabic morphology.",
+        "Built strict evaluation pipelines for reproducible, production-ready results."
+      ],
+      "startDate": "2024-11",
+      "endDate": "2024-11",
+      "keywords": ["HuggingFace", "Transformers", "NLP", "Arabic", "Fine-tuning"]
+    },
+    {
+      "name": "CARE-GNN Reconstruction",
+      "description": "Reconstructed CARE-GNN (NeurIPS 2021) from scratch in PyTorch; documented findings on graph-based fraud detection against camouflaged fraudsters.",
+      "highlights": [
+        "Full reconstruction of heterogeneous graph construction, label-aware similarity estimation, and RL-based neighbour selector.",
+        "Surfaced underspecified implementation details around camouflage-aware aggregation and the RL exploration-exploitation tradeoff."
+      ],
+      "startDate": "2023",
+      "endDate": "2023",
+      "keywords": ["PyTorch", "Graph Neural Networks", "Fraud Detection", "NeurIPS", "Reproducibility"]
     }
   ],
   "skills": [
     {
-      "name": "Machine Learning & AI",
-      "keywords": ["Deep Learning", "GANs", "Vision Language Models (VLMs)", "NLP", "LoRA Fine-Tuning"]
+      "name": "Languages",
+      "keywords": ["Python", "SQL", "Rust (intermediate)"]
     },
     {
-      "name": "Engineering & MLOps",
-      "keywords": ["Python", "PyTorch", "FastAPI", "Docker", "AWS", "Airflow", "OOP", "System Design", "Go", "Rust", "HTML"]
+      "name": "ML Frameworks",
+      "keywords": ["PyTorch", "HuggingFace", "scikit-learn", "XGBoost"]
     },
     {
-      "name": "Data & Tools",
-      "keywords": ["Git", "LaTeX", "MetaTrader 5", "GUROBI"]
+      "name": "MLOps & LLMOps",
+      "keywords": ["MLflow", "FastAPI", "Streamlit", "Docker", "Airflow", "LangChain", "Git"]
     },
     {
-      "name": "Soft Skills",
-      "keywords": ["Problem Solving", "Clear Communication", "Cross-team coordination"]
+      "name": "Cloud & Databases",
+      "keywords": ["AWS", "ChromaDB", "PostgreSQL", "MySQL"]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "AI Engineer Core Track (LLM Engineering, RAG, QLoRA, Agents)",
+      "date": "2026",
+      "issuer": "Udemy"
+    },
+    {
+      "name": "Machine Learning System Design",
+      "date": "2026",
+      "issuer": "ByteByteGo"
+    },
+    {
+      "name": "Stanford CME295 — Transformers and Large Language Models",
+      "date": "2026",
+      "issuer": "Stanford University"
+    },
+    {
+      "name": "Stanford CS336 — Language Modeling from Scratch",
+      "date": "2025",
+      "issuer": "Stanford University"
+    },
+    {
+      "name": "Associate DevOps Engineer",
+      "date": "2025",
+      "issuer": "Arvancloud"
+    },
+    {
+      "name": "Graph Search, Shortest Paths, and Data Structures (Algorithms Specialization, Part 2)",
+      "date": "2024",
+      "issuer": "Coursera"
+    },
+    {
+      "name": "Applied Statistical Modeling for Data Analysis in R",
+      "date": "2023",
+      "issuer": "Udemy"
     }
   ],
   "languages": [
@@ -134,9 +229,9 @@
   ],
   "interests": [
     {
-      "name": "interests",
+      "name": "Research Interests",
       "icon": "fa-solid fa-tag",
-      "keywords": ["Machine Learning", "Deep Learning", "LLM", "Diffusion Models"]
+      "keywords": ["Large Language Models", "Deep Learning", "Generative AI", "Graph Neural Networks", "MLOps"]
     }
   ]
 }

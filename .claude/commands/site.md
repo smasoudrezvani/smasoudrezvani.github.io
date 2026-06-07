@@ -107,8 +107,10 @@ Hub page at `/notes/` (`_pages/notes.md`) lists all series from `_data/series.ym
 Each series has a dedicated page at `/notes/<series-id>/` that filters posts with:
 
 ```liquid
-{% assign series_posts = site.posts | where: 'series', '<id>' | sort: 'date' %}
+{% assign series_posts = site.posts | where: 'series', '<id>' | sort: 'path' | sort: 'date' %}
 ```
+
+**Why two sorts?** `sort: 'date'` alone breaks when multiple posts share the same date (e.g. all parts published on the same day). Liquid's sort is stable, so sorting by `path` (filename) first, then by `date`, ensures equal-date posts stay in filename/alphabetical order — which is the intended Part 1 → Part 2 → … order. **Never use `sort: 'date'` alone on a series page.**
 
 ### Current Series
 
@@ -123,6 +125,7 @@ Each series has a dedicated page at `/notes/<series-id>/` that filters posts wit
 
 1. Add entry to `_data/series.yml` (id, title, subtitle, description, icon, url)
 2. Create `_pages/series-<id>.md` with permalink `/notes/<id>/`, `nav: false`
+   - Use `sort: 'path' | sort: 'date'` — never `sort: 'date'` alone (see note above)
 3. New posts: add `series: <id>` and `categories: <id>` to frontmatter
 
 ---
@@ -163,6 +166,9 @@ Notes created with the help of NotebookLM from podcast-style audio overviews of 
 - `2026-06-04-DDIA Part 3 - Data Models and Query Languages.md`
 - `2026-06-04-DDIA Part 4 - Storage and Retrieval.md`
 - `2026-06-04-DDIA Part 5 - Encoding and Evolution.md`
+- `2026-06-06-DDIA Part 6 - Replication.md`
+- `2026-06-06-DDIA Part 7 - Sharding.md`
+- `2026-06-06-DDIA Part 8 - Transactions.md`
 
 ---
 
@@ -172,6 +178,10 @@ Notes created with the help of NotebookLM from podcast-style audio overviews of 
 2. Build locally: `docker compose up --build`
 3. Check http://localhost:8080 — navigation, pages, dark mode
 4. Never commit: data files, model weights, `.env`
+
+### Prettier line-ending side-effect (Windows)
+
+Running `npx prettier . --write` on Windows normalises line endings from LF to CRLF across all touched files. This causes VS Code to show many existing posts as modified (orange **M**) even though **no actual content changed**. `git diff` will show only `LF will be replaced by CRLF` warnings with no content diff lines. This is expected and harmless — do not stage or worry about these files unless there is a real content change alongside the line-ending normalisation.
 
 ---
 
