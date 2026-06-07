@@ -2,7 +2,6 @@
 layout: page
 title: Algorithmic Trading System
 description: ML research framework for XAUUSD and forex trading strategies
-img: assets/img/trading_preview.jpg
 importance: 7
 category: work
 ---

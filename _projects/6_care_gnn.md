@@ -2,7 +2,6 @@
 layout: page
 title: CARE-GNN Reconstruction
 description: Reproducing NeurIPS 2021 graph-based fraud detection from scratch
-img: assets/img/caregnn_preview.jpg
 importance: 6
 category: work
 ---
