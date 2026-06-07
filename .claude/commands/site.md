@@ -25,7 +25,10 @@ Load this full context before taking any action on the site.
 | `_pages/`                               | All static pages (about, notes, publications, projects, cv, series pages) |
 | `_posts/`                               | All blog posts — filename format `YYYY-MM-DD-Title.md`                    |
 | `_includes/`                            | Liquid partials (header.liquid, footer.liquid, etc.)                      |
-| `assets/pdf/Masoud_Rezvaninejad_CV.pdf` | CV PDF                                                                    |
+| `assets/json/resume.json`               | CV data in JSONResume format — source of truth for the CV page            |
+| `assets/pdf/Masoud_Rezvaninejad_CV.pdf` | CV PDF — auto-generated on every deploy by the GitHub Actions workflow    |
+| `bin/update_scholar_citations.py`       | Fetches Google Scholar citation counts; requires `pyyaml` and `scholarly` |
+| `requirements.txt`                      | Python deps: `nbconvert pyyaml rendercv[full] scholarly`                  |
 
 ---
 
@@ -57,6 +60,37 @@ github_username: smasoudrezvani
 
 Supported keys come from jekyll-socials plugin. To add a platform not in the plugin,
 use `custom_social: { logo: <url>, title: <name>, url: <link> }`.
+
+---
+
+## CV Page
+
+The CV page (`_pages/cv.md`) uses `cv_format: jsonresume` and reads from `assets/json/resume.json`.
+
+### resume.json structure (JSONResume schema)
+
+Top-level keys currently used: `basics`, `education`, `work`, `publications`, `projects`, `skills`, `certificates`, `languages`, `interests`.
+
+**Work entries (in order):**
+
+1. Talk360 — AI Automation Intern (2026-04 → Present)
+2. Baly.iq (Rocket Internet) — Data Scientist (2024-02 → 2025-11)
+3. Snapp! (Rocket Internet) — Data Analyst (2020-09 → 2024-02)
+
+**Certifications:** 7 entries (Udemy AI Engineer, ByteByteGo ML System Design, Stanford CME295, Stanford CS336, Arvancloud DevOps, Coursera Algorithms, Udemy R stats).
+
+**Projects in resume.json:** DocVQA, SemArt, ML Interpretation Dashboard, Algorithmic Trading System, LLM Arabic Fraud Detection, CARE-GNN Reconstruction.
+
+### Dynamic PDF generation
+
+`assets/pdf/Masoud_Rezvaninejad_CV.pdf` is **auto-generated on every deploy** — do NOT manually edit this PDF. The mechanism lives in `.github/workflows/deploy.yml` as a "Generate CV PDF" step between the CSS purge and the deploy:
+
+1. Installs Playwright + Chromium
+2. Serves `_site` locally on port 4000
+3. Playwright renders `http://localhost:4000/cv/` and saves the PDF directly to `_site/assets/pdf/`
+4. Deploy action pushes `_site` to GitHub Pages (including the fresh PDF)
+
+No commit-back loop: the PDF is written to the built `_site` output, not back to the source branch.
 
 ---
 
@@ -172,6 +206,24 @@ Notes created with the help of NotebookLM from podcast-style audio overviews of 
 
 ---
 
+## Existing Projects (`_projects/`)
+
+| File                | Title                       | importance | Notes                                 |
+| ------------------- | --------------------------- | ---------- | ------------------------------------- |
+| `1_docvqa.md`       | Multimodal DocVQA           | 1          | img: assets/img/docvqa_preview.png    |
+| `2_semart.md`       | SemArt Digital Heritage     | 2          | img: assets/img/semart_preview.png    |
+| `3_ml_dashboard.md` | ML Interpretation Dashboard | 3          | img: assets/img/dashboard_preview.png |
+| `4_llm_fraud.md`    | LLM Fraud Detection         | 4          | img: assets/img/fraud_preview.png     |
+| `5_s3_minio.md`     | S3-MinIO Starter Kit        | 5          | img: assets/img/minio_preview.png     |
+| `6_care_gnn.md`     | CARE-GNN Reconstruction     | 6          | no img (source image not available)   |
+| `7_algo_trading.md` | Algorithmic Trading System  | 7          | no img (source image not available)   |
+
+**Important:** Project `img:` fields must reference files that actually exist in `assets/img/`. The build uses imagemagick to generate `-800.webp` and `-1400.webp` variants. If the source file is missing, the build produces broken WebP links that fail the `check-links-on-site` CI check. Omit `img:` rather than pointing to a non-existent file.
+
+Available project preview images in `assets/img/`: `docvqa_preview.png`, `semart_preview.png`, `dashboard_preview.png`, `fraud_preview.png`, `minio_preview.png` (and generic: `1.jpg`–`12.jpg`, `rhino.png`, `prof_pic.jpg`).
+
+---
+
 ## Pre-Commit Checklist
 
 1. **Run Prettier** (mandatory — always, no exceptions): `npx prettier . --write`
@@ -181,7 +233,7 @@ Notes created with the help of NotebookLM from podcast-style audio overviews of 
 
 ### Prettier line-ending side-effect (Windows)
 
-Running `npx prettier . --write` on Windows normalises line endings from LF to CRLF across all touched files. This causes VS Code to show many existing posts as modified (orange **M**) even though **no actual content changed**. `git diff` will show only `LF will be replaced by CRLF` warnings with no content diff lines. This is expected and harmless — do not stage or worry about these files unless there is a real content change alongside the line-ending normalisation.
+Running `npx prettier . --write` on Windows normalises line endings from LF to CRLF across all touched files. This causes VS Code to show many existing posts as modified (orange **M**) even though **no actual content changed**. `git diff` will show only `LF will be replaced by CRLF` warnings with no content diff lines. This is expected — **do commit these files** (git normalises back to LF in the object store; Linux CI sees clean files). The CI Prettier check passes because it runs on Linux which produces LF.
 
 ---
 
@@ -205,6 +257,18 @@ Running `npx prettier . --write` on Windows normalises line endings from LF to C
 
 1. Add `nav: true` + `nav_order: N` + capitalized `title:` to the page's frontmatter.
 2. Run `npx prettier . --write`.
+
+**Add a new project:**
+
+1. Create `_projects/N_slug.md` with `importance: N` and `category: work`.
+2. Only set `img:` if the image file actually exists in `assets/img/` — omit otherwise.
+3. Run `npx prettier . --write`.
+
+**Update the CV:**
+
+1. Edit `assets/json/resume.json` (JSONResume format).
+2. The PDF at `assets/pdf/Masoud_Rezvaninejad_CV.pdf` is auto-regenerated on the next deploy — do not edit it manually.
+3. Run `npx prettier . --write`.
 
 **Change social links:**
 Edit `_data/socials.yml` — changes take effect after rebuild. Run `npx prettier . --write`.
