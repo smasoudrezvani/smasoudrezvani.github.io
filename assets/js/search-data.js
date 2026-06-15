@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-part-8-transactions",
+        },{id: "post-part-9-the-trouble-with-distributed-systems",
+        
+          title: "Part 9: The Trouble with Distributed Systems",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/DDIA-Part-9-The-Trouble-with-Distributed-Systems/";
+          
+        },
+      },{id: "post-part-8-transactions",
         
           title: "Part 8: Transactions",
         
