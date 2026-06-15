@@ -55,6 +55,17 @@ ninja.data = [{
             window.location.href = "/blog/2026/DDIA-Part-9-The-Trouble-with-Distributed-Systems/";
           
         },
+      },{id: "post-part-10-consistency-and-consensus",
+        
+          title: "Part 10: Consistency and Consensus",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/DDIA-Part-10-Consistency-and-Consensus/";
+          
+        },
       },{id: "post-part-8-transactions",
         
           title: "Part 8: Transactions",
