@@ -44,15 +44,48 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-part-9-the-trouble-with-distributed-systems",
+        },{id: "post-part-14-doing-the-right-thing",
         
-          title: "Part 9: The Trouble with Distributed Systems",
+          title: "Part 14: Doing the Right Thing",
         
         description: "",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2026/DDIA-Part-9-The-Trouble-with-Distributed-Systems/";
+            window.location.href = "/blog/2026/DDIA-Part-14-Doing-the-Right-Thing/";
+          
+        },
+      },{id: "post-part-13-a-philosophy-of-streaming-systems",
+        
+          title: "Part 13: A Philosophy of Streaming Systems",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/DDIA-Part-13-A-Philosophy-of-Streaming-Systems/";
+          
+        },
+      },{id: "post-part-12-stream-processing",
+        
+          title: "Part 12: Stream Processing",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/DDIA-Part-12-Stream-Processing/";
+          
+        },
+      },{id: "post-part-11-batch-processing",
+        
+          title: "Part 11: Batch Processing",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/DDIA-Part-11-Batch-Processing/";
           
         },
       },{id: "post-part-10-consistency-and-consensus",
@@ -64,6 +97,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2026/DDIA-Part-10-Consistency-and-Consensus/";
+          
+        },
+      },{id: "post-part-9-the-trouble-with-distributed-systems",
+        
+          title: "Part 9: The Trouble with Distributed Systems",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/DDIA-Part-9-The-Trouble-with-Distributed-Systems/";
           
         },
       },{id: "post-part-8-transactions",
