@@ -148,6 +148,8 @@ Each series has a dedicated page at `/notes/<series-id>/` that filters posts wit
 
 **Why two sorts?** `sort: 'date'` alone breaks when multiple posts share the same date (e.g. all parts published on the same day). Liquid's sort is stable, so sorting by `path` (filename) first, then by `date`, ensures equal-date posts stay in filename/alphabetical order — which is the intended Part 1 → Part 2 → … order. **Never use `sort: 'date'` alone on a series page.**
 
+**The two-digit part-number trap:** When two posts share the same date AND their part numbers cross a power of ten (e.g. "Part 9" and "Part 10"), alphabetical path sort puts "Part 10" before "Part 9" because `'1' < '9'`. The date sort then preserves that wrong order. **Fix: give the higher-numbered post a strictly later date** (e.g. Part 9 → `2026-06-15`, Part 10 → `2026-06-16`). This ensures the date sort correctly separates them regardless of alphabetical path order. This issue recurs every time a series crosses from single-digit to double-digit (Part 9 → 10) or double-digit decades (Part 19 → 20).
+
 ### Current Series
 
 | id                       | Title                                 | Source                          | Page                                      |
@@ -205,6 +207,12 @@ Notes created with the help of NotebookLM from podcast-style audio overviews of 
 - `2026-06-06-DDIA Part 6 - Replication.md`
 - `2026-06-06-DDIA Part 7 - Sharding.md`
 - `2026-06-06-DDIA Part 8 - Transactions.md`
+- `2026-06-15-DDIA Part 9 - The Trouble with Distributed Systems.md`
+- `2026-06-15-DDIA Part 10 - Consistency and Consensus.md` (frontmatter date: 2026-06-16 — bumped to sort after Part 9)
+- `2026-06-26-DDIA Part 11 - Batch Processing.md`
+- `2026-06-26-DDIA Part 12 - Stream Processing.md`
+- `2026-06-26-DDIA Part 13 - A Philosophy of Streaming Systems.md`
+- `2026-06-26-DDIA Part 14 - Doing the Right Thing.md`
 
 ---
 

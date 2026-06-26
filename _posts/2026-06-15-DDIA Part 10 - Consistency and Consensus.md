@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Part 10: Consistency and Consensus"
-date: 2026-06-15
+date: 2026-06-16
 tags: ddia distributed-systems consistency consensus linearizability raft zookeeper
 categories: ddia
 series: ddia
